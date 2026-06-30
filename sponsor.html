@@ -18,11 +18,87 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<style>
+.see-sponsor-wrap{position:relative;padding:130px 0 140px;background:#f5f3ec;color:#0b0f0d;font-family:'Space Grotesk',sans-serif;overflow:hidden}
+.see-sponsor-wrap::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#1A6B3C,#F5C800,#1B3F9E,transparent)}
+.see-sponsor-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:60px;padding-bottom:30px;border-bottom:1px solid rgba(11,15,13,0.12)}
+.see-sponsor-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#1B3F9E;margin-bottom:18px}
+.see-sponsor-headline{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(36px,4.5vw,60px);letter-spacing:-0.03em;line-height:1.05;color:#0b0f0d;margin:0;max-width:760px}
+.see-sponsor-headline span{color:#1A6B3C}
+.see-sponsor-lede{max-width:380px;color:#4a4f4c;font-size:15px;line-height:1.6}
+.see-sponsor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid rgba(11,15,13,0.14);background:#fff;border-radius:8px;overflow:hidden}
+@media(max-width:991px){.see-sponsor-grid{grid-template-columns:1fr}}
+.see-sponsor-col{position:relative;padding:46px 36px 40px;display:flex;flex-direction:column;background:#fff;transition:background .35s ease}
+.see-sponsor-col+.see-sponsor-col{border-left:1px solid rgba(11,15,13,0.1)}
+@media(max-width:991px){.see-sponsor-col+.see-sponsor-col{border-left:none;border-top:1px solid rgba(11,15,13,0.1)}}
+.see-sponsor-col:hover{background:#faf8f0}
+.see-sponsor-col-featured{background:#0b1410;color:#f5f3ec}
+.see-sponsor-col-featured:hover{background:#0b1410}
+.see-sponsor-col-featured::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:#F5C800}
+.see-sponsor-ribbon{position:absolute;top:24px;right:-44px;transform:rotate(35deg);background:#F5C800;color:#0b0f0d;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.22em;padding:6px 50px;text-transform:uppercase}
+.see-sponsor-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(11,15,13,0.5)}
+.see-sponsor-col-featured .see-sponsor-meta{color:rgba(245,243,236,0.55)}
+.see-sponsor-meta-dot{width:8px;height:8px;border-radius:50%;background:#1A6B3C}
+.see-sponsor-col-featured .see-sponsor-meta-dot{background:#F5C800;box-shadow:0 0 10px #F5C800}
+.see-sponsor-tier-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.02em;color:#0b0f0d;margin:0 0 12px;line-height:1.1}
+.see-sponsor-col-featured .see-sponsor-tier-name{color:#fff}
+.see-sponsor-tagline{font-size:14px;color:#4a4f4c;line-height:1.55;margin-bottom:32px;min-height:64px}
+.see-sponsor-col-featured .see-sponsor-tagline{color:#cfd1cb}
+.see-sponsor-pricebox{padding:24px 0;border-top:1px solid rgba(11,15,13,0.12);border-bottom:1px solid rgba(11,15,13,0.12);margin-bottom:28px;display:flex;flex-direction:column;gap:6px}
+.see-sponsor-col-featured .see-sponsor-pricebox{border-color:rgba(245,243,236,0.18)}
+.see-sponsor-price-main{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:48px;letter-spacing:-0.03em;line-height:1;color:#1A6B3C}
+.see-sponsor-col-featured .see-sponsor-price-main{color:#F5C800}
+.see-sponsor-price-sub{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.05em;color:#4a4f4c}
+.see-sponsor-col-featured .see-sponsor-price-sub{color:#cfd1cb}
+.see-sponsor-list{list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:14px;flex:1}
+.see-sponsor-item{position:relative;padding-left:24px;font-size:14px;line-height:1.55;color:#1a1d1b;opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+.see-sponsor-col-featured .see-sponsor-item{color:#e7e5dc}
+.see-sponsor-col.see-sponsor-vis .see-sponsor-item{opacity:1;transform:translateY(0)}
+.see-sponsor-item::before{content:"";position:absolute;left:0;top:8px;width:12px;height:1px;background:#1A6B3C}
+.see-sponsor-col-featured .see-sponsor-item::before{background:#F5C800}
+.see-sponsor-btn{appearance:none;background:#1A6B3C;color:#fff;border:none;padding:18px 24px;font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;font-size:12px;cursor:pointer;transition:all .3s ease;display:inline-flex;align-items:center;justify-content:space-between;width:100%}
+.see-sponsor-btn:hover{background:#0b0f0d}
+.see-sponsor-btn-arrow{font-family:'IBM Plex Mono',monospace;transition:transform .3s ease}
+.see-sponsor-btn:hover .see-sponsor-btn-arrow{transform:translateX(6px)}
+.see-sponsor-col-featured .see-sponsor-btn{background:#F5C800;color:#0b0f0d}
+.see-sponsor-col-featured .see-sponsor-btn:hover{background:#fff}
+.see-sponsor-foot{margin-top:32px;display:flex;align-items:center;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#4a4f4c}
+.see-sponsor-foot-line{flex:1;height:1px;background:rgba(11,15,13,0.1)}
+
+/* Modal */
+.see-sponsor-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(11,20,16,0.65);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .3s ease;font-family:'Space Grotesk',sans-serif}
+.see-sponsor-modal.see-sponsor-modal-open{display:flex;opacity:1}
+.see-sponsor-modal-dialog{position:relative;width:100%;max-width:540px;max-height:92vh;overflow-y:auto;background:#fff;border:1px solid rgba(11,15,13,0.14);border-radius:8px;padding:46px 40px 38px;color:#0b0f0d;box-shadow:0 40px 80px -20px rgba(11,15,13,0.4);transform:translateY(20px) scale(0.98);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.see-sponsor-modal.see-sponsor-modal-open .see-sponsor-modal-dialog{transform:translateY(0) scale(1)}
+.see-sponsor-modal-dialog::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:#F5C800}
+.see-sponsor-modal-close{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(11,15,13,0.14);background:transparent;color:#0b0f0d;font-size:18px;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:all .25s ease}
+.see-sponsor-modal-close:hover{background:#0b0f0d;color:#fff;border-color:#0b0f0d}
+.see-sponsor-modal-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#1A6B3C;margin-bottom:14px}
+.see-sponsor-modal-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.02em;line-height:1.1;color:#0b0f0d;margin:0 0 8px}
+.see-sponsor-modal-title span{color:#1A6B3C}
+.see-sponsor-modal-sub{font-size:14px;color:#4a4f4c;line-height:1.55;margin:0 0 26px}
+.see-sponsor-modal-form{display:flex;flex-direction:column;gap:14px}
+.see-sponsor-modal-field{display:flex;flex-direction:column;gap:6px}
+.see-sponsor-modal-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#4a4f4c;font-weight:600}
+.see-sponsor-modal-input,.see-sponsor-modal-textarea{background:#fff;border:1px solid rgba(11,15,13,0.18);border-radius:4px;padding:12px 14px;color:#0b0f0d;font-family:'Space Grotesk',sans-serif;font-size:14px;line-height:1.4;transition:border-color .25s ease,box-shadow .25s ease;width:100%}
+.see-sponsor-modal-input:focus,.see-sponsor-modal-textarea:focus{outline:none;border-color:#1A6B3C;box-shadow:0 0 0 3px rgba(26,107,60,0.15)}
+.see-sponsor-modal-input::placeholder,.see-sponsor-modal-textarea::placeholder{color:#9aa09c}
+.see-sponsor-modal-textarea{min-height:110px;resize:vertical}
+.see-sponsor-modal-submit{margin-top:8px;appearance:none;background:#1A6B3C;color:#fff;border:none;padding:18px 24px;font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;font-size:12px;cursor:pointer;transition:all .3s ease;display:inline-flex;align-items:center;justify-content:space-between;width:100%}
+.see-sponsor-modal-submit:hover{background:#0b0f0d}
+.see-sponsor-modal-submit-arrow{font-family:'IBM Plex Mono',monospace;transition:transform .3s ease}
+.see-sponsor-modal-submit:hover .see-sponsor-modal-submit-arrow{transform:translateX(6px)}
+.see-sponsor-modal-success{display:none;text-align:center;padding:24px 8px 8px}
+.see-sponsor-modal-success.see-sponsor-modal-success-visible{display:block}
+.see-sponsor-modal-success-icon{width:60px;height:60px;border-radius:50%;background:#1A6B3C;color:#F5C800;display:inline-flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;margin-bottom:18px}
+.see-sponsor-modal-success-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.01em;color:#0b0f0d;margin:0 0 8px}
+.see-sponsor-modal-success-text{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#4a4f4c;line-height:1.6;margin:0}
+</style>
 </head>
 
-<body>
+<body style="background:#f5f3ec;">
 
-<div class="page-wrapper">
+<div class="page-wrapper" style="background:#f5f3ec;">
 
     <!-- Preloader -->
     <div class="preloader"></div>
@@ -225,188 +301,133 @@
             </ul>
         </div>
     </section>
-    <!--End Hidden Bar -->
 
-    <!--Page Title-->
-    <section class="page-title" style="background-image: url(images/background/11.jpg);">
-        <div class="anim-icons full-width">
-            <span class="icon icon-bull-eye"></span>
-            <span class="icon icon-dotted-circle"></span>
+    <section class="see-sponsor-wrap" id="see-sponsor-root">
+  <div class="container">
+    <header class="see-sponsor-head">
+      <div>
+        <div class="see-sponsor-eyebrow"></div>
+        <h2 class="see-sponsor-headline">Stand where the industry <span>signs deals</span>.</h2>
+      </div>
+      <p class="see-sponsor-lede">Three calibrated tiers for brands ready to invest in the sports economy taking shape across East Africa this October.</p>
+    </header>
+
+    <div class="see-sponsor-grid">
+
+      <div class="see-sponsor-col" data-see-sponsor-col="Official">
+        <div class="see-sponsor-meta"><span>Tier 01</span><span class="see-sponsor-meta-dot"></span><span>Regional</span></div>
+        <h3 class="see-sponsor-tier-name">Official Sponsor</h3>
+        <p class="see-sponsor-tagline">Meaningful brand presence throughout the event for regional businesses</p>
+        <div class="see-sponsor-pricebox">
+          <div class="see-sponsor-price-main">$6,000<span style="font-size:18px;color:#4a4f4c;margin-left:6px">USD</span></div>
+          <div class="see-sponsor-price-sub">960,000 ETB</div>
         </div>
-        <div class="auto-container">
-            <div class="title-outer">
-                <h1>Price Plan</h1>
-                <ul class="page-breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Price Plan</li>
-                </ul> 
-            </div>
+        <ul class="see-sponsor-list">
+          <li class="see-sponsor-item">Dedicated exhibition booth at a mid-hall location</li>
+          <li class="see-sponsor-item">Prominent mid-page logo on the event website</li>
+          <li class="see-sponsor-item">Dedicated sponsor page with company profile</li>
+          <li class="see-sponsor-item">Official programme logo placement</li>
+          <li class="see-sponsor-item">Multiple venue banners across the facility</li>
+          <li class="see-sponsor-item">Networking table at the main reception</li>
+          <li class="see-sponsor-item">Featured in official social media and newsletter</li>
+        </ul>
+        <button type="button" class="see-sponsor-btn" data-see-sponsor-open>Inquire Now <span class="see-sponsor-btn-arrow">→</span></button>
+      </div>
+
+      <div class="see-sponsor-col see-sponsor-col-featured" data-see-sponsor-col="Strategic">
+        <span class="see-sponsor-ribbon">Featured</span>
+        <div class="see-sponsor-meta"><span>Tier 02</span><span class="see-sponsor-meta-dot"></span><span>Established</span></div>
+        <h3 class="see-sponsor-tier-name">Strategic Sponsor</h3>
+        <p class="see-sponsor-tagline">Significant positioning and a speaking presence for established brands</p>
+        <div class="see-sponsor-pricebox">
+          <div class="see-sponsor-price-main">$12,000<span style="font-size:18px;color:#cfd1cb;margin-left:6px">USD</span></div>
+          <div class="see-sponsor-price-sub">1,920,000 ETB</div>
         </div>
-    </section>
-    <!--End Page Title-->
+        <ul class="see-sponsor-list">
+          <li class="see-sponsor-item">Large exhibition booth at a prime hall location</li>
+          <li class="see-sponsor-item">Speaking slot at an official event session</li>
+          <li class="see-sponsor-item">Featured spotlight page on the event website</li>
+          <li class="see-sponsor-item">Event apparel logo placement</li>
+          <li class="see-sponsor-item">Premium venue signage across multiple zones</li>
+          <li class="see-sponsor-item">Social media and email newsletter features</li>
+          <li class="see-sponsor-item">Branded sponsor frame for official athlete photography</li>
+        </ul>
+        <button type="button" class="see-sponsor-btn" data-see-sponsor-open>Inquire Now <span class="see-sponsor-btn-arrow">→</span></button>
+      </div>
 
-    <!-- Pricing Section Two-->
-    <section class="pricing-section-two">
-       <div class="auto-container">
-           <div class="sec-title text-center">
-               <span class="sub-title">GET TICKET</span>
-               <h2>Explore Flexible Pricing Plans <br />Choose a Ticket</h2>
-               <span class="divider"></span>
-           </div>
-
-           <div class="row">
-                <!-- Pricing block -->
-                <div class="pricing-block-two col-lg-4 col-md-12 col-sm-12 wow fadeInUp"  data-wow-delay="400ms">
-                    <div class="inner-box">
-                        <div class="title-box">
-                            <span class="title">Regular Plan</span>
-                            <h3>Standard Pass</h3>
-                        </div>
-                        <div class="price-box">
-                            <div class="price"><sup>$</sup>200</div>
-                        </div>
-                        <ul class="features">
-                            <li>Concert Attendance</li>
-                            <li>20 Lottery Ticket</li>
-                            <li>Priority Seating</li>
-                            <li>5 Person Entry</li>
-                            <li>Certificate</li>
-                            <li>T-Shart</li>
-                        </ul>
-                        <div class="btn-box">
-                            <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pricing block -->
-                <div class="pricing-block-two tagged col-lg-4 col-md-12 col-sm-12 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="title-box">
-                            <span class="title">Business Plan</span>
-                            <h3>Flexible Pass</h3>
-                        </div>
-                        <div class="price-box">
-                            <div class="price"><sup>$</sup>400</div>
-                        </div>
-                        <ul class="features">
-                            <li>Concert Attendance</li>
-                            <li>20 Lottery Ticket</li>
-                            <li>Priority Seating</li>
-                            <li>5 Person Entry</li>
-                            <li>Certificate</li>
-                            <li>T-Shart</li>
-                        </ul>
-                        <div class="btn-box">
-                            <button class="theme-btn btn-style-two"><span class="btn-title">Buy Ticket</span></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pricing block -->
-                <div class="pricing-block-two col-lg-4 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                    <div class="inner-box">
-                        <div class="title-box">
-                            <span class="title">Enterprise Plan</span>
-                            <h3>Fabulously Pass</h3>
-                        </div>
-                        <div class="price-box">
-                            <div class="price"><sup>$</sup>600</div>
-                        </div>
-                        <ul class="features">
-                            <li>Concert Attendance</li>
-                            <li>20 Lottery Ticket</li>
-                            <li>Priority Seating</li>
-                            <li>5 Person Entry</li>
-                            <li>Certificate</li>
-                            <li>T-Shart</li>
-                        </ul>
-                        <div class="btn-box">
-                            <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="see-sponsor-col" data-see-sponsor-col="Premier">
+        <div class="see-sponsor-meta"><span>Tier 03</span><span class="see-sponsor-meta-dot"></span><span>Sector Lead</span></div>
+        <h3 class="see-sponsor-tier-name">Premier Sponsor</h3>
+        <p class="see-sponsor-tagline">Premium exclusivity and deep brand integration for sector leaders</p>
+        <div class="see-sponsor-pricebox">
+          <div class="see-sponsor-price-main">$25,000<span style="font-size:18px;color:#4a4f4c;margin-left:6px">USD</span></div>
+          <div class="see-sponsor-price-sub">4,000,000 ETB</div>
         </div>
-    </section>
-    <!-- End Pricing Section -->
-    
-    <!-- Call to Action Two -->
-    <section class="call-to-action-two" style="background-image: url(images/background/5.png);">
-        <div class="auto-container">
-            <div class="row">
-                <div class="content-column col-lg-6 offset-lg-6">
-                    <div class="content-box wow fadeInUp">
-                        <span class="sub-title">GET EXPERIENCE</span>
-                        <h2>Shift Your Perspective on Digital Business</h2>
-                        <span class="text">How you transform your business as technology, consumer, habits industry dynamic s change? Find out from those leading the charge.</span>
-                        <a href="visitor.html" class="theme-btn btn-style-two"><span class="btn-title">Buy Ticket</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Call to Action Two -->
+        <ul class="see-sponsor-list">
+          <li class="see-sponsor-item">Premium corner booth in the highest-traffic zone</li>
+          <li class="see-sponsor-item">Keynote speaking slot at the main stage</li>
+          <li class="see-sponsor-item">Top-of-page logo placement on all digital properties</li>
+          <li class="see-sponsor-item">Branded digital screens throughout the venue</li>
+          <li class="see-sponsor-item">Co-branded event materials, print and digital</li>
+          <li class="see-sponsor-item">Access to the sponsor lounge and activation zone</li>
+          <li class="see-sponsor-item">Exclusive email sent to all registered event attendees</li>
+          <li class="see-sponsor-item">Full ROI and reach report</li>
+        </ul>
+        <button type="button" class="see-sponsor-btn" data-see-sponsor-open>Inquire Now <span class="see-sponsor-btn-arrow">→</span></button>
+      </div>
 
-    <!--Clients Section-->
-    <section class="clients-section alternate2">
-        <div class="auto-container">
-            <div class="row">
-                <!-- Title Column -->
-                <div class="title-column col-xl-3 col-lg-4 col-md-12">
-                    <div class="sec-title">
-                        <span class="sub-title">Clients</span>
-                        <h2>Our Official <br>Sponsors</h2>
-                        <div class="divider"></div>
-                        <div class="text">We have dedicated tracks for every industry Whether you want to hire tech’s top talent.</div> 
-                        <a href="visitor.html" class="theme-btn btn-style-one mt-4"><span class="btn-title">Buy Ticket</span></a>
-                    </div>
-                </div>
+    </div>
 
-                <!-- Title Column -->
-                <div class="title-column col-xl-9 col-lg-8 col-md-12">
-                    <div class="sponsors-outer">
-                        <div class="row">
-                            <!-- Client Block -->
-                            <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
-                                <figure class="image-box"><a href="visitor.html#"><img src="images/clients/1.jpg" alt=""></a></figure>
-                            </div>
+    <div class="see-sponsor-foot">
+      <span>Sport Expo ET · 2026</span>
+      <span class="see-sponsor-foot-line"></span>
+      <span>Sport Expo ET · 2026</span>
+    </div>
+  </div>
 
-                            <!-- Client Block -->
-                            <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="300ms">
-                                <figure class="image-box"><a href="visitor.html#"><img src="images/clients/2.jpg" alt=""></a></figure>
-                            </div>
+  <div class="see-sponsor-modal" id="see-sponsor-modal" role="dialog" aria-modal="true" aria-labelledby="see-sponsor-modal-title" aria-hidden="true">
+    <div class="see-sponsor-modal-dialog" role="document">
+      <button type="button" class="see-sponsor-modal-close" id="see-sponsor-modal-close" aria-label="Close">×</button>
 
-                            <!-- Client Block -->
-                            <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
-                                <figure class="image-box"><a href="visitor.html#"><img src="images/clients/3.jpg" alt=""></a></figure>
-                            </div>
+      <div class="see-sponsor-modal-form-wrap" id="see-sponsor-modal-form-wrap">
+        <div class="see-sponsor-modal-eyebrow">// SPONSORSHIP_INQUIRY</div>
+        <h3 class="see-sponsor-modal-title" id="see-sponsor-modal-title">Start the <span>conversation</span>.</h3>
+        <p class="see-sponsor-modal-sub">Share a few details and our partnerships team will reply with a tailored proposal.</p>
 
-                            <!-- Client Block -->
-                            <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="900ms">
-                                <figure class="image-box"><a href="visitor.html#"><img src="images/clients/4.jpg" alt=""></a></figure>
-                            </div>
+        <form class="see-sponsor-modal-form" id="see-sponsor-modal-form" novalidate>
+          <div class="see-sponsor-modal-field">
+            <label class="see-sponsor-modal-label" for="see-sponsor-modal-name">Name</label>
+            <input class="see-sponsor-modal-input" type="text" id="see-sponsor-modal-name" name="name" required placeholder="Your full name" />
+          </div>
+          <div class="see-sponsor-modal-field">
+            <label class="see-sponsor-modal-label" for="see-sponsor-modal-email">Email</label>
+            <input class="see-sponsor-modal-input" type="email" id="see-sponsor-modal-email" name="email" required placeholder="you@company.com" />
+          </div>
+          <div class="see-sponsor-modal-field">
+            <label class="see-sponsor-modal-label" for="see-sponsor-modal-phone">Phone</label>
+            <input class="see-sponsor-modal-input" type="tel" id="see-sponsor-modal-phone" name="phone" required placeholder="+251 ..." />
+          </div>
+          <div class="see-sponsor-modal-field">
+            <label class="see-sponsor-modal-label" for="see-sponsor-modal-company">Company</label>
+            <input class="see-sponsor-modal-input" type="text" id="see-sponsor-modal-company" name="company" required placeholder="Company or brand" />
+          </div>
+          <div class="see-sponsor-modal-field">
+            <label class="see-sponsor-modal-label" for="see-sponsor-modal-message">Message</label>
+            <textarea class="see-sponsor-modal-textarea" id="see-sponsor-modal-message" name="message" required placeholder="A brief note on your sponsorship goals"></textarea>
+          </div>
+          <input type="hidden" id="see-sponsor-modal-tier" name="tier" value="" />
+          <button type="submit" class="see-sponsor-modal-submit">Send inquiry <span class="see-sponsor-modal-submit-arrow">→</span></button>
+        </form>
+      </div>
 
-                            <!-- Client Block -->
-                            <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1200ms">
-                                <figure class="image-box"><a href="visitor.html#"><img src="images/clients/5.jpg" alt=""></a></figure>
-                            </div>
-
-                            <!-- Client Block -->
-                            <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1500ms">
-                                <figure class="image-box"><a href="visitor.html#"><img src="images/clients/6.jpg" alt=""></a></figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Clients Section-->
-
-    <!-- Subscribe Section Two -->
-    
-    <!--End Subscribe Section Two -->
+      <div class="see-sponsor-modal-success" id="see-sponsor-modal-success" aria-live="polite">
+        <div class="see-sponsor-modal-success-icon">✓</div>
+        <h3 class="see-sponsor-modal-success-title">Thanks — we'll be in touch shortly.</h3>
+        <p class="see-sponsor-modal-success-text">REPLY WITHIN MINUTES</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Main Footer -->
     <footer class="main-footer style-three">
@@ -530,7 +551,73 @@
 <!-- Color Palate -->
 
 
+<script>
+(function(){
+  var root=document.getElementById('see-sponsor-root');
+  if(!root) return;
+  var cols=root.querySelectorAll('[data-see-sponsor-col]');
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var col=e.target;
+        col.classList.add('see-sponsor-vis');
+        var items=col.querySelectorAll('.see-sponsor-item');
+        items.forEach(function(it,i){it.style.transitionDelay=(i*60+100)+'ms';});
+        io.unobserve(col);
+      }
+    });
+  },{threshold:0.18});
+  cols.forEach(function(c){io.observe(c);});
+})();
+(function(){
+  var modal=document.getElementById('see-sponsor-modal');
+  if(!modal) return;
+  var form=document.getElementById('see-sponsor-modal-form');
+  var formWrap=document.getElementById('see-sponsor-modal-form-wrap');
+  var success=document.getElementById('see-sponsor-modal-success');
+  var tierInput=document.getElementById('see-sponsor-modal-tier');
+  var closeBtn=document.getElementById('see-sponsor-modal-close');
+  var openers=document.querySelectorAll('[data-see-sponsor-open]');
 
+  function openModal(tier){
+    form.reset();
+    tierInput.value=tier||'';
+    formWrap.style.display='';
+    success.classList.remove('see-sponsor-modal-success-visible');
+    modal.classList.add('see-sponsor-modal-open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function closeModal(){
+    modal.classList.remove('see-sponsor-modal-open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+  openers.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var col=btn.closest('[data-see-sponsor-col]');
+      var tier=col?col.getAttribute('data-see-sponsor-col'):'';
+      openModal(tier);
+    });
+  });
+  closeBtn.addEventListener('click',closeModal);
+  modal.addEventListener('click',function(e){if(e.target===modal) closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('see-sponsor-modal-open')) closeModal();});
+
+  var emailRe=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=document.getElementById('see-sponsor-modal-email');
+    var inputs=form.querySelectorAll('input[required],textarea[required]');
+    var ok=true;
+    inputs.forEach(function(i){if(!i.value.trim()){ok=false;i.style.borderColor='#c0392b';}else{i.style.borderColor='';}});
+    if(!emailRe.test(email.value.trim())){ok=false;email.style.borderColor='#c0392b';}
+    if(!ok) return;
+    formWrap.style.display='none';
+    success.classList.add('see-sponsor-modal-success-visible');
+  });
+})();
+</script>
 <script src="js/jquery.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

@@ -20,6 +20,42 @@
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 
 <style>
+    .see-contact-wrap{position:relative;padding:120px 0;font-family:'Manrope',sans-serif;color:#0b0f0d;overflow:hidden;background:radial-gradient(1100px 700px at 90% 10%,rgba(27,63,158,0.12),transparent 60%),radial-gradient(900px 700px at 5% 95%,rgba(26,107,60,0.18),transparent 60%),#fbfaf5}
+.see-contact-eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:#1A6B3C;font-weight:700;margin-bottom:18px}
+.see-contact-eyebrow::before{content:"";width:36px;height:2px;background:#F5C800}
+.see-contact-headline{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(36px,4.4vw,56px);line-height:1.05;letter-spacing:-0.02em;color:#0b0f0d;margin:0 0 14px;max-width:620px}
+.see-contact-headline em{font-style:italic;color:#1B3F9E}
+.see-contact-lede{color:#4a4f4c;font-size:16px;line-height:1.6;max-width:540px;margin-bottom:56px}
+.see-contact-layout{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:stretch}
+@media(max-width:991px){.see-contact-layout{grid-template-columns:1fr}}
+.see-contact-panel{position:relative;background:linear-gradient(150deg,rgba(255,255,255,0.7),rgba(255,255,255,0.4));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.6);border-radius:28px;padding:40px;box-shadow:0 30px 60px -30px rgba(11,15,13,0.18),inset 0 1px 0 rgba(255,255,255,0.8);display:flex;flex-direction:column;gap:18px}
+.see-contact-panel::before{content:"";position:absolute;inset:0;border-radius:28px;background:linear-gradient(150deg,rgba(26,107,60,0.06),transparent 50%);pointer-events:none}
+.see-contact-tile{position:relative;display:flex;align-items:flex-start;gap:20px;padding:24px;background:rgba(255,255,255,0.55);border:1px solid rgba(11,15,13,0.06);border-radius:18px;transition:all .4s cubic-bezier(.2,.7,.2,1);cursor:pointer}
+.see-contact-tile:hover{transform:translateY(-4px);background:#fff;box-shadow:0 20px 40px -20px rgba(26,107,60,0.25);border-color:rgba(245,200,0,0.4)}
+.see-contact-icon{flex-shrink:0;width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#1A6B3C,#0f4a28);display:flex;align-items:center;justify-content:center;color:#F5C800;position:relative;box-shadow:0 8px 20px -8px rgba(26,107,60,0.5)}
+.see-contact-tile:nth-child(2) .see-contact-icon{background:linear-gradient(135deg,#1B3F9E,#13307a)}
+.see-contact-tile:nth-child(3) .see-contact-icon{background:linear-gradient(135deg,#F5C800,#caa400);color:#0b0f0d}
+.see-contact-icon svg{width:22px;height:22px;stroke-width:2}
+.see-contact-tile-body{flex:1;min-width:0}
+.see-contact-label{font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#1A6B3C;font-weight:700;margin-bottom:6px}
+.see-contact-tile:nth-child(2) .see-contact-label{color:#1B3F9E}
+.see-contact-tile:nth-child(3) .see-contact-label{color:#8a7000}
+.see-contact-value{font-family:'Playfair Display',serif;font-size:22px;font-weight:500;line-height:1.25;color:#0b0f0d;word-break:break-word}
+.see-contact-sub{margin-top:4px;font-size:13px;color:#4a4f4c}
+.see-contact-foot{margin-top:8px;padding-top:18px;border-top:1px dashed rgba(11,15,13,0.12);display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#4a4f4c;letter-spacing:0.06em}
+.see-contact-foot strong{color:#1A6B3C;font-weight:700}
+.see-contact-map{position:relative;border-radius:28px;overflow:hidden;border:1px solid rgba(11,15,13,0.08);box-shadow:0 30px 60px -30px rgba(11,15,13,0.25);min-height:480px;background:#e9e6dc}
+.see-contact-map iframe{display:block;width:100%;height:100%;border:0;position:absolute;inset:0}
+.see-contact-map-frame{position:absolute;inset:0;pointer-events:none;border-radius:28px;box-shadow:inset 0 0 0 2px rgba(245,200,0,0.6)}
+.see-contact-map-corner{position:absolute;width:32px;height:32px;border:2px solid #F5C800;pointer-events:none}
+.see-contact-map-corner-tl{top:14px;left:14px;border-right:none;border-bottom:none}
+.see-contact-map-corner-tr{top:14px;right:14px;border-left:none;border-bottom:none}
+.see-contact-map-corner-bl{bottom:14px;left:14px;border-right:none;border-top:none}
+.see-contact-map-corner-br{bottom:14px;right:14px;border-left:none;border-top:none}
+.see-contact-map-tag{position:absolute;left:24px;bottom:24px;display:inline-flex;align-items:center;gap:10px;padding:10px 16px;background:rgba(11,15,13,0.85);backdrop-filter:blur(10px);color:#fff;border-radius:999px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;z-index:2;pointer-events:none}
+.see-contact-map-tag-dot{width:8px;height:8px;border-radius:50%;background:#F5C800;box-shadow:0 0 0 0 rgba(245,200,0,0.6);animation:see-contact-pulse 2s infinite}
+@keyframes see-contact-pulse{0%{box-shadow:0 0 0 0 rgba(245,200,0,0.7)}70%{box-shadow:0 0 0 14px rgba(245,200,0,0)}100%{box-shadow:0 0 0 0 rgba(245,200,0,0)}}
+
   .see-contact-section { position:relative; padding:120px 20px; font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:#ffffff; background-image:url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=1920&q=80&auto=format&fit=crop"); background-size:cover; background-position:center; background-repeat:no-repeat; overflow:hidden; isolation:isolate; }
   .see-contact-bg-overlay { position:absolute; inset:0; background:linear-gradient(135deg,rgba(26,107,60,0.92) 0%,rgba(27,63,158,0.88) 100%); z-index:-1; }
   .see-contact-wrapper { max-width:720px; margin:0 auto; }
@@ -35,7 +71,7 @@
   .see-contact-textarea { resize:vertical; min-height:120px; line-height:1.5; }
   .see-contact-input:focus,.see-contact-textarea:focus { border-bottom-color:#F5C800; box-shadow:0 1px 0 0 #F5C800,0 6px 18px -10px rgba(245,200,0,0.7); }
   .see-contact-input::placeholder,.see-contact-textarea::placeholder { color:transparent; }
-  .see-contact-label { position:absolute; left:0; top:22px; font-size:16px; color:rgba(255,255,255,0.75); pointer-events:none; transition:transform .25s ease,color .25s ease,font-size .25s ease,top .25s ease; transform-origin:left top; }
+  .see-contact-label { position:absolute; left:20.9px; top:-2px; font-size:16px; color:#000000; pointer-events:none; transition:transform .25s ease,color .25s ease,font-size .25s ease,top .25s ease; transform-origin:left top; }
   .see-contact-input:focus + .see-contact-label,
   .see-contact-input:not(:placeholder-shown) + .see-contact-label,
   .see-contact-textarea:focus + .see-contact-label,
@@ -56,9 +92,9 @@
 </style>
 </head>
 
-<body>
+<body style="background:linear-gradient(135deg,rgba(26,107,60,0.92) 0%,rgba(27,63,158,0.88) 100%)">
 
-<div class="page-wrapper">
+<div class="page-wrapper" style="background:linear-gradient(135deg,rgba(26,107,60,0.92) 0%,rgba(27,63,158,0.88) 100%)">
 
     <!-- Preloader -->
     <div class="preloader"></div>
@@ -298,52 +334,71 @@
 </section>
 
     <!--End Contact Page Section -->
+<section class="see-contact-wrap" id="see-contact-root">
+  <div class="container">
+    <div class="see-contact-eyebrow">Get in touch</div>
+    <h2 class="see-contact-headline">Plan your visit to <em>Sport Expo ET 2026</em>.</h2>
+    <p class="see-contact-lede">Press, sponsors, exhibitors, and visitors — reach the team directly or find us in Addis Ababa this October.</p>
 
-     <!-- Map Section -->
-    <section class="map-section">
-        <div class="auto-container">
-            <div class="row clearfix">
-                <div class="contact-column col-lg-5 col-md-12 col-sm-12 order-2">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <span class="sub-title">QUICK CONTACT</span>
-                            <h2>Need Help? Contact Us</h2>
-                            <span class="divider"></span>
-                            <div class="text">Available to our business customers 24 hours a day.</div>
-                        </div>
-                        <ul class="contact-info">
-                            <li>
-                                <span class="icon fa fa-map-marker-alt"></span> 
-                                <h4>Our Location:</h4>
-                                <p>27 Division St, New York, NY 10002, United States.</p>
-                            </li>
+    <div class="see-contact-layout">
+      <div class="see-contact-panel">
 
-                            <li>
-                                <span class="icon fa fa-phone-volume"></span> 
-                                <h4>24/7 Hotline:</h4>
-                                <p>+8 (123) 985 789,  +8 (123) 985 535</p>
-                            </li>
+        <a class="see-contact-tile" href="tel:+251000000000">
+          <span class="see-contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <div class="see-contact-tile-body">
+            <div class="see-contact-label">Call</div>
+            <div class="see-contact-value">+251 XXX XXX XXX</div>
+            <div class="see-contact-sub">Mon — Fri · 09:00 — 18:00 EAT</div>
+          </div>
+        </a>
 
-                            <li>
-                                <span class="icon fa fa-envelope"></span> 
-                                <h4>Email:</h4>
-                                <p><a href="mailto:newyork@example.com">volia.newyork@gmail.com</a></p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <a class="see-contact-tile" href="mailto:info@sportexpoet.com">
+          <span class="see-contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <div class="see-contact-tile-body">
+            <div class="see-contact-label">Email</div>
+            <div class="see-contact-value">info@sportexpoet.com</div>
+            <div class="see-contact-sub">Replies within one business day</div>
+          </div>
+        </a>
 
-                <!-- Form Column -->
-                <div class="map-column col-lg-7 col-md-12 col-sm-12">
-                     <!--Map Outer-->
-                    <div class="map-outer">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805184.6331292129!2d144.49266890254142!3d-37.97123689954809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1574408946759!5m2!1sen!2s" allowfullscreen=""></iframe>
-                    </div>
-                </div>
-            </div>
+        <a class="see-contact-tile" href="https://maps.google.com/?q=Addis+Ababa+Exhibition+%26+Convention+Center" target="_blank" rel="noreferrer">
+          <span class="see-contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div class="see-contact-tile-body">
+            <div class="see-contact-label">Visit</div>
+            <div class="see-contact-value">Addis Ababa Exhibition &amp; Convention Center</div>
+            <div class="see-contact-sub">Addis Ababa, Ethiopia</div>
+          </div>
+        </a>
+
+        <div class="see-contact-foot">
+          <span>Event week · <strong>October 2026</strong></span>
+          <span>EAT (UTC+3)</span>
         </div>
-    </section>
-    <!--End Map Section -->
+      </div>
+
+      <div class="see-contact-map">
+        <iframe
+          src="https://www.google.com/maps?q=Addis+Ababa,Ethiopia&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          title="Addis Ababa, Ethiopia map"></iframe>
+        <span class="see-contact-map-corner see-contact-map-corner-tl"></span>
+        <span class="see-contact-map-corner see-contact-map-corner-tr"></span>
+        <span class="see-contact-map-corner see-contact-map-corner-bl"></span>
+        <span class="see-contact-map-corner see-contact-map-corner-br"></span>
+        <div class="see-contact-map-frame"></div>
+        <span class="see-contact-map-tag"><span class="see-contact-map-tag-dot"></span>Addis Ababa · Ethiopia</span>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Main Footer -->
     <footer class="main-footer style-three">
         <!--Widgets Section-->
