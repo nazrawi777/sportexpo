@@ -18,6 +18,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<style>
+  .see-gallery-section { background-color:#ffffff; padding:6px 0 0px; font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:#14241b; }
+  .see-gallery-header { text-align:center; max-width:760px; margin:0 auto 64px; padding:0 20px; }
+  .see-gallery-eyebrow { display:inline-block; letter-spacing:.28em; text-transform:uppercase; font-size:12px; font-weight:600; color:#F5C800; padding:6px 14px; border:1px solid #F5C800; border-radius:999px; margin-bottom:22px; }
+  .see-gallery-title { font-family:"Playfair Display",Georgia,serif; font-size:clamp(34px,5vw,56px); line-height:1.05; font-weight:700; color:#1A6B3C; margin:0 0 18px; letter-spacing:-0.01em; }
+  .see-gallery-title em { font-style:italic; color:#1B3F9E; }
+  .see-gallery-sub { font-size:16px; line-height:1.6; color:#57655d; margin:0; }
+  .see-gallery-masonry { column-count:1; column-gap:20px; max-width:1360px; margin:0 auto; padding:0 20px; }
+  @media (min-width:600px){ .see-gallery-masonry{ column-count:2; } }
+  @media (min-width:900px){ .see-gallery-masonry{ column-count:3; } }
+  @media (min-width:1200px){ .see-gallery-masonry{ column-count:4; } }
+  .see-gallery-item { position:relative; display:block; width:100%; break-inside:avoid; margin:0 0 20px; border-radius:14px; overflow:hidden; cursor:zoom-in; background-color:#0f2218; border:none; padding:0; box-shadow:0 1px 2px rgba(20,36,27,0.06),0 12px 28px -14px rgba(20,36,27,0.35); transform:translateY(18px); opacity:0; transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .7s cubic-bezier(.2,.7,.2,1),box-shadow .4s ease; }
+  .see-gallery-reveal--in { transform:translateY(0); opacity:1; }
+  .see-gallery-item:hover { box-shadow:0 2px 4px rgba(20,36,27,0.08),0 24px 50px -18px rgba(26,107,60,0.55); }
+  .see-gallery-img { display:block; width:100%; height:auto; transition:transform .9s cubic-bezier(.2,.7,.2,1); will-change:transform; }
+  .see-gallery-item:hover .see-gallery-img { transform:scale(1.06); }
+  .see-gallery-overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(26,107,60,0) 35%,rgba(15,34,24,0.85) 100%); opacity:0; transition:opacity .45s ease; pointer-events:none; }
+  .see-gallery-item:hover .see-gallery-overlay { opacity:1; }
+  .see-gallery-accent-bar { position:absolute; left:22px; bottom:84px; width:36px; height:3px; background-color:#F5C800; transform:scaleX(0); transform-origin:left center; transition:transform .5s .05s cubic-bezier(.2,.7,.2,1); }
+  .see-gallery-item:hover .see-gallery-accent-bar { transform:scaleX(1); }
+  .see-gallery-caption { position:absolute; left:22px; right:22px; bottom:22px; color:#fff; opacity:0; transform:translateY(10px); transition:opacity .4s ease,transform .5s cubic-bezier(.2,.7,.2,1); text-align:left; }
+  .see-gallery-item:hover .see-gallery-caption { opacity:1; transform:translateY(0); }
+  .see-gallery-zone { display:block; font-size:11px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:#F5C800; margin-bottom:6px; }
+  .see-gallery-label { display:block; font-size:17px; font-weight:600; line-height:1.3; color:#fff; }
+  .see-gallery-lightbox { position:fixed; inset:0; background:radial-gradient(circle at center,rgba(15,34,24,0.94) 0%,rgba(8,18,13,0.98) 100%); display:none; align-items:center; justify-content:center; z-index:9999; opacity:0; transition:opacity .3s ease; padding:40px 60px; }
+  .see-gallery-lightbox--open { display:flex; opacity:1; }
+  .see-gallery-lightbox-stage { position:relative; max-width:min(1200px,92vw); max-height:86vh; display:flex; flex-direction:column; align-items:center; gap:16px; }
+  .see-gallery-lightbox-img { max-width:100%; max-height:78vh; border-radius:8px; box-shadow:0 30px 80px rgba(0,0,0,0.5); object-fit:contain; background:#0f2218; }
+  .see-gallery-lightbox-caption { color:#fff; text-align:center; font-size:14px; letter-spacing:.04em; }
+  .see-gallery-lightbox-caption strong { color:#F5C800; font-weight:700; letter-spacing:.22em; text-transform:uppercase; font-size:11px; margin-right:10px; }
+  .see-gallery-lightbox-close,.see-gallery-lightbox-nav { position:absolute; background:rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.18); border-radius:999px; width:48px; height:48px; display:inline-flex; align-items:center; justify-content:center; font-size:20px; cursor:pointer; transition:background .25s ease,transform .25s ease,border-color .25s ease; }
+  .see-gallery-lightbox-close:hover,.see-gallery-lightbox-nav:hover { background:#F5C800; color:#1A6B3C; border-color:#F5C800; transform:scale(1.05); }
+  .see-gallery-lightbox-close { top:-56px; right:0; }
+  .see-gallery-lightbox-nav--prev { left:-64px; top:50%; transform:translateY(-50%); }
+  .see-gallery-lightbox-nav--next { right:-64px; top:50%; transform:translateY(-50%); }
+  .see-gallery-lightbox-nav--prev:hover { transform:translateY(-50%) scale(1.05); }
+  .see-gallery-lightbox-nav--next:hover { transform:translateY(-50%) scale(1.05); }
+  @media (max-width:700px){
+    .see-gallery-lightbox { padding:20px; }
+    .see-gallery-lightbox-close { top:-48px; right:0; }
+    .see-gallery-lightbox-nav--prev { left:4px; }
+    .see-gallery-lightbox-nav--next { right:4px; }
+  }
+</style>
 </head>
 
 <body>
@@ -226,26 +270,101 @@
         </div>
     </section>
     <!--End Hidden Bar -->
+    
 
-    <!--Page Title-->
-    <section class="page-title" style="background-image: url(images/background/11.jpg);">
-        <div class="anim-icons full-width">
-            <span class="icon icon-bull-eye"></span>
-            <span class="icon icon-dotted-circle"></span>
-        </div>
-        <div class="auto-container">
-            <div class="title-outer">
-                <h1>Gallery</h1>
-                <ul class="page-breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Gallery</li>
-                </ul> 
-            </div>
-        </div>
-    </section>
-    <!--End Page Title-->
-<section class="gallery-section"><div class="auto-container"><div class="sec-title text-center"><span class="sub-title">Addis Ababa in motion</span><h2>Gallery Preview</h2><span class="divider"></span><p>Sport Expo ET 2026 will showcase the energy of Ethiopia's sports community, from stadium atmosphere and fitness innovation to exhibition-floor networking and live demonstrations.</p></div><div class="row"><div class="feature-block-five col-lg-4 col-md-6"><div class="inner-box"><h4>Home of Champions</h4><p>Moments rooted in Ethiopia's athletics legacy and October's Season of Champions.</p></div></div><div class="feature-block-five col-lg-4 col-md-6"><div class="inner-box"><h4>Industry Showcase</h4><p>Visual stories from equipment, technology, wellness, infrastructure, and sports-business exhibitors.</p></div></div><div class="feature-block-five col-lg-4 col-md-6"><div class="inner-box"><h4>Global Connections</h4><p>Networking, demonstrations, and partnerships that bring the world to Addis Ababa.</p></div></div></div></div></section>
-<!-- Main Footer -->
+
+<section class="see-gallery-section" id="see-gallery">
+  <div class="see-gallery-header">
+    <span class="see-gallery-eyebrow">Sport Expo ET 2026</span>
+    <h2 class="see-gallery-title">Inside <em>Sport Expo ET 2026</em></h2>
+    <p class="see-gallery-sub">Moments from the floor — athletes, innovators and the global sports industry, gathered in Addis Ababa.</p>
+  </div>
+
+  <div class="see-gallery-masonry" id="see-gallery-masonry">
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Opening Ceremony" data-see-label="Lights over the main stadium">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=900&q=80&auto=format&fit=crop" alt="Floodlit stadium at night" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Opening Ceremony</span><span class="see-gallery-label">Lights over the main stadium</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Pro-Zone" data-see-label="Athletes in motion">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1505666287802-931dc83948e9?w=900&q=80&auto=format&fit=crop" alt="Runner on track" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Pro-Zone</span><span class="see-gallery-label">Athletes in motion</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Marketplace" data-see-label="Crowds at the expo floor">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80&auto=format&fit=crop" alt="Conference crowd" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Marketplace</span><span class="see-gallery-label">Crowds at the expo floor</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Live Demonstrations" data-see-label="Energy on the field">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=900&q=80&auto=format&fit=crop" alt="Athlete celebrating" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Live Demonstrations</span><span class="see-gallery-label">Energy on the field</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Innovation & Wellness Hub" data-see-label="Training meets technology">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&q=80&auto=format&fit=crop" alt="Wearable tech training" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Innovation &amp; Wellness Hub</span><span class="see-gallery-label">Training meets technology</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Pro-Zone" data-see-label="Speed on the track">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=900&q=80&auto=format&fit=crop" alt="Sprinters racing" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Pro-Zone</span><span class="see-gallery-label">Speed on the track</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Networking Lounge" data-see-label="Conversations that shape the industry">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1531058020387-3be344556be6?w=900&q=80&auto=format&fit=crop" alt="People networking" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Networking Lounge</span><span class="see-gallery-label">Conversations that shape the industry</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Marketplace" data-see-label="Inside the exhibition halls">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1486218119243-13883505764c?w=900&q=80&auto=format&fit=crop" alt="Modern exhibition hall" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Marketplace</span><span class="see-gallery-label">Inside the exhibition halls</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Ethiopian Athletics" data-see-label="A nation built on endurance">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1543353071-873f17a7a088?w=900&q=80&auto=format&fit=crop" alt="Distance runners" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Ethiopian Athletics</span><span class="see-gallery-label">A nation built on endurance</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Innovation & Wellness Hub" data-see-label="Sports science on stage">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=900&q=80&auto=format&fit=crop" alt="Sports lab" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Innovation &amp; Wellness Hub</span><span class="see-gallery-label">Sports science on stage</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Opening Ceremony" data-see-label="A full house under the lights">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=900&q=80&auto=format&fit=crop" alt="Packed stadium" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Opening Ceremony</span><span class="see-gallery-label">A full house under the lights</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Pro-Zone" data-see-label="Strength on display">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=900&q=80&auto=format&fit=crop" alt="Athlete training" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Pro-Zone</span><span class="see-gallery-label">Strength on display</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Networking Lounge" data-see-label="Partnerships in the making">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1565992441121-4367c2967103?w=900&q=80&auto=format&fit=crop" alt="Business handshake" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Networking Lounge</span><span class="see-gallery-label">Partnerships in the making</span></span>
+    </button>
+    <button type="button" class="see-gallery-item" data-see-reveal data-see-zone="Live Demonstrations" data-see-label="Court-side action">
+      <img class="see-gallery-img" src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=900&q=80&auto=format&fit=crop" alt="Basketball action" loading="lazy" />
+      <span class="see-gallery-overlay"></span><span class="see-gallery-accent-bar"></span>
+      <span class="see-gallery-caption"><span class="see-gallery-zone">Live Demonstrations</span><span class="see-gallery-label">Court-side action</span></span>
+    </button>
+  </div>
+
+  <div class="see-gallery-lightbox" id="see-gallery-lightbox" aria-hidden="true">
+    <div class="see-gallery-lightbox-stage">
+      <button type="button" class="see-gallery-lightbox-close" id="see-gallery-lightbox-close" aria-label="Close">&#10005;</button>
+      <button type="button" class="see-gallery-lightbox-nav see-gallery-lightbox-nav--prev" id="see-gallery-lightbox-prev" aria-label="Previous">&#8249;</button>
+      <button type="button" class="see-gallery-lightbox-nav see-gallery-lightbox-nav--next" id="see-gallery-lightbox-next" aria-label="Next">&#8250;</button>
+      <img class="see-gallery-lightbox-img" id="see-gallery-lightbox-img" src="" alt="" />
+      <div class="see-gallery-lightbox-caption" id="see-gallery-lightbox-caption"></div>
+    </div>
+  </div>
+</section>
+    <!-- End Gallery Section -->
+
     <footer class="main-footer style-three">
         <!--Widgets Section-->
         <div class="widgets-section">
@@ -368,6 +487,67 @@
 
 
 
+<script>
+(function(){
+  var items = Array.prototype.slice.call(document.querySelectorAll('#see-gallery-masonry .see-gallery-item'));
+  var lightbox = document.getElementById('see-gallery-lightbox');
+  var lbImg = document.getElementById('see-gallery-lightbox-img');
+  var lbCap = document.getElementById('see-gallery-lightbox-caption');
+  var lbClose = document.getElementById('see-gallery-lightbox-close');
+  var lbPrev = document.getElementById('see-gallery-lightbox-prev');
+  var lbNext = document.getElementById('see-gallery-lightbox-next');
+  var idx = 0;
+
+  // Stagger reveal
+  items.forEach(function(el, i){
+    el.style.transitionDelay = Math.min(i * 70, 700) + 'ms';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('see-gallery-reveal--in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function(el){ io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('see-gallery-reveal--in'); });
+  }
+
+  function render(){
+    var el = items[idx];
+    if (!el) return;
+    var img = el.querySelector('.see-gallery-img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt || '';
+    lbCap.innerHTML = '<strong>' + (el.getAttribute('data-see-zone') || '') + '</strong>' + (el.getAttribute('data-see-label') || '');
+  }
+  function open(i){
+    idx = i; render();
+    lightbox.classList.add('see-gallery-lightbox--open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    lightbox.classList.remove('see-gallery-lightbox--open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  function next(){ idx = (idx + 1) % items.length; render(); }
+  function prev(){ idx = (idx - 1 + items.length) % items.length; render(); }
+
+  items.forEach(function(el, i){ el.addEventListener('click', function(){ open(i); }); });
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', prev);
+  lbNext.addEventListener('click', next);
+  lightbox.addEventListener('click', function(e){ if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', function(e){
+    if (!lightbox.classList.contains('see-gallery-lightbox--open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowRight') next();
+    else if (e.key === 'ArrowLeft') prev();
+  });
+})();
+</script>
 <script src="js/jquery.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

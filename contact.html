@@ -18,6 +18,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+<style>
+  .see-contact-section { position:relative; padding:120px 20px; font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:#ffffff; background-image:url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=1920&q=80&auto=format&fit=crop"); background-size:cover; background-position:center; background-repeat:no-repeat; overflow:hidden; isolation:isolate; }
+  .see-contact-bg-overlay { position:absolute; inset:0; background:linear-gradient(135deg,rgba(26,107,60,0.92) 0%,rgba(27,63,158,0.88) 100%); z-index:-1; }
+  .see-contact-wrapper { max-width:720px; margin:0 auto; }
+  .see-contact-header { text-align:center; margin-bottom:48px; }
+  .see-contact-eyebrow { display:inline-block; letter-spacing:.28em; text-transform:uppercase; font-size:12px; font-weight:600; color:#F5C800; padding:6px 14px; border:1px solid rgba(245,200,0,0.55); border-radius:999px; margin-bottom:22px; }
+  .see-contact-title { font-family:"Playfair Display",Georgia,serif; font-size:clamp(34px,5vw,54px); line-height:1.05; font-weight:700; margin:0 0 16px; color:#ffffff; letter-spacing:-0.01em; }
+  .see-contact-sub { font-size:16px; line-height:1.65; color:rgba(255,255,255,0.82); margin:0 auto; max-width:560px; }
+  .see-contact-panel { position:relative; border-radius:22px; padding:48px 44px 40px; background:rgba(255,255,255,0.08); backdrop-filter:blur(18px) saturate(140%); -webkit-backdrop-filter:blur(18px) saturate(140%); border:1px solid rgba(255,255,255,0.18); box-shadow:0 30px 60px -20px rgba(0,0,0,0.45); overflow:hidden; }
+  .see-contact-panel::before { content:""; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#F5C800 50%,transparent); }
+  .see-contact-form { display:flex; flex-direction:column; gap:28px; }
+  .see-contact-field { position:relative; }
+  .see-contact-input,.see-contact-textarea { width:100%; background:transparent; border:none; border-bottom:1px solid rgba(255,255,255,0.35); border-radius:0; color:#ffffff; font-size:16px; font-family:inherit; padding:22px 0 10px; outline:none; transition:border-color .3s ease,box-shadow .3s ease; box-shadow:0 1px 0 0 transparent; }
+  .see-contact-textarea { resize:vertical; min-height:120px; line-height:1.5; }
+  .see-contact-input:focus,.see-contact-textarea:focus { border-bottom-color:#F5C800; box-shadow:0 1px 0 0 #F5C800,0 6px 18px -10px rgba(245,200,0,0.7); }
+  .see-contact-input::placeholder,.see-contact-textarea::placeholder { color:transparent; }
+  .see-contact-label { position:absolute; left:0; top:22px; font-size:16px; color:rgba(255,255,255,0.75); pointer-events:none; transition:transform .25s ease,color .25s ease,font-size .25s ease,top .25s ease; transform-origin:left top; }
+  .see-contact-input:focus + .see-contact-label,
+  .see-contact-input:not(:placeholder-shown) + .see-contact-label,
+  .see-contact-textarea:focus + .see-contact-label,
+  .see-contact-textarea:not(:placeholder-shown) + .see-contact-label { top:0; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#F5C800; font-weight:600; }
+  .see-contact-btn { margin-top:12px; align-self:flex-start; display:inline-flex; align-items:center; gap:10px; padding:16px 32px; background-color:#F5C800; color:#1A6B3C; font-weight:700; font-size:14px; letter-spacing:.16em; text-transform:uppercase; border:none; border-radius:999px; cursor:pointer; transition:transform .25s ease,box-shadow .3s ease,background-color .25s ease,color .25s ease; box-shadow:0 12px 24px -10px rgba(245,200,0,0.55); }
+  .see-contact-btn:hover { transform:translateY(-2px) scale(1.02); background-color:#ffd92e; box-shadow:0 18px 36px -10px rgba(245,200,0,0.8); }
+  .see-contact-btn:focus-visible { outline:2px solid #ffffff; outline-offset:4px; }
+  .see-contact-btn-arrow { display:inline-block; transition:transform .25s ease; }
+  .see-contact-btn:hover .see-contact-btn-arrow { transform:translateX(4px); }
+  .see-contact-success { text-align:center; padding:40px 20px; }
+  .see-contact-success-title { font-family:"Playfair Display",Georgia,serif; font-size:28px; color:#F5C800; margin:0 0 10px; }
+  .see-contact-success-text { color:rgba(255,255,255,0.85); font-size:15px; line-height:1.6; margin:0; }
+  @media (max-width:600px){
+    .see-contact-section { padding:80px 16px; }
+    .see-contact-panel { padding:36px 24px 32px; }
+    .see-contact-btn { width:100%; justify-content:center; }
+  }
+</style>
 </head>
 
 <body>
@@ -225,26 +261,89 @@
             </ul>
         </div>
     </section>
-    <!--End Hidden Bar -->
+    
 
-    <!--Page Title-->
-    <section class="page-title" style="background-image: url(images/background/11.jpg);">
-        <div class="anim-icons full-width">
-            <span class="icon icon-bull-eye"></span>
-            <span class="icon icon-dotted-circle"></span>
+
+<section class="see-contact-section" id="see-contact">
+  <div class="see-contact-bg-overlay"></div>
+  <div class="see-contact-wrapper">
+    <div class="see-contact-header">
+      <span class="see-contact-eyebrow">Sport Expo ET 2026</span>
+      <h2 class="see-contact-title">Let's Connect</h2>
+      <p class="see-contact-sub">Visitors, exhibitors, media and sponsors — reach out and our team will be in touch within one business day.</p>
+    </div>
+
+    <div class="see-contact-panel" id="see-contact-panel">
+      <form class="see-contact-form" id="see-contact-form" novalidate>
+        <div class="see-contact-field">
+          <input class="see-contact-input" id="see-contact-name" name="name" type="text" placeholder=" " required />
+          <label class="see-contact-label" for="see-contact-name">Name</label>
         </div>
+        <div class="see-contact-field">
+          <input class="see-contact-input" id="see-contact-email" name="email" type="email" placeholder=" " required />
+          <label class="see-contact-label" for="see-contact-email">Email</label>
+        </div>
+        <div class="see-contact-field">
+          <input class="see-contact-input" id="see-contact-phone" name="phone" type="tel" placeholder=" " />
+          <label class="see-contact-label" for="see-contact-phone">Phone</label>
+        </div>
+        <div class="see-contact-field">
+          <textarea class="see-contact-textarea" id="see-contact-message" name="message" rows="4" placeholder=" " required></textarea>
+          <label class="see-contact-label" for="see-contact-message">Message</label>
+        </div>
+        <button type="submit" class="see-contact-btn">Send Message <span class="see-contact-btn-arrow">&rarr;</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+    <!--End Contact Page Section -->
+
+     <!-- Map Section -->
+    <section class="map-section">
         <div class="auto-container">
-            <div class="title-outer">
-                <h1>Contact</h1>
-                <ul class="page-breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Contact</li>
-                </ul> 
+            <div class="row clearfix">
+                <div class="contact-column col-lg-5 col-md-12 col-sm-12 order-2">
+                    <div class="inner-column">
+                        <div class="sec-title">
+                            <span class="sub-title">QUICK CONTACT</span>
+                            <h2>Need Help? Contact Us</h2>
+                            <span class="divider"></span>
+                            <div class="text">Available to our business customers 24 hours a day.</div>
+                        </div>
+                        <ul class="contact-info">
+                            <li>
+                                <span class="icon fa fa-map-marker-alt"></span> 
+                                <h4>Our Location:</h4>
+                                <p>27 Division St, New York, NY 10002, United States.</p>
+                            </li>
+
+                            <li>
+                                <span class="icon fa fa-phone-volume"></span> 
+                                <h4>24/7 Hotline:</h4>
+                                <p>+8 (123) 985 789,  +8 (123) 985 535</p>
+                            </li>
+
+                            <li>
+                                <span class="icon fa fa-envelope"></span> 
+                                <h4>Email:</h4>
+                                <p><a href="mailto:newyork@example.com">volia.newyork@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="map-column col-lg-7 col-md-12 col-sm-12">
+                     <!--Map Outer-->
+                    <div class="map-outer">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805184.6331292129!2d144.49266890254142!3d-37.97123689954809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1574408946759!5m2!1sen!2s" allowfullscreen=""></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!--End Page Title-->
-<section class="contact-section"><div class="auto-container"><div class="sec-title text-center"><span class="sub-title">Contact Sport Expo ET 2026</span><h2>Meet Us in Addis Ababa</h2><span class="divider"></span><p>For visitor registration, exhibitor space, media partnerships, sponsorship, or general event inquiries, contact the Sport Expo ET 2026 team.</p></div><div class="row"><div class="contact-info-block col-lg-4 col-md-6"><div class="inner"><h4>Venue</h4><p>Addis Ababa Exhibition & Convention Center, Addis Ababa, Ethiopia.</p></div></div><div class="contact-info-block col-lg-4 col-md-6"><div class="inner"><h4>Date</h4><p>October 2026</p></div></div><div class="contact-info-block col-lg-4 col-md-6"><div class="inner"><h4>Email</h4><p><a href="mailto:info@sportexpoet.com">info@sportexpoet.com</a></p></div></div></div></div></section>
+    <!--End Map Section -->
 <!-- Main Footer -->
     <footer class="main-footer style-three">
         <!--Widgets Section-->
@@ -368,6 +467,29 @@
 
 
 
+<script>
+(function(){
+  var form = document.getElementById('see-contact-form');
+  var panel = document.getElementById('see-contact-panel');
+  if (!form || !panel) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = form.querySelector('#see-contact-name');
+    var email = form.querySelector('#see-contact-email');
+    var msg = form.querySelector('#see-contact-message');
+    if (!name.value.trim() || !email.value.trim() || !msg.value.trim()) {
+      [name, email, msg].forEach(function(el){
+        if (!el.value.trim()) { el.focus(); }
+      });
+      return;
+    }
+    panel.innerHTML = '<div class="see-contact-success" role="status">'
+      + '<h3 class="see-contact-success-title">Message received</h3>'
+      + '<p class="see-contact-success-text">Thank you. The Sport Expo ET 2026 team will reach out shortly.</p>'
+      + '</div>';
+  });
+})();
+</script>
 <script src="js/jquery.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
