@@ -83,15 +83,6 @@
 		});
 	}
 	
-	//Header Search
-	if($('.search-btn').length) {
-		$('.search-btn').on('click', function() {
-			$('body').addClass('search-active');
-		});
-		$('.close-search').on('click', function() {
-			$('body').removeClass('search-active');
-		});
-	}
 
 	//Banner Carousel
 	if ($('.banner-carousel').length) {
