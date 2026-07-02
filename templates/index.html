@@ -498,83 +498,61 @@
    <section class="banner-section">
 
     <div class="banner-carousel owl-carousel owl-theme">
-
-        <!-- ===================== -->
-        <!-- SLIDE 1: VIDEO -->
-        <!-- ===================== -->
+        {% for slide in hero_slides %}
+            {% if slide.media_type == 'video' %}
         <div class="slide-item video-slide">
 
             <video class="bg-video" autoplay muted loop playsinline preload="metadata">
-                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                <source src="{{ slide.get_media_url }}" type="video/mp4">
             </video>
 
-           
-
             <div class="auto-container">
-
                 <div class="content-box">
-
-                    <span class="title animate-1">Worldwide conference on </span>
-
+                    <span class="title animate-1">{{ slide.title }}</span>
                     <div class="h2-style-mod animate-2">
-                        Late Crazes in Teaching <br>Learning & Preparing
+                        {{ slide.heading|linebreaksbr }}
                     </div>
-
                     <div class="text animate-3">
-                        Hilton Nashville Airport Hotel, Nashville, TN
+                        {{ slide.location }}
                     </div>
-
                     <div class="time-counter-two animate-4">
-                        <div class="time-countdown" data-countdown="12/31/2028"></div>
+                        <div class="time-countdown" data-countdown="{{ slide.countdown_date|date:'m/d/Y' }}"></div>
                     </div>
-
                     <div class="btn-box animate-5">
                         <a href="visitor.html" class="theme-btn futuristic-btn">
     <span>Book Now</span>
 </a>
                     </div>
-
                 </div>
-
             </div>
 
         </div>
-
-        <!-- ===================== -->
-        <!-- SLIDE 2: IMAGE -->
-        <!-- ===================== -->
-        <div class="slide-item" style="background-image: url(/static/images/main-slider/1.jpg);">
+            {% else %}
+        <div class="slide-item" style="background-image: url({{ slide.get_media_url }});">
 
             <div class="auto-container">
-
                 <div class="content-box">
-
-                    <span class="title animate-1">Worldwide conference on </span>
-
+                    <span class="title animate-1">{{ slide.title }}</span>
                     <div class="h2-style-mod animate-2">
-                        Late Crazes in Teaching <br>Learning & Preparing
+                        {{ slide.heading|linebreaksbr }}
                     </div>
-
                     <div class="text animate-3">
-                        Hilton Nashville Airport Hotel, Nashville, TN
+                        {{ slide.location }}
                     </div>
-
                     <div class="time-counter-two animate-4">
-                        <div class="time-countdown" data-countdown="12/31/2028"></div>
+                        <div class="time-countdown" data-countdown="{{ slide.countdown_date|date:'m/d/Y' }}"></div>
                     </div>
-
                     <div class="btn-box animate-5">
                         <a href="visitor.html" class="theme-btn futuristic-btn">
     <span>Book Now</span>
 </a>
                     </div>
-
                 </div>
-
             </div>
 
         </div>
-
+            {% endif %}
+        {% endfor %}
     </div>
 
 </section>
@@ -598,27 +576,9 @@
                 <!--clients carousel-->
 
                 <ul class="clients-carousel owl-carousel owl-theme default-nav">
-
-                    <li class="slide-item"> <a href="#"><img src="/static/images/clients/1.jpg" alt="Official Sponsor Logo" width="270" height="170" loading="lazy"></a> </li>
-
-                    <li class="slide-item"> <a href="#"><img src="/static/images/clients/2.jpg" alt="Official Sponsor Logo" width="270" height="170" loading="lazy"></a> </li>
-
-                    <li class="slide-item"> <a href="#"><img src="/static/images/clients/3.jpg" alt="Official Sponsor Logo" width="270" height="170" loading="lazy"></a> </li>
-
-                    <li class="slide-item"> <a href="#"><img src="/static/images/clients/4.jpg" alt="Official Sponsor Logo" width="270" height="170" loading="lazy"></a> </li>
-
-                    <li class="slide-item"> <a href="#"><img src="/static/images/clients/5.jpg" alt="Official Sponsor Logo" width="270" height="170" loading="lazy"></a> </li>
-
-                    <li class="slide-item"> <a href="#"><img src="/static/images/clients/1.jpg" alt="Official Sponsor Logo" width="270" height="170" loading="lazy"></a> </li>
-
-                    <li class="slide-item"> <a href="#"><img src="/static/images/clients/2.jpg" alt="Official Sponsor Logo" width="270" height="170" loading="lazy"></a> </li>
-
-                    <li class="slide-item"> <a href="#"><img src="/static/images/clients/3.jpg" alt="Official Sponsor Logo" width="270" height="170" loading="lazy"></a> </li>
-
-                    <li class="slide-item"> <a href="#"><img src="/static/images/clients/4.jpg" alt="Official Sponsor Logo" width="270" height="170" loading="lazy"></a> </li>
-
-                    <li class="slide-item"> <a href="#"><img src="/static/images/clients/5.jpg" alt="Official Sponsor Logo" width="270" height="170" loading="lazy"></a> </li>
-
+                    {% for logo in sponsor_logos %}
+                    <li class="slide-item"> <a href="#"><img src="{{ logo.get_image_url }}" alt="{{ logo.name }}" width="270" height="170" loading="lazy"></a> </li>
+                    {% endfor %}
                 </ul>
 
             </div>
@@ -1332,71 +1292,26 @@
         </div>
         <div class="auto-container">
             <div class="row">
-                <!-- News Block Four -->
+                {% for post in latest_blog_posts %}
                 <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
                     <div class="inner-box">
                         <div class="image-box">
-                            <span class="tag">Participants</span>
-                            <figure class="image"><a href="blog-single.html"><img src="/static/images/resource/news-1.jpg" alt="Sport Expo ET 2026 News" width="370" height="270" loading="lazy"></a></figure>
+                            <span class="tag">{{ post.category }}</span>
+                            <figure class="image"><a href="{% url 'blog_detail' post.slug %}"><img src="{{ post.get_image_url }}" alt="{{ post.title }}" width="370" height="270" loading="lazy"></a></figure>
                         </div>
                         <div class="lower-content">
                             <div class="author">
-                                <figure class="thumb"><img src="/static/images/resource/author-thumb-1.jpg" alt="Author" width="40" height="40" loading="lazy"></figure>
-                                <h5 class="name">Thomas Albart</h5>
+                                <h5 class="name">{{ post.author_name }}</h5>
                             </div>
                             <ul class="post-info">
-                                <li><span class="far fa-calendar"></span> 31/12/2023</li>
-                                <li><span class="far fa-comments"></span> 02 Comments</li>
+                                <li><span class="far fa-calendar"></span> {{ post.published_date|date:'d/m/Y' }}</li>
                             </ul>    
-                            <h4><a href="blog-single.html">Chances are Good That There’s a Cloud Software as </a></h4>
-                            <div class="text">Single stroke at the present moment and yet I feel that lorem quis bibendum auctor.</div>
+                            <h4><a href="{% url 'blog_detail' post.slug %}">{{ post.title }}</a></h4>
+                            <div class="text">{{ post.excerpt }}</div>
                         </div>
                     </div>
                 </div>
-
-                <!-- News Block Four -->
-                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="400ms">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <span class="tag">Virtual</span>
-                            <figure class="image"><a href="blog-single.html"><img src="/static/images/resource/news-2.jpg" alt="Sport Expo ET 2026 News" width="370" height="270" loading="lazy"></a></figure>
-                        </div>
-                        <div class="lower-content">
-                            <div class="author">
-                                <figure class="thumb"><img src="/static/images/resource/author-thumb-2.jpg" alt="Author" width="40" height="40" loading="lazy"></figure>
-                                <h5 class="name">Jamika Lora</h5>
-                            </div>
-                            <ul class="post-info">
-                                <li><span class="far fa-calendar"></span> 31/12/2023</li>
-                                <li><span class="far fa-comments"></span> 02 Comments</li>
-                            </ul>
-                            <h4><a href="blog-single.html">Chances are Good That There’s a Cloud Software as </a></h4>
-                            <div class="text">Single stroke at the present moment and yet I feel that lorem quis bibendum auctor.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block Four -->
-                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="800ms">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <span class="tag">Marketing</span>
-                            <figure class="image"><a href="blog-single.html"><img src="/static/images/resource/news-3.jpg" alt="Sport Expo ET 2026 News" width="370" height="270" loading="lazy"></a></figure>
-                        </div>
-                        <div class="lower-content">
-                            <div class="author">
-                                <figure class="thumb"><img src="/static/images/resource/author-thumb-3.jpg" alt="Author" width="40" height="40" loading="lazy"></figure>
-                                <h5 class="name">Nicky Monitor</h5>
-                            </div>
-                            <ul class="post-info">
-                                <li><span class="far fa-calendar"></span> 31/12/2023</li>
-                                <li><span class="far fa-comments"></span> 02 Comments</li>
-                            </ul>
-                            <h4><a href="blog-single.html">We Have Top Executive and Start Up Here Event 2023</a></h4>
-                            <div class="text">Single stroke at the present moment and yet I feel that lorem quis bibendum auctor.</div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

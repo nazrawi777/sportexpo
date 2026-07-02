@@ -1,3 +1,9 @@
 from django.urls import path
 
-urlpatterns = []
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('blog/', views.blog, name='blog'),
+    path('blog/<slug:slug>/', views.blog_detail, name='blog_detail'),
+]

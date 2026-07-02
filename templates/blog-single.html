@@ -268,28 +268,18 @@
                         <div class="news-block style-four">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <span class="tag">Participants</span>
-                                    <figure class="image"><img src="/static/images/resource/blog-1.jpg" alt=""></figure>
+                                    <span class="tag">{{ post.category }}</span>
+                                    <figure class="image"><img src="{{ post.get_image_url }}" alt="{{ post.title }}"></figure>
                                 </div>
                                 <div class="lower-content">
                                     <div class="author">
-                                        <figure class="thumb"><img src="/static/images/resource/author-thumb-1.jpg" alt=""></figure>
-                                        <h5 class="name">Thomas Albart</h5>
+                                        <h5 class="name">{{ post.author_name }}</h5>
                                     </div>
                                     <ul class="post-info">
-                                        <li><span class="far fa-calendar"></span> 31/12/2023</li>
-                                        <li><span class="far fa-comments"></span> 02 Comments</li>
+                                        <li><span class="far fa-calendar"></span> {{ post.published_date|date:'d/m/Y' }}</li>
                                     </ul>    
-                                    <h4>Chances are Good That There’s a Cloud Software as</h4>
-                                    <p>Single stroke at the present moment and yet I feel that lorem quis bibendum auctor. Elitm sed eiusmod tempor incididunt umst etsu dolore magna aliquatenim ad.</p>
-                                    <p>Sed quia conse quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ea magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat.</p>
-                                    <p> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                                    
-                                    <p>randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. </p>
-
-                                   
-
-                                   
+                                    <h4>{{ post.title }}</h4>
+                                    {{ post.content|linebreaks }}
                                 </div>
                             </div>
                         </div>
@@ -308,12 +298,9 @@
                             <div class="widget-content">
                                 <!-- Blog Category -->
                                 <ul class="blog-categories">
-                                    <li><a href="blog-single.html">Business <span>03</span></a></li>
-                                    <li><a href="blog-single.html">Conference <span>07</span></a></li>
-                                    <li><a href="blog-single.html">Digital <span>06</span></a></li>
-                                    <li><a href="blog-single.html">Music <span>02</span></a></li>
-                                    <li><a href="blog-single.html">Startup <span>06</span></a></li>
-                                    <li><a href="blog-single.html">Workshop <span>09</span></a></li>
+                                    {% for category in category_counts %}
+                                    <li><a href="{% url 'blog' %}?category={{ category.category|urlencode }}">{{ category.category }} <span>{{ category.count }}</span></a></li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>

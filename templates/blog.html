@@ -263,146 +263,39 @@
 <section class="news-section alternate bg-none">
         <div class="auto-container">
             <div class="row">
-                <!-- News Block Four -->
+                {% for post in posts %}
                 <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
                     <div class="inner-box">
                         <div class="image-box">
-                            <span class="tag">Participants</span>
-                            <figure class="image"><a href="blog-single.html"><img src="/static/images/resource/news-1.jpg" alt="Sport Expo ET 2026 News" width="370" height="270" loading="lazy"></a></figure>
+                            <span class="tag">{{ post.category }}</span>
+                            <figure class="image"><a href="{% url 'blog_detail' post.slug %}"><img src="{{ post.get_image_url }}" alt="{{ post.title }}" width="370" height="270" loading="lazy"></a></figure>
                         </div>
                         <div class="lower-content">
                             <div class="author">
-                                <figure class="thumb"><img src="/static/images/resource/author-thumb-1.jpg" alt="Author" width="40" height="40" loading="lazy"></figure>
-                                <h5 class="name">Thomas Albart</h5>
+                                <h5 class="name">{{ post.author_name }}</h5>
                             </div>
                             <ul class="post-info">
-                                <li><span class="far fa-calendar"></span> 31/12/2023</li>
-                                <li><span class="far fa-comments"></span> 02 Comments</li>
+                                <li><span class="far fa-calendar"></span> {{ post.published_date|date:'d/m/Y' }}</li>
                             </ul>    
-                            <h4><a href="blog-single.html">Chances are Good That There’s a Cloud Software as </a></h4>
-                            <div class="text">Single stroke at the present moment and yet I feel that lorem quis bibendum auctor.</div>
+                            <h4><a href="{% url 'blog_detail' post.slug %}">{{ post.title }}</a></h4>
+                            <div class="text">{{ post.excerpt }}</div>
                         </div>
                     </div>
                 </div>
-
-                <!-- News Block Four -->
-                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="400ms">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <span class="tag">Virtual</span>
-                            <figure class="image"><a href="blog-single.html"><img src="/static/images/resource/news-2.jpg" alt="Sport Expo ET 2026 News" width="370" height="270" loading="lazy"></a></figure>
-                        </div>
-                        <div class="lower-content">
-                            <div class="author">
-                                <figure class="thumb"><img src="/static/images/resource/author-thumb-2.jpg" alt="Author" width="40" height="40" loading="lazy"></figure>
-                                <h5 class="name">Jamika Lora</h5>
-                            </div>
-                            <ul class="post-info">
-                                <li><span class="far fa-calendar"></span> 31/12/2023</li>
-                                <li><span class="far fa-comments"></span> 02 Comments</li>
-                            </ul>
-                            <h4><a href="blog-single.html">Chances are Good That There’s a Cloud Software as </a></h4>
-                            <div class="text">Single stroke at the present moment and yet I feel that lorem quis bibendum auctor.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block Four -->
-                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="800ms">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <span class="tag">Marketing</span>
-                            <figure class="image"><a href="blog-single.html"><img src="/static/images/resource/news-3.jpg" alt="Sport Expo ET 2026 News" width="370" height="270" loading="lazy"></a></figure>
-                        </div>
-                        <div class="lower-content">
-                            <div class="author">
-                                <figure class="thumb"><img src="/static/images/resource/author-thumb-3.jpg" alt="Author" width="40" height="40" loading="lazy"></figure>
-                                <h5 class="name">Nicky Monitor</h5>
-                            </div>
-                            <ul class="post-info">
-                                <li><span class="far fa-calendar"></span> 31/12/2023</li>
-                                <li><span class="far fa-comments"></span> 02 Comments</li>
-                            </ul>
-                            <h4><a href="blog-single.html">We Have Top Executive and Start Up Here Event 2023</a></h4>
-                            <div class="text">Single stroke at the present moment and yet I feel that lorem quis bibendum auctor.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block Four -->
-                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <span class="tag">Participants</span>
-                            <figure class="image"><a href="blog-single.html"><img src="/static/images/resource/news-1.jpg" alt="Sport Expo ET 2026 News" width="370" height="270" loading="lazy"></a></figure>
-                        </div>
-                        <div class="lower-content">
-                            <div class="author">
-                                <figure class="thumb"><img src="/static/images/resource/author-thumb-1.jpg" alt="Author" width="40" height="40" loading="lazy"></figure>
-                                <h5 class="name">Thomas Albart</h5>
-                            </div>
-                            <ul class="post-info">
-                                <li><span class="far fa-calendar"></span> 31/12/2023</li>
-                                <li><span class="far fa-comments"></span> 02 Comments</li>
-                            </ul>    
-                            <h4><a href="blog-single.html">Chances are Good That There’s a Cloud Software as </a></h4>
-                            <div class="text">Single stroke at the present moment and yet I feel that lorem quis bibendum auctor.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block Four -->
-                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="400ms">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <span class="tag">Virtual</span>
-                            <figure class="image"><a href="blog-single.html"><img src="/static/images/resource/news-2.jpg" alt="Sport Expo ET 2026 News" width="370" height="270" loading="lazy"></a></figure>
-                        </div>
-                        <div class="lower-content">
-                            <div class="author">
-                                <figure class="thumb"><img src="/static/images/resource/author-thumb-2.jpg" alt="Author" width="40" height="40" loading="lazy"></figure>
-                                <h5 class="name">Jamika Lora</h5>
-                            </div>
-                            <ul class="post-info">
-                                <li><span class="far fa-calendar"></span> 31/12/2023</li>
-                                <li><span class="far fa-comments"></span> 02 Comments</li>
-                            </ul>
-                            <h4><a href="blog-single.html">Chances are Good That There’s a Cloud Software as </a></h4>
-                            <div class="text">Single stroke at the present moment and yet I feel that lorem quis bibendum auctor.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block Four -->
-                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="800ms">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <span class="tag">Marketing</span>
-                            <figure class="image"><a href="blog-single.html"><img src="/static/images/resource/news-3.jpg" alt="Sport Expo ET 2026 News" width="370" height="270" loading="lazy"></a></figure>
-                        </div>
-                        <div class="lower-content">
-                            <div class="author">
-                                <figure class="thumb"><img src="/static/images/resource/author-thumb-3.jpg" alt="Author" width="40" height="40" loading="lazy"></figure>
-                                <h5 class="name">Nicky Monitor</h5>
-                            </div>
-                            <ul class="post-info">
-                                <li><span class="far fa-calendar"></span> 31/12/2023</li>
-                                <li><span class="far fa-comments"></span> 02 Comments</li>
-                            </ul>
-                            <h4><a href="blog-single.html">We Have Top Executive and Start Up Here Event 2023</a></h4>
-                            <div class="text">Single stroke at the present moment and yet I feel that lorem quis bibendum auctor.</div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
 
             <div class="styled-pagination mb-3">
                 <ul>
-                    <li class="prev-post"><a href="blog.html#"><span class="fa fa-angle-left"></span></a></li>
-                    <li><a href="blog.html#">1</a></li>
-                    <li class="active"><a href="blog.html#">2</a></li>
-                    <li><a href="blog.html#">3</a></li>
-                    <li class="next-post"><a href="blog.html#"><span class="fa fa-angle-right"></span> </a></li>
+                    {% if posts.has_previous %}
+                    <li class="prev-post"><a href="?page={{ posts.previous_page_number }}"><span class="fa fa-angle-left"></span></a></li>
+                    {% endif %}
+                    {% for page_number in posts.paginator.page_range %}
+                    <li{% if posts.number == page_number %} class="active"{% endif %}><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+                    {% endfor %}
+                    {% if posts.has_next %}
+                    <li class="next-post"><a href="?page={{ posts.next_page_number }}"><span class="fa fa-angle-right"></span> </a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
