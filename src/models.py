@@ -15,7 +15,7 @@ class HeroSlide(models.Model):
     title = models.CharField(max_length=255)
     heading = models.CharField(max_length=255)
     location = models.CharField(max_length=255)
-    countdown_date = models.DateField()
+    countdown_date = models.DateTimeField()
     image = models.ImageField(upload_to='hero_slides/', blank=True, null=True)
     image_url = models.URLField(blank=True, null=True)
     video = models.FileField(upload_to='hero_slides/videos/', blank=True, null=True)

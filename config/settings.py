@@ -1,5 +1,6 @@
 from decouple import config
 from pathlib import Path
+from django.templatetags.static import static
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -93,4 +94,7 @@ UNFOLD = {
     "SITE_TITLE": "Sport Expo ET 2026 Admin",
     "SITE_HEADER": "Sport Expo ET 2026",
     "SITE_SYMBOL": "sports_soccer",
+    "STYLES": [
+        lambda request: static("admin/css/unfold-form-contrast.css"),
+    ],
 }

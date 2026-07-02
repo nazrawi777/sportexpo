@@ -1,0 +1,88 @@
+/* Project-level Django Unfold contrast fixes for dark admin forms. */
+:root,
+.dark {
+    --sportexpo-admin-field-bg: #18202b;
+    --sportexpo-admin-field-bg-hover: #1f2937;
+    --sportexpo-admin-field-border: #64748b;
+    --sportexpo-admin-field-border-focus: #38bdf8;
+    --sportexpo-admin-field-text: #f8fafc;
+    --sportexpo-admin-field-muted: #cbd5e1;
+}
+
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"]):not([type="reset"]),
+.dark textarea,
+.dark select,
+.dark .vTextField,
+.dark .vURLField,
+.dark .vIntegerField,
+.dark .vBigIntegerField,
+.dark .vDateField,
+.dark .vTimeField,
+.dark .vDateTimeField,
+.dark .select2-selection,
+.dark .select2-container--admin-autocomplete .select2-selection,
+.dark .select2-container--default .select2-selection,
+.dark .select2-container--default .select2-selection--single,
+.dark .select2-container--default .select2-selection--multiple {
+    background-color: var(--sportexpo-admin-field-bg) !important;
+    border: 1px solid var(--sportexpo-admin-field-border) !important;
+    color: var(--sportexpo-admin-field-text) !important;
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.03) !important;
+}
+
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"]):not([type="reset"]):hover,
+.dark textarea:hover,
+.dark select:hover,
+.dark .select2-selection:hover {
+    background-color: var(--sportexpo-admin-field-bg-hover) !important;
+    border-color: #94a3b8 !important;
+}
+
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"]):not([type="reset"]):focus,
+.dark textarea:focus,
+.dark select:focus,
+.dark .select2-container--focus .select2-selection,
+.dark .select2-container--open .select2-selection {
+    background-color: var(--sportexpo-admin-field-bg-hover) !important;
+    border-color: var(--sportexpo-admin-field-border-focus) !important;
+    box-shadow: 0 0 0 3px rgb(56 189 248 / 0.25) !important;
+    color: var(--sportexpo-admin-field-text) !important;
+    outline: none !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder,
+.dark .select2-selection__placeholder {
+    color: var(--sportexpo-admin-field-muted) !important;
+    opacity: 1 !important;
+}
+
+.dark option,
+.dark optgroup,
+.dark .select2-results__option,
+.dark .select2-dropdown {
+    background-color: var(--sportexpo-admin-field-bg) !important;
+    color: var(--sportexpo-admin-field-text) !important;
+}
+
+.dark input[type="file"],
+.dark .file-upload,
+.dark .file-upload a,
+.dark .aligned .form-row .file-upload,
+.dark .form-row .file-upload,
+.dark p.file-upload {
+    background-color: var(--sportexpo-admin-field-bg) !important;
+    border-color: var(--sportexpo-admin-field-border) !important;
+    color: var(--sportexpo-admin-field-text) !important;
+}
+
+.dark input[type="file"]::file-selector-button {
+    background-color: #334155 !important;
+    border: 1px solid #94a3b8 !important;
+    color: var(--sportexpo-admin-field-text) !important;
+}
+
+.dark input[type="checkbox"],
+.dark input[type="radio"] {
+    border-color: var(--sportexpo-admin-field-border) !important;
+}
