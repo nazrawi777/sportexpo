@@ -86,3 +86,29 @@
 .dark input[type="radio"] {
     border-color: var(--sportexpo-admin-field-border) !important;
 }
+
+
+/* Keep the HeroSlide countdown split date/time widgets separated in Unfold. */
+.form-row.field-countdown_date .datetime,
+.form-row.field-countdown_date .datetimeshortcuts,
+.field-countdown_date .datetime,
+.field-countdown_date .datetimeshortcuts {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+}
+
+.field-countdown_date .vDateField,
+.field-countdown_date .vTimeField {
+    position: relative !important;
+    margin-right: 0.25rem !important;
+}
+
+.field-countdown_date .datetimeshortcuts a,
+.field-countdown_date .datetimeshortcuts .date-icon,
+.field-countdown_date .datetimeshortcuts .clock-icon {
+    position: static !important;
+    margin: 0 0.35rem 0 0 !important;
+    vertical-align: middle !important;
+}

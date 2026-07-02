@@ -8,19 +8,19 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://sport-expo-et-2026.netlify.app/visitor.html">
+<meta property="og:url" content="https://sport-expo-et-2026.netlify.app/visitor/">
 <meta property="og:title" content="Visitor Packages | Sport Expo ET 2026 — Addis Ababa">
 <meta property="og:description" content="Choose your visitor package for Sport Expo ET 2026. Join Africa's premier sports gathering in Addis Ababa this October 2026.">
 <meta property="og:image" content="https://sport-expo-et-2026.netlify.app/images/resource/image-1.jpg">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://sport-expo-et-2026.netlify.app/visitor.html">
+<meta name="twitter:url" content="https://sport-expo-et-2026.netlify.app/visitor/">
 <meta name="twitter:title" content="Visitor Packages | Sport Expo ET 2026 — Addis Ababa">
 <meta name="twitter:description" content="Choose your visitor package for Sport Expo ET 2026. Join Africa's premier sports gathering in Addis Ababa this October 2026.">
 <meta name="twitter:image" content="https://sport-expo-et-2026.netlify.app/images/resource/image-1.jpg">
 
-<link rel="canonical" href="https://sport-expo-et-2026.netlify.app/visitor.html">
+<link rel="canonical" href="https://sport-expo-et-2026.netlify.app/visitor/">
 <!-- Stylesheets -->
 <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 <link href="/static/css/style.css" rel="stylesheet">
@@ -490,6 +490,71 @@
     width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .see-visitor-section {
+    padding-left: 16px;
+    padding-right: 16px;
+    overflow-x: hidden;
+  }
+  .see-visitor-cards {
+    gap: 24px;
+    width: 100%;
+  }
+  .see-visitor-card,
+  .see-visitor-card--premier,
+  .see-visitor-card--ambassador {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .see-visitor-card-body,
+  .see-visitor-card--premier .see-visitor-card-body {
+    padding: 28px 20px 24px;
+  }
+  .see-visitor-card-top {
+    align-items: flex-start;
+  }
+  .see-visitor-tier-name,
+  .see-visitor-card--premier .see-visitor-tier-name {
+    font-size: 17px;
+    line-height: 1.25;
+  }
+  .see-visitor-price-row {
+    flex-wrap: wrap;
+  }
+  .see-visitor-price-usd,
+  .see-visitor-card--premier .see-visitor-price-usd {
+    font-size: 30px;
+  }
+  .see-visitor-feature-item {
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .see-visitor-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .see-visitor-card-body,
+  .see-visitor-card--premier .see-visitor-card-body {
+    padding: 26px 16px 22px;
+  }
+  .see-visitor-badge {
+    max-width: calc(100% - 32px);
+    padding-left: 14px;
+    padding-right: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .see-visitor-cta {
+    padding-left: 14px;
+    padding-right: 14px;
+    white-space: normal;
+  }
+}
+
 </style>
 
 <script type="application/ld+json">
@@ -500,12 +565,12 @@
     "@type": "ListItem",
     "position": 1,
     "name": "Home",
-    "item": "https://sport-expo-et-2026.netlify.app/index.html"
+    "item": "https://sport-expo-et-2026.netlify.app/"
   },{
     "@type": "ListItem",
     "position": 2,
     "name": "Visitor",
-    "item": "https://sport-expo-et-2026.netlify.app/visitor.html"
+    "item": "https://sport-expo-et-2026.netlify.app/visitor/"
   }]
 }
 </script>
@@ -541,7 +606,7 @@
                 <!-- Main box -->
                 <div class="main-box">
                     <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
+                        <div class="logo"><a href="{% url 'index' %}"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
                     </div>
 
                     <div class="nav-outer">
@@ -559,18 +624,18 @@
                             
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li class="current"><a href="visitor.html">Visitor</a></li>
-                                    <li><a href="media.html">Media</a></li>
-                                    <li><a href="sponsor.html">Sponsor</a></li>
-                                    <li><a href="hall.html">Hall</a></li>
-                                    <li><a href="schedule.html">Schedule</a></li>
-                                    <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li class="current"><a href="{% url 'visitor' %}">Visitor</a></li>
+                                    <li><a href="{% url 'media' %}">Media</a></li>
+                                    <li><a href="{% url 'sponsor' %}">Sponsor</a></li>
+                                    <li><a href="{% url 'hall' %}">Hall</a></li>
+                                    <li><a href="{% url 'schedule' %}">Schedule</a></li>
+                                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
                                     <li>
-  <a href="#" class="user-icon-link" aria-label="User profile">
+  <a href="{% url 'admin:index' %}" class="user-icon-link" aria-label="User profile">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="user-icon" fill="currentColor">
   <!-- User -->
   <path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-3.3 0-10 1.7-10 5v3h10v-3c0-1.3.4-2.5 1.1-3.5-.4-.3-.7-.5-1.1-.5z"/>
@@ -590,7 +655,7 @@
                             
                             <!-- Quote Btn -->
                             <div class="btn-box">
-                                <a href="schedule.html" class="theme-btn btn-style-one"><span class="btn-title"><i class="flaticon-chair"></i> Register as Visitor</span></a>
+                                <a href="{% url 'schedule' %}" class="theme-btn btn-style-one"><span class="btn-title"><i class="flaticon-chair"></i> Register as Visitor</span></a>
                             </div>
                             
                             <button class="nav-toggler"><i class="flaticon flaticon-menu-2"></i></button>
@@ -607,9 +672,9 @@
 
                 <div class="main-box">
                     <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
+                        <div class="logo"><a href="{% url 'index' %}"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
                         <div class="upper-right">
-                            <a href="visitor.html#nav-mobile" class="mobile-nav-toggler navbar-trigger"><i class="flaticon-menu"></i></a>
+                            <a href="{% url 'visitor' %}#nav-mobile" class="mobile-nav-toggler navbar-trigger"><i class="flaticon-menu"></i></a>
                         </div>
                     </div>
                     
@@ -620,13 +685,13 @@
 
         <!-- Mobile Header -->
         <div class="mobile-header">
-            <div class="logo"><a href="index.html"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
+            <div class="logo"><a href="{% url 'index' %}"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
 
             <!--Nav Box-->
             <div class="nav-outer clearfix">
                 <div class="outer-box">
                     <!-- Search Btn -->
-                    <a href="visitor.html#nav-mobile" class="mobile-nav-toggler navbar-trigger"><i class="flaticon-menu"></i></a>
+                    <a href="{% url 'visitor' %}#nav-mobile" class="mobile-nav-toggler navbar-trigger"><i class="flaticon-menu"></i></a>
                 </div>
             </div>
         </div>
@@ -638,7 +703,7 @@
             <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
             <nav class="menu-box">
                 <div class="upper-box">
-                    <div class="nav-logo"><a href="index.html"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
+                    <div class="nav-logo"><a href="{% url 'index' %}"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
                     <div class="close-btn"><i class="icon flaticon-close"></i></div>
                 </div>
 
@@ -653,10 +718,10 @@
                 </ul>
 
                 <ul class="social-links">
-                    <li><a href="visitor.html#"><span class="fab fa-facebook-f"></span></a></li>
-                    <li><a href="visitor.html#"><span class="fab fa-pinterest"></span></a></li>
-                    <li><a href="visitor.html#"><span class="fab fa-twitter"></span></a></li>
-                    <li><a href="visitor.html#"><span class="fab fa-dribbble"></span></a></li>
+                    <li><a href="{% url 'visitor' %}#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="{% url 'visitor' %}#"><span class="fab fa-pinterest"></span></a></li>
+                    <li><a href="{% url 'visitor' %}#"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="{% url 'visitor' %}#"><span class="fab fa-dribbble"></span></a></li>
                 </ul>
             </nav>
         </div><!-- End Mobile Menu -->
@@ -940,7 +1005,7 @@
                             <div class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget about-widget">
                                     <div class="logo">
-                                        <a href="index.html"><img src="/static/images/logo-2.png" alt="Sport Expo ET 2026 Logo" width="163" height="62" loading="lazy" /></a>
+                                        <a href="{% url 'index' %}"><img src="/static/images/logo-2.png" alt="Sport Expo ET 2026 Logo" width="163" height="62" loading="lazy" /></a>
                                     </div>
                                     <div class="text">
                                         <p>We have very good strength in innovative technology and tools with over 35 years of experience. We makes long-term investments goal in global companies in different sectors, mainly in Europe and other countries.</p>
@@ -953,13 +1018,13 @@
                                 <div class="footer-widget lnks-widget">
                                     <h2 class="widget-title">Useful Links</h2>
                                     <ul class="user-links">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="visitor.html">Visitor</a></li>
-                                        <li><a href="schedule.html">Schedule</a></li>
-                                        <li><a href="gallery.html">Gallery</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'about' %}">About</a></li>
+                                        <li><a href="{% url 'visitor' %}">Visitor</a></li>
+                                        <li><a href="{% url 'schedule' %}">Schedule</a></li>
+                                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        <li><a href="{% url 'terms_and_conditions' %}">Terms and Conditions</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1018,10 +1083,10 @@
                                         </ul>
 
                                         <ul class="social-icon-two">
-                                            <li><a href="visitor.html#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="visitor.html#"><i class="fab fa-pinterest"></i></a></li>
-                                            <li><a href="visitor.html#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="visitor.html#"><i class="fab fa-dribbble"></i></a></li>
+                                            <li><a href="{% url 'visitor' %}#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="{% url 'visitor' %}#"><i class="fab fa-pinterest"></i></a></li>
+                                            <li><a href="{% url 'visitor' %}#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="{% url 'visitor' %}#"><i class="fab fa-dribbble"></i></a></li>
                                         </ul>
                                     </div>       
                                 </div>

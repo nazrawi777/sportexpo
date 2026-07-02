@@ -126,3 +126,49 @@ class BlogPost(models.Model):
                 counter += 1
             self.slug = slug
         super().save(*args, **kwargs)
+
+
+class GalleryImage(models.Model):
+    image = models.ImageField(upload_to='gallery/')
+    title = models.CharField(max_length=255)
+    tagline = models.CharField(max_length=255)
+    order = models.PositiveIntegerField(default=0)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['order', 'created_at']
+
+    def __str__(self):
+        return self.title
+
+
+class ScheduleDay(models.Model):
+    date = models.DateField()
+    day_label = models.CharField(max_length=100, blank=True)
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ['order', 'date']
+
+    def __str__(self):
+        return self.day_label or self.date.strftime('%B %d, %Y')
+
+
+class ScheduleSpeaker(models.Model):
+    day = models.ForeignKey(ScheduleDay, related_name='speakers', on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+    role = models.CharField(max_length=255)
+    session_title = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='schedule_speakers/')
+    location = models.CharField(max_length=255)
+    time_start = models.TimeField()
+    time_end = models.TimeField()
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ['order', 'time_start']
+
+    def __str__(self):
+        return f'{self.name} — {self.session_title}'

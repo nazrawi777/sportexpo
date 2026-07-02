@@ -8,19 +8,19 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://sport-expo-et-2026.netlify.app/schedule.html">
+<meta property="og:url" content="https://sport-expo-et-2026.netlify.app/schedule/">
 <meta property="og:title" content="Event Schedule | Sport Expo ET 2026 Program Framework">
 <meta property="og:description" content="Explore the Sport Expo ET 2026 event schedule. Trade displays, innovation panels, and networking sessions in Addis Ababa, October 2026.">
 <meta property="og:image" content="https://sport-expo-et-2026.netlify.app/images/resource/image-1.jpg">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://sport-expo-et-2026.netlify.app/schedule.html">
+<meta name="twitter:url" content="https://sport-expo-et-2026.netlify.app/schedule/">
 <meta name="twitter:title" content="Event Schedule | Sport Expo ET 2026 Program Framework">
 <meta name="twitter:description" content="Explore the Sport Expo ET 2026 event schedule. Trade displays, innovation panels, and networking sessions in Addis Ababa, October 2026.">
 <meta name="twitter:image" content="https://sport-expo-et-2026.netlify.app/images/resource/image-1.jpg">
 
-<link rel="canonical" href="https://sport-expo-et-2026.netlify.app/schedule.html">
+<link rel="canonical" href="https://sport-expo-et-2026.netlify.app/schedule/">
 <!-- Stylesheets -->
 <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 <link href="/static/css/style.css" rel="stylesheet">
@@ -45,12 +45,12 @@
     "@type": "ListItem",
     "position": 1,
     "name": "Home",
-    "item": "https://sport-expo-et-2026.netlify.app/index.html"
+    "item": "https://sport-expo-et-2026.netlify.app/"
   },{
     "@type": "ListItem",
     "position": 2,
     "name": "Schedule",
-    "item": "https://sport-expo-et-2026.netlify.app/schedule.html"
+    "item": "https://sport-expo-et-2026.netlify.app/schedule/"
   }]
 }
 </script>
@@ -88,7 +88,7 @@
                 <!-- Main box -->
                 <div class="main-box">
                     <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
+                        <div class="logo"><a href="{% url 'index' %}"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
                     </div>
 
                     <div class="nav-outer">
@@ -106,18 +106,18 @@
                             
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="visitor.html">Visitor</a></li>
-                                    <li><a href="media.html">Media</a></li>
-                                    <li><a href="sponsor.html">Sponsor</a></li>
-                                    <li><a href="hall.html">Hall</a></li>
-                                    <li class="current"><a href="schedule.html">Schedule</a></li>
-                                    <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li><a href="{% url 'visitor' %}">Visitor</a></li>
+                                    <li><a href="{% url 'media' %}">Media</a></li>
+                                    <li><a href="{% url 'sponsor' %}">Sponsor</a></li>
+                                    <li><a href="{% url 'hall' %}">Hall</a></li>
+                                    <li class="current"><a href="{% url 'schedule' %}">Schedule</a></li>
+                                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
                                     <li>
-  <a href="#" class="user-icon-link" aria-label="User profile">
+  <a href="{% url 'admin:index' %}" class="user-icon-link" aria-label="User profile">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="user-icon" fill="currentColor">
   <!-- User -->
   <path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-3.3 0-10 1.7-10 5v3h10v-3c0-1.3.4-2.5 1.1-3.5-.4-.3-.7-.5-1.1-.5z"/>
@@ -138,7 +138,7 @@
                             
                             <!-- Quote Btn -->
                             <div class="btn-box">
-                                <a href="schedule.html" class="theme-btn btn-style-one"><span class="btn-title"><i class="flaticon-chair"></i> Register as Visitor</span></a>
+                                <a href="{% url 'schedule' %}" class="theme-btn btn-style-one"><span class="btn-title"><i class="flaticon-chair"></i> Register as Visitor</span></a>
                             </div>
                             
                             <button class="nav-toggler"><i class="flaticon flaticon-menu-2"></i></button>
@@ -155,7 +155,7 @@
 
                 <div class="main-box">
                     <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
+                        <div class="logo"><a href="{% url 'index' %}"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
                         <div class="upper-right">
                             <a href="#nav-mobile" class="mobile-nav-toggler navbar-trigger"><i class="flaticon-menu"></i></a>
                         </div>
@@ -168,7 +168,7 @@
 
         <!-- Mobile Header -->
         <div class="mobile-header">
-            <div class="logo"><a href="index.html"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
+            <div class="logo"><a href="{% url 'index' %}"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
 
             <!--Nav Box-->
             <div class="nav-outer clearfix">
@@ -186,7 +186,7 @@
             <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
             <nav class="menu-box">
                 <div class="upper-box">
-                    <div class="nav-logo"><a href="index.html"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
+                    <div class="nav-logo"><a href="{% url 'index' %}"><img src="/static/images/logo.png" alt="Sport Expo ET 2026 Logo" width="163" height="70"></a></div>
                     <div class="close-btn"><i class="icon flaticon-close"></i></div>
                 </div>
 
@@ -274,285 +274,48 @@
 
             <div class="schedule-tabs tabs-box">
                 <div class="btns-box">
-                    <!--Tabs Box-->
                     <ul class="tab-buttons style-two clearfix">
-                        <li class="tab-btn active-btn" data-tab="#tab-1">
+                        {% for day in schedule_days %}
+                        <li class="tab-btn{% if forloop.first %} active-btn{% endif %}" data-tab="#tab-{{ forloop.counter }}">
                             <div class="date-box">
-                                <span class="date">25</span>
-                                <span class="month"><span class="colored">Jan</span> 2023</span>
+                                <span class="date">{{ day.date|date:"d" }}</span>
+                                <span class="month"><span class="colored">{{ day.date|date:"M" }}</span> {{ day.date|date:"Y" }}</span>
                             </div>
                         </li>
-
-                        <li class="tab-btn" data-tab="#tab-2">
-                            <div class="date-box">
-                                <span class="date">26</span>
-                                <span class="month"><span class="colored">Jan</span> 2023</span>
-                            </div>
-                        </li>
-
-                        <li class="tab-btn" data-tab="#tab-3">
-                            <div class="date-box">
-                                <span class="date">27</span>
-                                <span class="month"><span class="colored">Jan</span> 2023</span>
-                            </div>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="tabs-content">
-                    <!--Tab-->
-                    <div class="tab active-tab" id="tab-1">
+                    {% for day in schedule_days %}
+                    <div class="tab{% if forloop.first %} active-tab{% endif %}" id="tab-{{ forloop.counter }}">
                         <div class="schedule-timeline">
-                            <!-- schedule Block -->
+                            {% for speaker in day.speakers.all %}
+                            <div class="schedule-block-three{% if forloop.counter|divisibleby:2 %} even{% endif %}">
+                                <div class="inner-box">
+                                    <div class="date">
+                                        <span class="icon fa fa-microphone"></span>
+                                        <span class="time">{{ speaker.time_start|date:"h.i a" }} <br> {{ speaker.time_end|date:"h.i a" }}</span>
+                                    </div>
+                                    <div class="inner">
+                                        <figure class="thumb">
+                                            <img src="{{ speaker.image.url }}" alt="Schedule Session" width="188" height="188" loading="lazy">
+                                        </figure>
+                                        <div class="speaker-info">
+                                            <h4 class="name">{{ speaker.name }} <span class="designation">{{ speaker.role }}</span></h4>
+                                            <h3><a>{{ speaker.session_title }}</a></h3>
+                                            <div class="location"><strong>Location:</strong> {{ speaker.location }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% empty %}
                             <div class="schedule-block-three">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">08.00 am <br> 10.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-1.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Tripp Mckay <span class="designation">Historian</span></h4>
-                                            <h3><a>Social Profit from Venture (SROI) Gathering</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="inner-box"><div class="inner"><div class="speaker-info"><h3><a>Schedule sessions will be announced soon.</a></h3></div></div></div>
                             </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block-three even">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">10.00 am <br> 11.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-2.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Milana Myles, <span class="designation">Art Critic</span></h4>
-                                            <h3><a>Marine & Oceanic Government Workers</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block-three">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">11.00 am <br> 12.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-3.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Gabrielle Winn, <span class="designation">Insurance consultant</span></h4>
-                                            <h3><a>Home Life Open Entryway Open Occasion of 21</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block-three even">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">12.00 am <br> 01.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-4.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Rene Wells, <span class="designation">Historian</span></h4>
-                                            <h3><a>Developing Force Legislative issues of Arctics Motivation</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
-
-                    <!--Tab-->
-                    <div class="tab" id="tab-2">
-                        <div class="schedule-timeline">
-                            <!-- schedule Block -->
-                            <div class="schedule-block-three">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">08.00 am <br> 10.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-1.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Tripp Mckay <span class="designation">Historian</span></h4>
-                                            <h3><a>Social Profit from Venture (SROI) Gathering</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block-three even">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">10.00 am <br> 11.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-2.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Milana Myles, <span class="designation">Art Critic</span></h4>
-                                            <h3><a>Marine & Oceanic Government Workers</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block-three">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">11.00 am <br> 12.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-3.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Gabrielle Winn, <span class="designation">Insurance consultant</span></h4>
-                                            <h3><a>Home Life Open Entryway Open Occasion of 21</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block-three even">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">12.00 am <br> 01.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-1.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Rene Wells, <span class="designation">Historian</span></h4>
-                                            <h3><a>Developing Force Legislative issues of Arctics Motivation</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Tab-->
-                    <div class="tab" id="tab-3">
-                        <div class="schedule-timeline">
-                            <!-- schedule Block -->
-                            <div class="schedule-block-three">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">08.00 am <br> 10.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-1.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Tripp Mckay <span class="designation">Historian</span></h4>
-                                            <h3><a>Social Profit from Venture (SROI) Gathering</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block-three even">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">10.00 am <br> 11.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-2.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Milana Myles, <span class="designation">Art Critic</span></h4>
-                                            <h3><a>Marine & Oceanic Government Workers</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block-three">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">11.00 am <br> 12.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-3.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Gabrielle Winn, <span class="designation">Insurance consultant</span></h4>
-                                            <h3><a>Home Life Open Entryway Open Occasion of 21</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block-three even">
-                                <div class="inner-box">
-                                    <div class="date">
-                                        <span class="icon fa fa-microphone"></span>
-                                        <span class="time">12.00 am <br> 01.00 am</span>
-                                    </div>
-                                    <div class="inner">
-                                        <figure class="thumb">
-                                            <img src="/static/images/resource/schedule-1.jpg" alt="Schedule Session" width="188" height="188" loading="lazy">
-                                        </figure>
-                                        <div class="speaker-info">
-                                            <h4 class="name">Rene Wells, <span class="designation">Historian</span></h4>
-                                            <h3><a>Developing Force Legislative issues of Arctics Motivation</a></h3>
-                                            <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -572,7 +335,7 @@
                             <div class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget about-widget">
                                     <div class="logo">
-                                        <a href="index.html"><img src="/static/images/logo-2.png" alt="Sport Expo ET 2026 Logo" width="163" height="62" loading="lazy" /></a>
+                                        <a href="{% url 'index' %}"><img src="/static/images/logo-2.png" alt="Sport Expo ET 2026 Logo" width="163" height="62" loading="lazy" /></a>
                                     </div>
                                     <div class="text">
                                         <p>We have very good strength in innovative technology and tools with over 35 years of experience. We makes long-term investments goal in global companies in different sectors, mainly in Europe and other countries.</p>
@@ -585,13 +348,13 @@
                                 <div class="footer-widget lnks-widget">
                                     <h2 class="widget-title">Useful Links</h2>
                                     <ul class="user-links">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="visitor.html">Visitor</a></li>
-                                        <li><a href="schedule.html">Schedule</a></li>
-                                        <li><a href="gallery.html">Gallery</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'about' %}">About</a></li>
+                                        <li><a href="{% url 'visitor' %}">Visitor</a></li>
+                                        <li><a href="{% url 'schedule' %}">Schedule</a></li>
+                                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        <li><a href="{% url 'terms_and_conditions' %}">Terms and Conditions</a></li>
                                     </ul>
                                 </div>
                             </div>
