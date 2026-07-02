@@ -636,14 +636,14 @@ Theme Btn
 
 .btn-style-one {
     position: relative;
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 13px;
+    line-height: 25px;
     color: #ffffff;
     padding: 10px 30px;
     font-weight: 600;
     background: #001376;
     overflow: hidden;
-    min-width: 180px;
+    min-width: 160px;
 }
 
 .btn-style-one:hover {
@@ -662,7 +662,7 @@ Theme Btn
     top: -50%;
     left: -50%;
     height: 100%;
-    width: 200%;
+    width: 100%;
     content: "";
     background-color: rgba(255, 255, 255, 0.1);
     -webkit-transform: rotate(16deg);
@@ -1597,6 +1597,7 @@ hr {
 .main-menu .navigation>li {
     position: relative;
     margin-right: 48px;
+    gap :20px;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -1884,10 +1885,12 @@ hr {
 }
 
 .main-header .theme-btn {
-    margin-left: 30px;
+    margin-left: 20px;
     background-color: #081245;
     white-space: nowrap;
+    max-width: 50px;
     display: block;
+    border-radius: 30px;
 }
 
 
@@ -2989,7 +2992,9 @@ hr {
 }
 
 .header-style-two .nav-toggler {
-    margin-left: 30px;
+    margin-left: 15px;
+    position : relative;
+    left: 10px;
 }
 
 
@@ -3580,6 +3585,7 @@ Page Title
 
 .banner-section {
     position: relative;
+    bottom: 30px;
 }
 
 .banner-section .slide-item {
@@ -4027,7 +4033,103 @@ a.ui-button:active,
     top: 5px;
 }
 
+.video-slide {
+    position: relative;
+    overflow: hidden;
+    min-height: 840px;
+}
 
+.video-slide .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-slide .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.video-slide .auto-container {
+    position: relative;
+    z-index: 2;
+}
+
+.futuristic-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 24px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    overflow: hidden;
+    z-index: 1;
+
+    /* Gradient base */
+    background: linear-gradient(
+        90deg,
+        #00ff66,
+        #ffd000,
+        #ff3b3b
+    );
+
+    background-size: 300% 300%;
+    animation: gradientMove 4s ease infinite;
+
+    box-shadow: 0 0 20px rgba(0, 255, 102, 0.4),
+                0 0 40px rgba(255, 208, 0, 0.3),
+                0 0 60px rgba(255, 59, 59, 0.2);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glow pulse layer */
+.futuristic-btn::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(
+        90deg,
+        #00ff66,
+        #ffd000,
+        #ff3b3b
+    );
+    z-index: -1;
+    filter: blur(12px);
+    opacity: 0.7;
+    animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+/* Hover effect */
+.futuristic-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(0, 255, 102, 0.7),
+                0 0 50px rgba(255, 208, 0, 0.5),
+                0 0 80px rgba(255, 59, 59, 0.4);
+}
+
+/* Gradient movement */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glow breathing effect */
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
 /*** 
 
 ====================================================================
@@ -14056,11 +14158,11 @@ Accordian Box
 
 /* Sport Expo ET 2026 refinement: nav fit, green background/text rebalance, footer placement */
 .main-header .logo-box { min-width: 180px; padding-right: 16px; }
-.main-menu .navigation>li { margin-right: 20px; }
+.main-menu .navigation>li { margin-right: 29px; }
 .main-menu .navigation>li>a { color: #1A6B3C; }
-.main-header .outer-box { display: flex; align-items: center; gap: 18px; }
-.main-header .outer-box .btn-box { margin-left: 0; }
-.sticky-header .main-menu .navigation>li { margin-left: 22px; }
+.main-header .outer-box { display: flex; align-items: center; gap: 2px; position :relative; right: 40px}
+.main-header .outer-box .btn-box { margin-left: 0;}
+.sticky-header .main-menu .navigation>li { margin-left: 29px; }
 .banner-section .slide-item:before,
 .page-title:before {
     background: #1A6B3C;
