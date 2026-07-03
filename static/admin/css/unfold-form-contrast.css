@@ -1,12 +1,97 @@
-/* Project-level Django Unfold contrast fixes for dark admin forms. */
-:root,
+/* Project-level Django Unfold contrast fixes for light + dark admin forms. */
+:root {
+  --sportexpo-admin-field-bg: #e8edf2;
+  --sportexpo-admin-field-bg-hover: #dde4ec;
+  --sportexpo-admin-field-border: #334155;
+  --sportexpo-admin-field-border-focus: #1e328c;
+  --sportexpo-admin-field-text: #0f172a;
+  --sportexpo-admin-field-muted: #64748b;
+}
+
 .dark {
-  --sportexpo-admin-field-bg: #18202b;
-  --sportexpo-admin-field-bg-hover: #1f2937;
-  --sportexpo-admin-field-border: #64748b;
-  --sportexpo-admin-field-border-focus: #38bdf8;
-  --sportexpo-admin-field-text: #f8fafc;
-  --sportexpo-admin-field-muted: #cbd5e1;
+  --sportexpo-admin-field-bg: #334155;
+  --sportexpo-admin-field-bg-hover: #3f4f68;
+  --sportexpo-admin-field-border: #cbd5e1;
+  --sportexpo-admin-field-border-focus: #fadc00;
+  --sportexpo-admin-field-text: #ffffff;
+  --sportexpo-admin-field-muted: #e2e8f0;
+}
+
+/* LIGHT MODE field styling */
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not(
+    [type="submit"]
+  ):not([type="button"]):not([type="reset"]),
+textarea,
+select,
+.vTextField,
+.vURLField,
+.vIntegerField,
+.vBigIntegerField,
+.vDateField,
+.vTimeField,
+.vDateTimeField,
+.select2-selection,
+.select2-container--admin-autocomplete .select2-selection,
+.select2-container--default .select2-selection,
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+  background-color: var(--sportexpo-admin-field-bg) !important;
+  border: 1px solid var(--sportexpo-admin-field-border) !important;
+  color: var(--sportexpo-admin-field-text) !important;
+  border-radius: 15px;;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not(
+    [type="submit"]
+  ):not([type="button"]):not([type="reset"]):hover,
+textarea:hover,
+select:hover,
+.select2-selection:hover {
+  background-color: var(--sportexpo-admin-field-bg-hover) !important;
+  border-color: #00a844 !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not(
+    [type="submit"]
+  ):not([type="button"]):not([type="reset"]):focus,
+textarea:focus,
+select:focus,
+.select2-container--focus .select2-selection,
+.select2-container--open .select2-selection {
+  background-color: var(--sportexpo-admin-field-bg-hover) !important;
+  border-color: var(--sportexpo-admin-field-border-focus) !important;
+  box-shadow: 0 0 0 3px rgb(30 50 140 / 0.2) !important;
+  color: var(--sportexpo-admin-field-text) !important;
+  outline: none !important;
+}
+
+input::placeholder,
+textarea::placeholder,
+.select2-selection__placeholder {
+  color: var(--sportexpo-admin-field-muted) !important;
+  opacity: 1 !important;
+}
+
+input[type="file"],
+.file-upload,
+.file-upload a,
+.aligned .form-row .file-upload,
+.form-row .file-upload,
+p.file-upload {
+  background-color: var(--sportexpo-admin-field-bg) !important;
+  border-color: var(--sportexpo-admin-field-border) !important;
+  color: var(--sportexpo-admin-field-text) !important;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #007832 !important;
+  border: 1px solid #00a844 !important;
+  color: #ffffff !important;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  border-color: var(--sportexpo-admin-field-border) !important;
 }
 
 .dark
@@ -41,7 +126,7 @@
 .dark select:hover,
 .dark .select2-selection:hover {
   background-color: var(--sportexpo-admin-field-bg-hover) !important;
-  border-color: #94a3b8 !important;
+  border-color: #00a844 !important;
 }
 
 .dark
@@ -54,7 +139,7 @@
 .dark .select2-container--open .select2-selection {
   background-color: var(--sportexpo-admin-field-bg-hover) !important;
   border-color: var(--sportexpo-admin-field-border-focus) !important;
-  box-shadow: 0 0 0 3px rgb(56 189 248 / 0.25) !important;
+  box-shadow: 0 0 0 3px rgb(250 220 0 / 0.25) !important;
   color: var(--sportexpo-admin-field-text) !important;
   outline: none !important;
 }
@@ -86,8 +171,8 @@
 }
 
 .dark input[type="file"]::file-selector-button {
-  background-color: #334155 !important;
-  border: 1px solid #94a3b8 !important;
+  background-color: #007832 !important;
+  border: 1px solid #00a844 !important;
   color: var(--sportexpo-admin-field-text) !important;
 }
 
@@ -96,27 +181,61 @@
   border-color: var(--sportexpo-admin-field-border) !important;
 }
 
-/* Keep the HeroSlide countdown split date/time widgets separated in Unfold. */
-.form-row.field-countdown_date .datetime,
-.form-row.field-countdown_date .datetimeshortcuts,
-.field-countdown_date .datetime,
-.field-countdown_date .datetimeshortcuts {
-  display: flex !important;
-  align-items: center !important;
-  flex-wrap: wrap !important;
-  gap: 0.5rem !important;
+/* Keep the HeroSlide countdown split date/time widgets separated in Unfold.
+   Real DOM structure is: <div class="grow relative"><p class="datetime">
+   Date: <input><span class="datetimeshortcuts">...<span class="date-icon">
+   <br>
+   Time: <input><span class="datetimeshortcuts">...<span class="clock-icon">
+   The parent div has class "relative", which was causing the icons (if
+   absolutely positioned by Django's default admin CSS) to stack on top of
+   each other at the same coordinates. Forcing them to static/inline fixes it. */
+
+p.datetime {
+  display: block !important;
 }
 
-.field-countdown_date .vDateField,
-.field-countdown_date .vTimeField {
-  position: relative !important;
-  margin-right: 0.25rem !important;
-}
-
-.field-countdown_date .datetimeshortcuts a,
-.field-countdown_date .datetimeshortcuts .date-icon,
-.field-countdown_date .datetimeshortcuts .clock-icon {
+p.datetime .datetimeshortcuts {
   position: static !important;
-  margin: 0 0.35rem 0 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.25rem !important;
+  margin-left: 0.35rem !important;
+}
+
+p.datetime .datetimeshortcuts a {
+  position: static !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+p.datetime .datetimeshortcuts .date-icon,
+p.datetime .datetimeshortcuts .clock-icon {
+  position: static !important;
+  display: inline-block !important;
   vertical-align: middle !important;
+  margin: 0 !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  /* Covers icons implemented as CSS mask (currentColor-based) */
+  color: #1e328c !important;
+ 
+  /* Covers icons implemented as a background-image (e.g. Django's default
+     calendar/clock sprite images) - tints them toward brand blue */
+  filter: brightness(0) saturate(100%) invert(20%) sepia(54%) saturate(2245%)
+    hue-rotate(199deg) brightness(94%) contrast(101%) !important;
+}
+
+.dark p.datetime .datetimeshortcuts .date-icon,
+.dark p.datetime .datetimeshortcuts .clock-icon {
+  color: #fadc00 !important;
+  
+  filter: brightness(0) saturate(100%) invert(89%) sepia(35%) saturate(1873%)
+    hue-rotate(0deg) brightness(103%) contrast(105%) !important;
+}
+
+p.datetime .vDateField,
+p.datetime .vTimeField {
+  position: static !important;
 }
