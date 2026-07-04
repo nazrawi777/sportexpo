@@ -713,6 +713,336 @@
           white-space: normal;
         }
       }
+
+      /* ================================================================
+         LIGHT-THEME OVERRIDE  —  Sport Expo ET 2026 (Visitor)
+         Repaints the dark neon layout onto Sponsor's cream palette.
+         Palette (from sponsor.html):
+           bg #f5f3ec | ink #0b0f0d | muted #4a4f4c
+           green #1a6b3c | gold #f5c800 | blue #1b3f9e
+         Featured tier (Premier) = solid green fill w/ white text +
+         gold CTA — same "distinct solid-fill card" pattern as
+         Sponsor's Strategic Sponsor card, but in green.
+         ================================================================ */
+      .see-visitor-section {
+        background: #f5f3ec !important;
+        color: #0b0f0d;
+        font-family: "Space Grotesk", "Inter", -apple-system, sans-serif;
+        padding: 96px 24px 120px;
+      }
+      .see-visitor-section::before {
+        content: "";
+        position: absolute; top: 0; left: 0; right: 0; height: 1px;
+        background: linear-gradient(90deg,transparent,#1a6b3c,#f5c800,#1b3f9e,transparent);
+        z-index: 1;
+      }
+      .see-visitor-bg-orb-1,
+      .see-visitor-bg-orb-2,
+      .see-visitor-bg-orb-3,
+      .see-visitor-bg-grid { display: none !important; }
+
+      /* Header */
+      .see-visitor-eyebrow {
+        background: transparent;
+        border: 1px solid rgba(26,107,60,0.35);
+        color: #1a6b3c;
+        font-family: "IBM Plex Mono", monospace;
+        letter-spacing: 0.28em;
+      }
+      .see-visitor-title { color: #0b0f0d; font-weight: 700; letter-spacing: -0.03em; }
+      .see-visitor-title-gold {
+        background: none;
+        -webkit-text-fill-color: currentColor;
+        color: #1a6b3c;
+      }
+      .see-visitor-subtitle { color: #4a4f4c; }
+      .see-visitor-subtitle strong { color: #0b0f0d; font-weight: 600; }
+      .see-visitor-divider-line-left {
+        background: linear-gradient(90deg, transparent, rgba(26,107,60,0.4));
+      }
+      .see-visitor-divider-line-right {
+        background: linear-gradient(90deg, rgba(26,107,60,0.4), transparent);
+      }
+      .see-visitor-divider-dot {
+        background: #1a6b3c; box-shadow: none;
+      }
+
+      /* Cards — flat light on cream, no glow */
+      .see-visitor-card,
+      .see-visitor-card--premier,
+      .see-visitor-card--ambassador {
+        background: #ffffff !important;
+        border: 1px solid rgba(11,15,13,0.14) !important;
+        border-radius: 12px !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        color: #0b0f0d;
+      }
+      .see-visitor-card:hover,
+      .see-visitor-card--ambassador:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 12px 32px -18px rgba(11,15,13,0.25) !important;
+        border-color: rgba(26,107,60,0.45) !important;
+      }
+      .see-visitor-card--premier:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 20px 40px -18px rgba(26,107,60,0.4) !important;
+      }
+
+      /* Ambassador — remove shimmer bar, use flat gold accent */
+      .see-visitor-shimmer-bar {
+        animation: none !important;
+        background: #f5c800 !important;
+        height: 3px !important;
+      }
+
+      /* Icons */
+      .see-visitor-icon-wrap {
+        background: rgba(26,107,60,0.10) !important;
+        border: 1px solid rgba(26,107,60,0.20) !important;
+        color: #1a6b3c;
+      }
+      .see-visitor-card--ambassador .see-visitor-icon-wrap {
+        background: rgba(245,200,0,0.15) !important;
+        border-color: rgba(245,200,0,0.35) !important;
+      }
+
+      /* Text */
+      .see-visitor-label {
+        color: #1a6b3c !important;
+        font-family: "IBM Plex Mono", monospace;
+      }
+      .see-visitor-card--ambassador .see-visitor-label { color: #a17a00 !important; }
+      .see-visitor-tier-name { color: #0b0f0d !important; }
+      .see-visitor-tagline { color: #4a4f4c !important; }
+      .see-visitor-divider-card {
+        background: rgba(11,15,13,0.10) !important;
+      }
+      .see-visitor-price-usd,
+      .see-visitor-card--premier .see-visitor-price-usd,
+      .see-visitor-card--ambassador .see-visitor-price-usd {
+        color: #1a6b3c !important;
+      }
+      .see-visitor-price-currency { color: #4a4f4c !important; }
+      .see-visitor-price-etb { color: #7a7f7c !important; }
+      .see-visitor-feature-item { color: #1a1d1b !important; }
+
+      /* Badge — flat pill, no glow */
+      .see-visitor-badge {
+        background: #1a6b3c !important;
+        color: #ffffff !important;
+        box-shadow: none !important;
+        border-radius: 0 0 6px 6px;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+      }
+
+      /* CTA — Sponsor button conventions */
+      .see-visitor-cta,
+      .see-visitor-card--ambassador .see-visitor-cta,
+      .see-visitor-card--discovery .see-visitor-cta {
+        background: #1a6b3c !important;
+        color: #ffffff !important;
+        border-radius: 6px !important;
+        box-shadow: none !important;
+        font-family: "Space Grotesk", sans-serif;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 16px 24px !important;
+        transition: background 0.3s ease;
+      }
+      .see-visitor-cta:hover {
+        background: #0b0f0d !important;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      /* ── FEATURED: Premier = solid green with white text ── */
+      .see-visitor-card--premier {
+        background: #1a6b3c !important;
+        border-color: #1a6b3c !important;
+        color: #ffffff;
+        position: relative;
+        overflow: hidden;
+      }
+      .see-visitor-card--premier::after {
+        content: "";
+        position: absolute; top: 0; left: 0; right: 0; height: 4px;
+        background: #f5c800;
+      }
+      .see-visitor-card--premier .see-visitor-icon-wrap {
+        background: rgba(245,200,0,0.20) !important;
+        border-color: rgba(245,200,0,0.4) !important;
+      }
+      .see-visitor-card--premier .see-visitor-label { color: #f5c800 !important; }
+      .see-visitor-card--premier .see-visitor-tier-name { color: #ffffff !important; }
+      .see-visitor-card--premier .see-visitor-tagline { color: rgba(255,255,255,0.82) !important; }
+      .see-visitor-card--premier .see-visitor-divider-card {
+        background: rgba(255,255,255,0.20) !important;
+      }
+      .see-visitor-card--premier .see-visitor-price-usd { color: #f5c800 !important; }
+      .see-visitor-card--premier .see-visitor-price-currency { color: rgba(255,255,255,0.7) !important; }
+      .see-visitor-card--premier .see-visitor-price-etb { color: rgba(255,255,255,0.6) !important; }
+      .see-visitor-card--premier .see-visitor-feature-item { color: rgba(255,255,255,0.92) !important; }
+      .see-visitor-card--premier .see-visitor-badge {
+        background: #f5c800 !important;
+        color: #0b0f0d !important;
+      }
+      .see-visitor-card--premier .see-visitor-cta {
+        background: #f5c800 !important;
+        color: #0b0f0d !important;
+      }
+      .see-visitor-card--premier .see-visitor-cta:hover {
+        background: #ffffff !important;
+        color: #0b0f0d !important;
+      }
+
+      /* City-tour helper line on every card */
+      .see-visitor-tour-note {
+        margin: 4px 0 20px;
+        padding: 10px 12px;
+        border: 1px dashed rgba(26,107,60,0.35);
+        border-radius: 6px;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        line-height: 1.5;
+        color: #4a4f4c;
+      }
+      .see-visitor-card--premier .see-visitor-tour-note {
+        border-color: rgba(245,200,0,0.55);
+        color: rgba(255,255,255,0.88);
+      }
+
+      .see-visitor-footnote { color: #6c726b; }
+
+      /* ================================================================
+         BOOKING MODAL
+         ================================================================ */
+      .sev-book-modal {
+        position: fixed; inset: 0; z-index: 10000;
+        display: none; align-items: flex-start; justify-content: center;
+        padding: 40px 20px;
+        background: rgba(11,20,16,0.65);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        opacity: 0;
+        transition: opacity 0.25s ease;
+        overflow-y: auto;
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .sev-book-modal[data-open="true"] { display: flex; opacity: 1; }
+      .sev-book-dialog {
+        position: relative;
+        width: 100%; max-width: 520px;
+        margin: auto;
+        background: #ffffff;
+        border: 1px solid rgba(11,15,13,0.14);
+        border-radius: 10px;
+        padding: 40px 36px 32px;
+        color: #0b0f0d;
+        box-shadow: 0 40px 80px -20px rgba(11,15,13,0.4);
+      }
+      .sev-book-dialog::before {
+        content: ""; position: absolute; top: 0; left: 0; right: 0;
+        height: 4px; background: #1a6b3c; border-radius: 10px 10px 0 0;
+      }
+      .sev-book-close {
+        position: absolute; top: 12px; right: 12px;
+        width: 36px; height: 36px; border-radius: 50%;
+        border: 1px solid rgba(11,15,13,0.14);
+        background: transparent; color: #0b0f0d;
+        font-size: 20px; line-height: 1; cursor: pointer;
+        display: inline-flex; align-items: center; justify-content: center;
+        transition: all .25s ease;
+      }
+      .sev-book-close:hover { background: #0b0f0d; color: #fff; border-color: #0b0f0d; }
+      .sev-book-eyebrow {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+        color: #1a6b3c; margin-bottom: 12px;
+      }
+      .sev-book-title {
+        font-weight: 700; font-size: 26px; letter-spacing: -0.02em;
+        line-height: 1.1; margin: 0 0 6px; color: #0b0f0d;
+      }
+      .sev-book-title span { color: #1a6b3c; }
+      .sev-book-sub {
+        font-size: 14px; color: #4a4f4c; line-height: 1.55; margin: 0 0 22px;
+      }
+      .sev-book-form { display: flex; flex-direction: column; gap: 14px; }
+      .sev-book-row {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+      }
+      @media (max-width: 480px) { .sev-book-row { grid-template-columns: 1fr; } }
+      .sev-book-field { display: flex; flex-direction: column; gap: 6px; }
+      .sev-book-label {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+        color: #4a4f4c; font-weight: 600;
+      }
+      .sev-book-input {
+        background: #fff; border: 1px solid rgba(11,15,13,0.18);
+        border-radius: 4px; padding: 12px 14px;
+        color: #0b0f0d; font-family: inherit; font-size: 14px; line-height: 1.4;
+        transition: border-color .25s ease, box-shadow .25s ease;
+        width: 100%;
+      }
+      .sev-book-input:focus {
+        outline: none; border-color: #1a6b3c;
+        box-shadow: 0 0 0 3px rgba(26,107,60,0.15);
+      }
+      .sev-book-summary {
+        margin-top: 6px; padding: 16px 18px;
+        background: #faf8f0; border: 1px solid rgba(11,15,13,0.10);
+        border-radius: 6px;
+        display: flex; flex-direction: column; gap: 8px;
+        font-size: 13px;
+      }
+      .sev-book-summary-row {
+        display: flex; justify-content: space-between;
+        color: #4a4f4c;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 12px; letter-spacing: 0.04em;
+      }
+      .sev-book-summary-total {
+        display: flex; justify-content: space-between; align-items: baseline;
+        border-top: 1px solid rgba(11,15,13,0.14);
+        padding-top: 10px; margin-top: 4px;
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .sev-book-summary-total > span:first-child {
+        font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+        color: #0b0f0d; font-weight: 700;
+      }
+      .sev-book-summary-total > span:last-child {
+        font-size: 22px; font-weight: 700; color: #1a6b3c;
+        letter-spacing: -0.02em;
+      }
+      .sev-book-error {
+        color: #b1301c; font-size: 12px;
+        font-family: "IBM Plex Mono", monospace;
+        letter-spacing: 0.04em;
+      }
+      .sev-book-pay {
+        margin-top: 6px;
+        appearance: none; background: #1a6b3c; color: #fff;
+        border: none; padding: 18px 24px;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600; letter-spacing: 0.18em;
+        text-transform: uppercase; font-size: 12px;
+        cursor: pointer; transition: background .3s ease;
+        border-radius: 6px;
+      }
+      .sev-book-pay:hover:not(:disabled) { background: #0b0f0d; }
+      .sev-book-pay:disabled { opacity: .45; cursor: not-allowed; }
+      .sev-book-note {
+        margin: 12px 0 0; font-size: 11px; line-height: 1.5;
+        color: #6c726b;
+      }
+      .sev-book-note strong { color: #0b0f0d; }
     </style>
 
     <script type="application/ld+json">
@@ -1141,6 +1471,9 @@
                 <p class="see-visitor-tagline">
                   Entry-level access for first-time visitors and solo travelers
                 </p>
+                <p class="see-visitor-tour-note">
+                  City tour options available: 1-day, 2-day, or 3-day itineraries.
+                </p>
 
                 <div class="see-visitor-divider-card"></div>
 
@@ -1342,6 +1675,9 @@
                 <p class="see-visitor-tagline">
                   The most popular choice for individual professionals and small
                   delegations
+                </p>
+                <p class="see-visitor-tour-note">
+                  City tour options available: 1-day, 2-day, or 3-day itineraries.
                 </p>
 
                 <div class="see-visitor-divider-card"></div>
@@ -1571,6 +1907,9 @@
                 <p class="see-visitor-tagline">
                   The flagship experience — for heads of federation, government
                   delegates, and key investors
+                </p>
+                <p class="see-visitor-tour-note">
+                  City tour options available: 1-day, 2-day, or 3-day itineraries.
                 </p>
 
                 <div class="see-visitor-divider-card"></div>
@@ -2053,20 +2392,216 @@
           });
         });
 
-        /* ── Package selection handler ───────────────────────────────── */
-        window.seeVisitorSelectPackage = function (tier) {
-          /* Replace this with your own booking/CTA logic */
-          var labels = {
-            discovery: "Discovery — $699 USD",
-            premier: "Premier — $1,299 USD",
-            ambassador: "Ambassador — $5,500 USD",
-          };
-          alert(
-            "You selected: " +
-              (labels[tier] || tier) +
-              "\nReplace this handler with your booking flow.",
-          );
+        /* ── Booking flow (dates → live total → Stripe) ─────────────── */
+
+        /* CONFIG — edit these when finalized ------------------------ */
+        var BOOKING_CUTOFF_DATE = "2026-11-30"; // last selectable date (inclusive), YYYY-MM-DD
+
+        var PACKAGE_PRICING = {
+          discovery:  { name: "Discovery",  nightly_rate: 0, arrival_fee: 0 },
+          premier:    { name: "Premier",    nightly_rate: 0, arrival_fee: 0 },
+          ambassador: { name: "Ambassador", nightly_rate: 0, arrival_fee: 0 },
         };
+
+        // One Stripe Payment Link per tier. Each Payment Link should have
+        // two line items: "Nightly rate" (customer-adjustable quantity) and
+        // "Arrival fee" (quantity fixed at 1). Guest sets nights = N on
+        // Stripe's page — the total shown here in the popup matches the
+        // final Stripe checkout total when they do.
+        var STRIPE_PAYMENT_LINKS = {
+          discovery:  "", // e.g. "https://buy.stripe.com/..."
+          premier:    "",
+          ambassador: "",
+        };
+        /* ---------------------------------------------------------- */
+
+        var currentTier = null;
+        var modal, elTitle, elCheckin, elCheckout, elName, elEmail, elPhone;
+        var elNights, elRate, elArr, elTotal, elNightsNote, elError, elPay;
+
+        function bindBookingEls() {
+          modal    = document.getElementById("sev-book-modal");
+          if (!modal) return false;
+          elTitle  = modal.querySelector("[data-sev-tier-name]");
+          elCheckin  = document.getElementById("sev-checkin");
+          elCheckout = document.getElementById("sev-checkout");
+          elName   = document.getElementById("sev-name");
+          elEmail  = document.getElementById("sev-email");
+          elPhone  = document.getElementById("sev-phone");
+          elNights = modal.querySelector("[data-sev-nights]");
+          elRate   = modal.querySelector("[data-sev-rate]");
+          elArr    = modal.querySelector("[data-sev-arrival]");
+          elTotal  = modal.querySelector("[data-sev-total]");
+          elNightsNote = modal.querySelector("[data-sev-nights-note]");
+          elError  = document.getElementById("sev-book-error");
+          elPay    = document.getElementById("sev-book-pay");
+          return true;
+        }
+
+        function todayISO() {
+          var d = new Date();
+          var m = String(d.getMonth() + 1).padStart(2, "0");
+          var day = String(d.getDate()).padStart(2, "0");
+          return d.getFullYear() + "-" + m + "-" + day;
+        }
+
+        function fmtUSD(n) {
+          return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " USD";
+        }
+
+        // UTC-midnight diff — avoids DST off-by-one.
+        // July 10 → July 13 = 3 nights.
+        function nightsBetween(inStr, outStr) {
+          if (!inStr || !outStr) return 0;
+          var a = new Date(inStr + "T00:00:00Z").getTime();
+          var b = new Date(outStr + "T00:00:00Z").getTime();
+          if (isNaN(a) || isNaN(b)) return 0;
+          var diff = Math.round((b - a) / 86400000);
+          return diff > 0 ? diff : 0;
+        }
+
+        function setError(msg) {
+          if (!elError) return;
+          if (msg) { elError.textContent = msg; elError.hidden = false; }
+          else     { elError.textContent = "";  elError.hidden = true; }
+        }
+
+        function recalc() {
+          if (!currentTier) return;
+          var cfg = PACKAGE_PRICING[currentTier] || { nightly_rate: 0, arrival_fee: 0 };
+          var nights = nightsBetween(elCheckin.value, elCheckout.value);
+
+          elNights.textContent = nights ? String(nights) : "—";
+          elNightsNote.textContent = nights ? String(nights) : "—";
+          elRate.textContent   = cfg.nightly_rate ? fmtUSD(cfg.nightly_rate) : "—";
+          elArr.textContent    = cfg.arrival_fee  ? fmtUSD(cfg.arrival_fee)  : "—";
+
+          var total = (nights * cfg.nightly_rate) + cfg.arrival_fee;
+          var valid = nights > 0 && total > 0;
+
+          elTotal.textContent = valid ? fmtUSD(total) : "$0.00 USD";
+
+          // Validate date bounds
+          setError("");
+          if (elCheckin.value && elCheckin.value < todayISO()) {
+            setError("Check-in cannot be in the past.");
+            valid = false;
+          } else if (elCheckout.value && elCheckout.value > BOOKING_CUTOFF_DATE) {
+            setError("Check-out is beyond the booking window (" + BOOKING_CUTOFF_DATE + ").");
+            valid = false;
+          } else if (elCheckin.value && elCheckout.value && nights <= 0) {
+            setError("Check-out must be after check-in.");
+            valid = false;
+          } else if (nights > 0 && (!cfg.nightly_rate || !cfg.arrival_fee)) {
+            setError("Pricing not yet configured for this package.");
+            valid = false;
+          }
+
+          elPay.disabled = !valid;
+          elPay.dataset.sevTotal = valid ? String(total) : "0";
+          elPay.dataset.sevNights = valid ? String(nights) : "0";
+        }
+
+        function openModal(tier) {
+          if (!modal || !PACKAGE_PRICING[tier]) return;
+          currentTier = tier;
+          if (elTitle) elTitle.textContent = PACKAGE_PRICING[tier].name;
+          // Reset form values
+          elCheckin.value = "";
+          elCheckout.value = "";
+          elName.value = "";
+          elEmail.value = "";
+          elPhone.value = "";
+          setError("");
+          // Bounds
+          var today = todayISO();
+          elCheckin.min  = today;
+          elCheckin.max  = BOOKING_CUTOFF_DATE;
+          elCheckout.min = today;
+          elCheckout.max = BOOKING_CUTOFF_DATE;
+          recalc();
+          modal.setAttribute("data-open", "true");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          if (!modal) return;
+          modal.setAttribute("data-open", "false");
+          document.body.style.overflow = "";
+        }
+
+        // Queue calls made before DOM is ready
+        var pendingTier = null;
+        window.seeVisitorSelectPackage = function (tier) {
+          if (!modal && !bindBookingEls()) {
+            pendingTier = tier;
+            return;
+          }
+          openModal(tier);
+        };
+
+        function initBooking() {
+          if (!bindBookingEls()) return;
+
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) closeModal();
+          });
+          modal.querySelector(".sev-book-close").addEventListener("click", closeModal);
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && modal.getAttribute("data-open") === "true") closeModal();
+          });
+
+          [elCheckin, elCheckout, elName, elEmail, elPhone].forEach(function (el) {
+            if (!el) return;
+            el.addEventListener("input",  recalc);
+            el.addEventListener("change", recalc);
+          });
+
+          elCheckin.addEventListener("change", function () {
+            if (elCheckin.value) {
+              elCheckout.min = elCheckin.value;
+              if (elCheckout.value && elCheckout.value <= elCheckin.value) {
+                elCheckout.value = "";
+              }
+            }
+            recalc();
+          });
+
+          elPay.addEventListener("click", function () {
+            if (elPay.disabled) return;
+            if (!elName.value || !elEmail.value || !elPhone.value) {
+              setError("Please fill in your name, email, and phone.");
+              return;
+            }
+            var link = STRIPE_PAYMENT_LINKS[currentTier];
+            if (!link) {
+              setError("Payment link not configured for " + PACKAGE_PRICING[currentTier].name + " yet.");
+              return;
+            }
+            // client_reference_id gets passed to the checkout.session.completed
+            // webhook so the confirmation email/QR flow can join it to guest data.
+            var ref = [
+              currentTier,
+              elCheckin.value,
+              elCheckout.value,
+              elPay.dataset.sevNights,
+              Date.now(),
+            ].join("_");
+            var sep = link.indexOf("?") === -1 ? "?" : "&";
+            var url = link + sep +
+              "prefilled_email=" + encodeURIComponent(elEmail.value) +
+              "&client_reference_id=" + encodeURIComponent(ref);
+            window.location.href = url;
+          });
+
+          if (pendingTier) { openModal(pendingTier); pendingTier = null; }
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initBooking);
+        } else {
+          initBooking();
+        }
       })();
     </script>
     <script src="/static/js/jquery.js"></script>
@@ -2081,5 +2616,50 @@
     <script src="/static/js/script.js" defer></script>
     <!-- Color Setting -->
     <script src="/static/js/color-settings.js" defer></script>
+
+    <!-- Visitor booking modal -->
+    <div class="sev-book-modal" id="sev-book-modal" role="dialog" aria-modal="true" aria-labelledby="sev-book-title">
+      <div class="sev-book-dialog">
+        <button type="button" class="sev-book-close" aria-label="Close">×</button>
+        <div class="sev-book-eyebrow">Book your visit</div>
+        <h3 class="sev-book-title" id="sev-book-title"><span data-sev-tier-name>Discovery</span> Package</h3>
+        <p class="sev-book-sub">Choose your dates and enter your details — you'll continue to secure Stripe checkout.</p>
+        <form class="sev-book-form" onsubmit="return false;">
+          <div class="sev-book-row">
+            <div class="sev-book-field">
+              <label class="sev-book-label" for="sev-checkin">Check-in</label>
+              <input class="sev-book-input" type="date" id="sev-checkin" required />
+            </div>
+            <div class="sev-book-field">
+              <label class="sev-book-label" for="sev-checkout">Check-out</label>
+              <input class="sev-book-input" type="date" id="sev-checkout" required />
+            </div>
+          </div>
+          <div class="sev-book-field">
+            <label class="sev-book-label" for="sev-name">Full name</label>
+            <input class="sev-book-input" type="text" id="sev-name" autocomplete="name" required />
+          </div>
+          <div class="sev-book-row">
+            <div class="sev-book-field">
+              <label class="sev-book-label" for="sev-email">Email</label>
+              <input class="sev-book-input" type="email" id="sev-email" autocomplete="email" required />
+            </div>
+            <div class="sev-book-field">
+              <label class="sev-book-label" for="sev-phone">Phone</label>
+              <input class="sev-book-input" type="tel" id="sev-phone" autocomplete="tel" required />
+            </div>
+          </div>
+          <div class="sev-book-summary">
+            <div class="sev-book-summary-row"><span>Nights</span><span data-sev-nights>—</span></div>
+            <div class="sev-book-summary-row"><span>Nightly rate</span><span data-sev-rate>—</span></div>
+            <div class="sev-book-summary-row"><span>Arrival fee</span><span data-sev-arrival>—</span></div>
+            <div class="sev-book-summary-total"><span>Total</span><span data-sev-total>$0.00 USD</span></div>
+          </div>
+          <div class="sev-book-error" id="sev-book-error" hidden></div>
+          <button type="button" class="sev-book-pay" id="sev-book-pay" disabled>Pay with card →</button>
+          <p class="sev-book-note">You'll be redirected to Stripe. On the next screen, set the "Nightly rate" quantity to <strong data-sev-nights-note>—</strong> to match your stay.</p>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

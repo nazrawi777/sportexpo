@@ -617,6 +617,249 @@
         line-height: 1.6;
         margin: 0;
       }
+
+      /* ================================================================
+         LIGHT-THEME OVERRIDE  —  Sport Expo ET 2026 (Media)
+         Sponsor palette (cream #f5f3ec / ink #0b0f0d / green #1a6b3c /
+         gold #f5c800). Media leans slightly more toward gold accents
+         to keep a distinct character on the shared background.
+         Featured tier (Strategic) = solid dark card w/ gold accent —
+         mirrors Sponsor's Strategic Sponsor pattern exactly.
+         Popup: max-height 85vh with internal scroll so nothing clips.
+         ================================================================ */
+      .see-media-wrap {
+        background: #f5f3ec !important;
+        color: #0b0f0d !important;
+        font-family: "Space Grotesk", "Inter", sans-serif;
+      }
+      .see-media-wrap::before {
+        background:
+          radial-gradient(900px 500px at 12% 8%, rgba(26,107,60,0.06), transparent 60%),
+          radial-gradient(700px 500px at 92% 90%, rgba(245,200,0,0.06), transparent 65%) !important;
+      }
+      .see-media-wrap::after {
+        background-image:
+          linear-gradient(rgba(11,15,13,0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(11,15,13,0.04) 1px, transparent 1px) !important;
+      }
+
+      /* Header */
+      .see-media-eyebrow {
+        color: #a17a00 !important;
+        border-color: rgba(245,200,0,0.55) !important;
+        background: rgba(245,200,0,0.10) !important;
+        font-family: "IBM Plex Mono", monospace;
+      }
+      .see-media-eyebrow-dot { box-shadow: none !important; background: #f5c800 !important; }
+      .see-media-headline { color: #0b0f0d !important; }
+      .see-media-headline em { color: #1a6b3c !important; }
+      .see-media-lede { color: #4a4f4c !important; }
+      .see-media-rule { color: #4a4f4c !important; font-family: "IBM Plex Mono", monospace; }
+      .see-media-rule::before, .see-media-rule::after {
+        background: linear-gradient(90deg, transparent, rgba(11,15,13,0.20), transparent) !important;
+      }
+
+      /* Cards — flat on white, no glow */
+      .see-media-tier {
+        background: #ffffff !important;
+        border: 1px solid rgba(11,15,13,0.14) !important;
+        border-radius: 12px !important;
+        color: #0b0f0d !important;
+        box-shadow: none !important;
+      }
+      .see-media-tier:hover {
+        border-color: rgba(245,200,0,0.55) !important;
+        box-shadow: 0 12px 32px -18px rgba(11,15,13,0.25) !important;
+      }
+      .see-media-tier::before { display: none !important; }
+      .see-media-tier-name { color: #0b0f0d !important; }
+      .see-media-tier-name::after { background: #f5c800 !important; }
+      .see-media-tagline { color: #4a4f4c !important; }
+      .see-media-price-usd { color: #1a6b3c !important; }
+      .see-media-price-currency { color: #4a4f4c !important; }
+      .see-media-price-etb { color: #7a7f7c !important; }
+      .see-media-divider {
+        background: linear-gradient(90deg, rgba(11,15,13,0.14), transparent) !important;
+      }
+      .see-media-feature { color: #1a1d1b !important; }
+      .see-media-check {
+        background: rgba(26,107,60,0.12) !important;
+        color: #1a6b3c !important;
+      }
+
+      /* Flag/ribbon — flat pill */
+      .see-media-flag {
+        background: #f5c800 !important;
+        color: #0b0f0d !important;
+        box-shadow: none !important;
+        border-radius: 999px;
+        padding: 6px 12px;
+      }
+
+      /* CTA — Sponsor button conventions */
+      .see-media-cta {
+        background: #1a6b3c !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 6px !important;
+        padding: 16px 22px !important;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        transition: background .3s ease !important;
+      }
+      .see-media-cta:hover {
+        background: #0b0f0d !important;
+        color: #ffffff !important;
+        border-color: #0b0f0d !important;
+      }
+
+      /* ── FEATURED (Strategic): solid dark card with gold accent ── */
+      .see-media-tier-featured {
+        background: #0b1410 !important;
+        border: 1px solid #0b1410 !important;
+        color: #f5f3ec !important;
+        transform: none !important;
+        box-shadow: none !important;
+        position: relative;
+        overflow: hidden;
+      }
+      .see-media-tier-featured.see-media-in {
+        transform: translateY(0) !important;
+      }
+      .see-media-tier-featured::after {
+        content: "";
+        position: absolute; top: 0; left: 0; right: 0;
+        height: 4px; background: #f5c800; z-index: 1;
+      }
+      .see-media-tier-featured .see-media-tier-name { color: #ffffff !important; }
+      .see-media-tier-featured .see-media-tier-name::after { background: #f5c800 !important; }
+      .see-media-tier-featured .see-media-tagline { color: #cfd1cb !important; }
+      .see-media-tier-featured .see-media-price-usd { color: #f5c800 !important; }
+      .see-media-tier-featured .see-media-price-currency { color: rgba(245,243,236,0.7) !important; }
+      .see-media-tier-featured .see-media-price-etb { color: rgba(245,243,236,0.6) !important; }
+      .see-media-tier-featured .see-media-feature { color: #e7e5dc !important; }
+      .see-media-tier-featured .see-media-check {
+        background: #f5c800 !important;
+        color: #0b0f0d !important;
+      }
+      .see-media-tier-featured .see-media-divider {
+        background: linear-gradient(90deg, rgba(245,200,0,0.55), transparent) !important;
+      }
+      .see-media-tier-featured .see-media-cta {
+        background: #f5c800 !important;
+        color: #0b0f0d !important;
+      }
+      .see-media-tier-featured .see-media-cta:hover {
+        background: #ffffff !important;
+        color: #0b0f0d !important;
+      }
+      .see-media-tier-featured:hover {
+        border-color: #0b1410 !important;
+        box-shadow: 0 20px 40px -18px rgba(11,15,13,0.4) !important;
+      }
+
+      /* ================================================================
+         MODAL — light theme + sizing fix
+         (Sponsor's popup is the working reference; this rebuilds the
+         same behaviour without touching sponsor.html.)
+         ================================================================ */
+      .see-media-modal {
+        background: rgba(11,20,16,0.55) !important;
+        padding: 24px 20px !important;
+        align-items: flex-start !important;
+        overflow-y: auto !important;
+      }
+      .see-media-modal-dialog {
+        background: #ffffff !important;
+        border: 1px solid rgba(11,15,13,0.14) !important;
+        color: #0b0f0d !important;
+        box-shadow: 0 40px 80px -20px rgba(11,15,13,0.4) !important;
+        border-radius: 10px !important;
+        padding: 40px 36px 32px !important;
+        max-width: 540px !important;
+        /* Sizing: cap at 85vh, put internal scroll on the form body
+           (see .see-media-modal-form below) so the header stays visible
+           and the submit button never gets clipped by the footer. */
+        max-height: 85vh !important;
+        margin-block: 24px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .see-media-modal-dialog::before {
+        left: 0 !important; right: 0 !important;
+        height: 4px !important;
+        background: #f5c800 !important;
+      }
+      .see-media-modal-close {
+        border-color: rgba(11,15,13,0.14) !important;
+        color: #0b0f0d !important;
+        background: transparent !important;
+      }
+      .see-media-modal-close:hover {
+        background: #0b0f0d !important;
+        color: #ffffff !important;
+        border-color: #0b0f0d !important;
+      }
+      .see-media-modal-eyebrow {
+        color: #1a6b3c !important;
+        font-family: "IBM Plex Mono", monospace;
+      }
+      .see-media-modal-eyebrow::before {
+        background: #1a6b3c !important;
+        box-shadow: none !important;
+      }
+      .see-media-modal-title { color: #0b0f0d !important; }
+      .see-media-modal-title em { color: #1a6b3c !important; font-style: normal; }
+      .see-media-modal-sub { color: #4a4f4c !important; }
+      /* Scrollable body: the form-wrap holds eyebrow/title/sub/form/submit,
+         so scrolling that keeps every field including the submit reachable
+         without clipping the top or bottom of the dialog. */
+      .see-media-modal-form-wrap,
+      .see-media-modal-success {
+        overflow-y: auto !important;
+        overflow-x: hidden;
+        flex: 1 1 auto;
+        min-height: 0;
+        padding-right: 4px;
+      }
+      .see-media-modal-label { color: #4a4f4c !important; font-family: "IBM Plex Mono", monospace; }
+      .see-media-modal-input,
+      .see-media-modal-textarea {
+        background: #ffffff !important;
+        border: 1px solid rgba(11,15,13,0.18) !important;
+        border-radius: 4px !important;
+        color: #0b0f0d !important;
+      }
+      .see-media-modal-input:focus,
+      .see-media-modal-textarea:focus {
+        border-color: #1a6b3c !important;
+        background: #ffffff !important;
+        box-shadow: 0 0 0 3px rgba(26,107,60,0.15) !important;
+      }
+      .see-media-modal-input::placeholder,
+      .see-media-modal-textarea::placeholder { color: #9aa09c !important; }
+      .see-media-modal-submit {
+        background: #1a6b3c !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 6px !important;
+        padding: 16px 22px !important;
+      }
+      .see-media-modal-submit:hover {
+        background: #0b0f0d !important;
+        color: #ffffff !important;
+        border-color: #0b0f0d !important;
+      }
+      .see-media-modal-success-icon {
+        background: #1a6b3c !important;
+        color: #f5c800 !important;
+        border: none !important;
+      }
+      .see-media-modal-success-title { color: #0b0f0d !important; }
+      .see-media-modal-success-text { color: #4a4f4c !important; }
     </style>
   </head>
 
