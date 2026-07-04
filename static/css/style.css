@@ -582,6 +582,39 @@ default table
   color: #5c6770;
   font-weight: 400;
 }
+
+.dante-launcher {
+  position: fixed !important;
+}
+.dante-panel-wrap {
+  right: auto !important;
+  left: 20px !important;
+}
+
+.dante-launcher {
+  right: auto !important;
+  left: 20px !important;
+}
+
+.dante-sk--avatar {
+  background: #1a1a1a;
+  background-image: none;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.dante-sk--avatar::after {
+  content: "SE"; /* your initials or a short mark, e.g. Sport Expo */
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
 @media (max-width: 768px) {
   .user-icon {
     position: relative;
@@ -589,6 +622,28 @@ default table
     width: 24px;
     height: 24px;
   }
+  .contact-list-two li {
+  position: relative;
+  font-size: 12px !important;
+  line-height: 14px !important;
+  color: #ffffff;
+  font-weight: 400;
+  margin-right: 60px;
+  text-align: center !important;
+}
+
+.contact-list-two li strong {
+  font-size: 12px !important;
+  line-height: 15px !important;
+  font-weight: 700;
+  margin-right: 3px;
+  color: #ffae00;
+}
+.header-style-two .logo img {
+    max-width: 170px;
+    position: relative;
+    top: 0px !important;
+}
   .sticky-header {
     display: none !important;
   }
@@ -14242,4 +14297,18 @@ Accordian Box
 }
 .scroll-to-top {
   color: #1a6b3c;
+}
+
+
+.dante-sk--avatar {
+  content: "";
+  position: absolute;
+  width: 40px;  /* match the real avatar's rendered size */
+  height: 40px;
+  border-radius: 50%;
+  background-image: url('/static/images/sportexpo.png');
+  background-size: cover;
+  background-position: center;
+  pointer-events: none; /* critical — without this you'll block clicks to whatever's underneath */
+  z-index: 10;
 }
