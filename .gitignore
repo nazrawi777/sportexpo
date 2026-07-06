@@ -1,19 +1,29 @@
 # Environment variables
 .env
+.env.*
 
 # Python
+.venv/
 venv/
+ENV/
+env/
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
+*.pyd
 
 # Django
 db.sqlite3
+db.sqlite3-journal
 staticfiles/
 media/
+*.log
+local_settings.py
 
 # VS Code
-.vscode/settings.json
+.vscode/
+.idea/
 
 # OS
 .DS_Store
+Thumbs.db
