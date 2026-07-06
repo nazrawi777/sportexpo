@@ -1,14 +1,15 @@
 from decouple import config
 from pathlib import Path
 from django.templatetags.static import static
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY')       
 
-DEBUG = True
+DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 USE_X_FORWARDED_HOST = True
@@ -16,6 +17,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.app.github.dev',
     'https://localhost:8000',
     'http://localhost:8000',
+    'https://*.onrender.com',
 ]
 
 INSTALLED_APPS = [
