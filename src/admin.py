@@ -165,6 +165,6 @@ class ScheduleSpeakerAdmin(admin.ModelAdmin):
     image_preview_large.short_description = 'Image Preview'
 
 
-admin.site.site_header = 'Sport Expo ET 2026 Admin'
-admin.site.site_title = 'Sport Expo ET 2026'
-admin.site.index_title = 'Sport Expo ET 2026 Dashboard'
+admin.site.site_header = 'Sport Expo ET 2027 Admin'
+admin.site.site_title = 'Sport Expo ET 2027'
+admin.site.index_title = 'Sport Expo ET 2027 Dashboard'

@@ -114,8 +114,8 @@ STORAGES = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 UNFOLD = {
-    "SITE_TITLE": "Sport Expo ET 2026 Admin",
-    "SITE_HEADER": "Sport Expo ET 2026",
+    "SITE_TITLE": "Sport Expo ET 2027 Admin",
+    "SITE_HEADER": "Sport Expo ET 2027",
     "SITE_SYMBOL": "sports_soccer",
     "STYLES": [
         lambda request: static("admin/css/unfold-form-contrast.css"),

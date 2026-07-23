@@ -7574,7 +7574,7 @@
         "July",
         "August",
         "September",
-        "October",
+        "january",
         "November",
         "December",
       ], // Names of months for drop-down and formatting
