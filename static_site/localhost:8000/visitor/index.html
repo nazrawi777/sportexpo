@@ -1,0 +1,2739 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Visitor Packages | Sport Expo ET 2027 — Addis Ababa</title>
+    <meta
+      name="description"
+      content="Choose your visitor package for Sport Expo ET 2027. Join Africa's premier sports gathering in Addis Ababa this january 2027."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://sport-expo-et-2027.netlify.app/visitor/"
+    />
+    <meta
+      property="og:title"
+      content="Visitor Packages | Sport Expo ET 2027 — Addis Ababa"
+    />
+    <meta
+      property="og:description"
+      content="Choose your visitor package for Sport Expo ET 2027. Join Africa's premier sports gathering in Addis Ababa this january 2027."
+    />
+    <meta
+      property="og:image"
+      content="https://sport-expo-et-2027.netlify.app/images/resource/image-1.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://sport-expo-et-2027.netlify.app/visitor/"
+    />
+    <meta
+      name="twitter:title"
+      content="Visitor Packages | Sport Expo ET 2027 — Addis Ababa"
+    />
+    <meta
+      name="twitter:description"
+      content="Choose your visitor package for Sport Expo ET 2027. Join Africa's premier sports gathering in Addis Ababa this january 2027."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sport-expo-et-2027.netlify.app/images/resource/image-1.jpg"
+    />
+
+    <link
+      rel="canonical"
+      href="https://sport-expo-et-2027.netlify.app/visitor/"
+    />
+    <!-- Stylesheets -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../static/css/style.css" rel="stylesheet" />
+    <link href="../static/css/responsive.css" rel="stylesheet" />
+
+    <link
+      rel="shortcut icon"
+      href="../static/images/faviconsport.png"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="../static/images/faviconsport.png" type="image/x-icon" />
+    <!--Color Switcher Mockup-->
+    <link href="../static/css/color-switcher-design.css" rel="stylesheet" />
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <!--[if lt IE 9
+      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
+    ><![endif]-->
+    <!--[if lt IE 9]><script src="/static/js/respond.js"></script><![endif]-->
+    <style>
+      /* ─── Sport Expo ET 2027 — Visitor Packages ─────────────────── */
+      /* Color palette (literal hex — no CSS variables):
+   Deep green: #1A6B3C  |  Gold: #F5C800  |  Blue: #1B3F9E  |  Red: #D42B2B */
+
+      .see-visitor-section {
+        background: linear-gradient(
+          160deg,
+          #060d1a 0%,
+          #091424 30%,
+          #04150d 70%,
+          #060d1a 100%
+        );
+        padding: 40px 24px 80px;
+        position: relative;
+        overflow: hidden;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+
+      .see-visitor-bg-orb-1 {
+        position: absolute;
+        top: -200px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 900px;
+        height: 600px;
+        background: radial-gradient(
+          ellipse,
+          rgba(26, 107, 60, 0.12) 0%,
+          rgba(26, 107, 60, 0.04) 50%,
+          transparent 80%
+        );
+        pointer-events: none;
+      }
+      .see-visitor-bg-orb-2 {
+        position: absolute;
+        bottom: -100px;
+        left: -200px;
+        width: 700px;
+        height: 500px;
+        background: radial-gradient(
+          ellipse,
+          rgba(27, 63, 158, 0.1) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .see-visitor-bg-orb-3 {
+        position: absolute;
+        bottom: 0;
+        right: -100px;
+        width: 600px;
+        height: 400px;
+        background: radial-gradient(
+          ellipse,
+          rgba(139, 105, 20, 0.08) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .see-visitor-bg-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px
+          );
+        background-size: 60px 60px;
+        pointer-events: none;
+      }
+
+      .see-visitor-inner {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* ── Header ── */
+      .see-visitor-header {
+        text-align: center;
+        margin-bottom: 72px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .see-visitor-header.see-visitor-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .see-visitor-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(245, 200, 0, 0.1);
+        border: 1px solid rgba(245, 200, 0, 0.2);
+        border-radius: 40px;
+        padding: 6px 18px;
+        margin-bottom: 24px;
+        color: #f5c800;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .see-visitor-title {
+        color: #ffffff;
+        font-size: clamp(32px, 5vw, 54px);
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+        margin: 0 0 16px;
+      }
+      .see-visitor-title-gold {
+        background: linear-gradient(90deg, #f5c800 0%, #ffe566 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .see-visitor-subtitle {
+        color: rgba(255, 255, 255, 0.55);
+        font-size: clamp(14px, 2vw, 17px);
+        line-height: 1.7;
+        max-width: 560px;
+        margin: 0 auto;
+        font-weight: 400;
+      }
+      .see-visitor-subtitle strong {
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 500;
+      }
+
+      .see-visitor-divider {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        justify-content: center;
+        margin-top: 32px;
+      }
+      .see-visitor-divider-line-left {
+        width: 60px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(245, 200, 0, 0.4));
+      }
+      .see-visitor-divider-line-right {
+        width: 60px;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(245, 200, 0, 0.4), transparent);
+      }
+      .see-visitor-divider-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #f5c800;
+        box-shadow: 0 0 12px rgba(245, 200, 0, 0.6);
+      }
+
+      /* ── Cards ── */
+      .see-visitor-cards {
+        display: flex;
+        gap: 44px;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+
+      .see-visitor-card {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        flex: 1 1 0;
+        min-width: 280px;
+        max-width: 360px;
+        background: linear-gradient(
+          145deg,
+          rgba(27, 63, 158, 0.15) 0%,
+          rgba(27, 63, 158, 0.05) 100%
+        );
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1.5px solid rgba(255, 255, 255, 0.12);
+        box-shadow:
+          0 8px 32px rgba(27, 63, 158, 0.18),
+          inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        opacity: 0;
+        transform: translateY(40px) scale(0.97);
+        transition:
+          opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.3s ease;
+      }
+      .see-visitor-card.see-visitor-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      .see-visitor-card:hover {
+        transform: translateY(-10px) scale(1.02) !important;
+        box-shadow:
+          0 32px 80px rgba(27, 63, 158, 0.35),
+          0 0 0 1px rgba(100, 130, 255, 0.2),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+      }
+
+      /* Premier card */
+      .see-visitor-card--premier {
+        max-width: 400px;
+        background: linear-gradient(
+          145deg,
+          rgba(26, 107, 60, 0.18) 0%,
+          rgba(26, 107, 60, 0.06) 100%
+        );
+        border-color: rgba(245, 200, 0, 0.55);
+        box-shadow:
+          0 16px 48px rgba(26, 107, 60, 0.25),
+          0 0 0 0.5px rgba(245, 200, 0, 0.25),
+          inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      }
+      .see-visitor-card--premier:hover {
+        box-shadow:
+          0 32px 80px rgba(26, 107, 60, 0.45),
+          0 0 0 1px rgba(245, 200, 0, 0.4),
+          inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+      }
+
+      /* Ambassador card */
+      .see-visitor-card--ambassador {
+        background: linear-gradient(
+          145deg,
+          rgba(139, 105, 20, 0.15) 0%,
+          rgba(139, 105, 20, 0.05) 100%
+        );
+        border-color: rgba(245, 200, 0, 0.3);
+        box-shadow:
+          0 12px 40px rgba(139, 105, 20, 0.2),
+          inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      }
+      .see-visitor-card--ambassador:hover {
+        box-shadow:
+          0 32px 80px rgba(139, 105, 20, 0.35),
+          0 0 0 1px rgba(245, 200, 0, 0.3),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+      }
+
+      /* Ambassador shimmer top line */
+      .see-visitor-shimmer-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          #f5c800 30%,
+          #fff8c0 50%,
+          #f5c800 70%,
+          transparent 100%
+        );
+        animation: see-visitor-shimmer 3s ease-in-out infinite;
+        z-index: 10;
+      }
+
+      /* Popular badge */
+      .see-visitor-badge {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(90deg, #f5c800 0%, #e8b400 100%);
+        color: #0a1a00;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        padding: 5px 22px;
+        border-radius: 0 0 10px 10px;
+        z-index: 10;
+        text-transform: uppercase;
+        box-shadow: 0 4px 16px rgba(245, 200, 0, 0.4);
+        white-space: nowrap;
+      }
+
+      /* Card body */
+      .see-visitor-card-body {
+        padding: 32px 28px 30px;
+      }
+      .see-visitor-card--premier .see-visitor-card-body {
+        padding: 40px 32px 36px;
+      }
+
+      /* Icon block */
+      .see-visitor-card-top {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 16px;
+      }
+      .see-visitor-card--premier .see-visitor-card-top {
+        margin-top: 16px;
+      }
+
+      .see-visitor-icon-wrap {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        background: linear-gradient(
+          135deg,
+          rgba(27, 63, 158, 0.3) 0%,
+          rgba(27, 63, 158, 0.12) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .see-visitor-card--premier .see-visitor-icon-wrap {
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+        background: linear-gradient(
+          135deg,
+          rgba(26, 107, 60, 0.35) 0%,
+          rgba(26, 107, 60, 0.15) 100%
+        );
+        border-color: rgba(245, 200, 0, 0.3);
+      }
+      .see-visitor-card--ambassador .see-visitor-icon-wrap {
+        background: linear-gradient(
+          135deg,
+          rgba(245, 200, 0, 0.25) 0%,
+          rgba(139, 105, 20, 0.2) 100%
+        );
+        border-color: rgba(245, 200, 0, 0.25);
+      }
+
+      .see-visitor-label {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+      }
+      .see-visitor-card--premier .see-visitor-label,
+      .see-visitor-card--ambassador .see-visitor-label {
+        color: #f5c800;
+      }
+
+      .see-visitor-tier-name {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        margin: 0;
+        text-transform: uppercase;
+      }
+      .see-visitor-card--premier .see-visitor-tier-name {
+        font-size: 22px;
+      }
+
+      .see-visitor-tagline {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 13px;
+        line-height: 1.6;
+        margin: 0 0 22px;
+        min-height: 40px;
+      }
+
+      .see-visitor-divider-card {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.08),
+          transparent
+        );
+        margin-bottom: 22px;
+      }
+      .see-visitor-card--premier .see-visitor-divider-card {
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(245, 200, 0, 0.25),
+          transparent
+        );
+      }
+      .see-visitor-card--ambassador .see-visitor-divider-card {
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(245, 200, 0, 0.3),
+          transparent
+        );
+      }
+
+      /* Price */
+      .see-visitor-price-wrap {
+        margin-bottom: 24px;
+      }
+      .see-visitor-price-row {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        margin-bottom: 4px;
+      }
+      .see-visitor-price-usd {
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+      .see-visitor-card--premier .see-visitor-price-usd,
+      .see-visitor-card--ambassador .see-visitor-price-usd {
+        color: #f5c800;
+      }
+      .see-visitor-card--premier .see-visitor-price-usd {
+        font-size: 38px;
+      }
+
+      .see-visitor-price-currency {
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .see-visitor-price-etb {
+        color: rgba(255, 255, 255, 0.35);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+      }
+
+      /* Features */
+      .see-visitor-features {
+        list-style: none;
+        margin: 0 0 28px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .see-visitor-feature-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 13px;
+        line-height: 1.55;
+        opacity: 0;
+        transform: translateX(-8px);
+        transition:
+          opacity 0.4s ease,
+          transform 0.4s ease;
+      }
+      .see-visitor-feature-item.see-visitor-visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .see-visitor-check-icon {
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      /* CTA Button */
+      .see-visitor-cta {
+        width: 100%;
+        padding: 13px 24px;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        background: linear-gradient(
+          135deg,
+          rgba(27, 63, 158, 0.5) 0%,
+          rgba(27, 63, 158, 0.3) 100%
+        );
+        color: #ffffff;
+        box-shadow:
+          0 4px 16px rgba(27, 63, 158, 0.25),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      }
+      .see-visitor-cta:hover {
+        transform: translateY(-1px);
+        outline: none;
+      }
+      .see-visitor-cta:focus-visible {
+        outline: 2px solid #f5c800;
+        outline-offset: 3px;
+      }
+
+      .see-visitor-card--premier .see-visitor-cta {
+        padding: 15px 24px;
+        background: linear-gradient(135deg, #f5c800 0%, #e8b400 100%);
+        color: #0a1a00;
+        box-shadow: 0 8px 24px rgba(245, 200, 0, 0.35);
+      }
+      .see-visitor-card--premier .see-visitor-cta:hover {
+        box-shadow: 0 12px 32px rgba(245, 200, 0, 0.5);
+      }
+
+      .see-visitor-card--ambassador .see-visitor-cta {
+        background: linear-gradient(135deg, #f5c800 0%, #e8b400 100%);
+        color: #0a1a00;
+        box-shadow:
+          0 4px 16px rgba(245, 200, 0, 0.15),
+          inset 0 1px 0 rgba(245, 200, 0, 0.2);
+      }
+      .see-visitor-card--discovery .see-visitor-cta {
+        background: linear-gradient(
+          135deg,
+          #f5c800 0%,
+          #e8b400 100%
+        ) !important;
+        color: #0a1a00;
+        box-shadow:
+          0 4px 16px rgba(245, 200, 0, 0.15),
+          inset 0 1px 0 rgba(245, 200, 0, 0.2);
+      }
+
+      /* Footer note */
+      .see-visitor-footnote {
+        text-align: center;
+        margin-top: 48px;
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 12px;
+        line-height: 1.6;
+      }
+
+      /* Animations */
+      @keyframes see-visitor-shimmer {
+        0%,
+        100% {
+          opacity: 0.6;
+          transform: scaleX(0.8);
+        }
+        50% {
+          opacity: 1;
+          transform: scaleX(1);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .see-visitor-cards {
+          flex-direction: column;
+          align-items: center;
+        }
+        .see-visitor-card,
+        .see-visitor-card--premier {
+          max-width: 480px;
+          width: 100%;
+        }
+      }
+      @media (max-width: 768px) {
+        .see-visitor-section {
+          padding-left: 16px;
+          padding-right: 16px;
+          overflow-x: hidden;
+        }
+        .see-visitor-cards {
+          gap: 24px;
+          width: 100%;
+        }
+        .see-visitor-card,
+        .see-visitor-card--premier,
+        .see-visitor-card--ambassador {
+          flex: 0 1 auto;
+          min-width: 0;
+          max-width: 100%;
+          width: 100%;
+        }
+        .see-visitor-card-body,
+        .see-visitor-card--premier .see-visitor-card-body {
+          padding: 28px 20px 24px;
+        }
+        .see-visitor-card-top {
+          align-items: flex-start;
+        }
+        .see-visitor-tier-name,
+        .see-visitor-card--premier .see-visitor-tier-name {
+          font-size: 17px;
+          line-height: 1.25;
+        }
+        .see-visitor-price-row {
+          flex-wrap: wrap;
+        }
+        .see-visitor-price-usd,
+        .see-visitor-card--premier .see-visitor-price-usd {
+          font-size: 30px;
+        }
+        .see-visitor-feature-item {
+          font-size: 12.5px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .see-visitor-section {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+        .see-visitor-card-body,
+        .see-visitor-card--premier .see-visitor-card-body {
+          padding: 26px 16px 22px;
+        }
+        .see-visitor-badge {
+          max-width: calc(100% - 32px);
+          padding-left: 14px;
+          padding-right: 14px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .see-visitor-cta {
+          padding-left: 14px;
+          padding-right: 14px;
+          white-space: normal;
+        }
+      }
+
+      /* ================================================================
+         LIGHT-THEME OVERRIDE  —  Sport Expo ET 2027 (Visitor)
+         Repaints the dark neon layout onto Sponsor's cream palette.
+         Palette (from sponsor.html):
+           bg #f5f3ec | ink #0b0f0d | muted #4a4f4c
+           green #1a6b3c | gold #f5c800 | blue #1b3f9e
+         Featured tier (Premier) = solid green fill w/ white text +
+         gold CTA — same "distinct solid-fill card" pattern as
+         Sponsor's Strategic Sponsor card, but in green.
+         ================================================================ */
+      .see-visitor-section {
+        background: #f5f3ec !important;
+        color: #0b0f0d;
+        font-family: "Space Grotesk", "Inter", -apple-system, sans-serif;
+        padding: 96px 24px 120px;
+      }
+      .see-visitor-section::before {
+        content: "";
+        position: absolute; top: 0; left: 0; right: 0; height: 1px;
+        background: linear-gradient(90deg,transparent,#1a6b3c,#f5c800,#1b3f9e,transparent);
+        z-index: 1;
+      }
+      .see-visitor-bg-orb-1,
+      .see-visitor-bg-orb-2,
+      .see-visitor-bg-orb-3,
+      .see-visitor-bg-grid { display: none !important; }
+
+      /* Header */
+      .see-visitor-eyebrow {
+        background: transparent;
+        border: 1px solid rgba(26,107,60,0.35);
+        color: #1a6b3c;
+        font-family: "IBM Plex Mono", monospace;
+        letter-spacing: 0.28em;
+      }
+      .see-visitor-title { color: #0b0f0d; font-weight: 700; letter-spacing: -0.03em; }
+      .see-visitor-title-gold {
+        background: none;
+        -webkit-text-fill-color: currentColor;
+        color: #1a6b3c;
+      }
+      .see-visitor-subtitle { color: #4a4f4c; }
+      .see-visitor-subtitle strong { color: #0b0f0d; font-weight: 600; }
+      .see-visitor-divider-line-left {
+        background: linear-gradient(90deg, transparent, rgba(26,107,60,0.4));
+      }
+      .see-visitor-divider-line-right {
+        background: linear-gradient(90deg, rgba(26,107,60,0.4), transparent);
+      }
+      .see-visitor-divider-dot {
+        background: #1a6b3c; box-shadow: none;
+      }
+
+      /* Cards — flat light on cream, no glow */
+      .see-visitor-card,
+      .see-visitor-card--premier,
+      .see-visitor-card--ambassador {
+        background: #ffffff !important;
+        border: 1px solid rgba(11,15,13,0.14) !important;
+        border-radius: 12px !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        color: #0b0f0d;
+      }
+      .see-visitor-card:hover,
+      .see-visitor-card--ambassador:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 12px 32px -18px rgba(11,15,13,0.25) !important;
+        border-color: rgba(26,107,60,0.45) !important;
+      }
+      .see-visitor-card--premier:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 20px 40px -18px rgba(26,107,60,0.4) !important;
+      }
+
+      /* Ambassador — remove shimmer bar, use flat gold accent */
+      .see-visitor-shimmer-bar {
+        animation: none !important;
+        background: #f5c800 !important;
+        height: 3px !important;
+      }
+
+      /* Icons */
+      .see-visitor-icon-wrap {
+        background: rgba(26,107,60,0.10) !important;
+        border: 1px solid rgba(26,107,60,0.20) !important;
+        color: #1a6b3c;
+      }
+      .see-visitor-card--ambassador .see-visitor-icon-wrap {
+        background: rgba(245,200,0,0.15) !important;
+        border-color: rgba(245,200,0,0.35) !important;
+      }
+
+      /* Text */
+      .see-visitor-label {
+        color: #1a6b3c !important;
+        font-family: "IBM Plex Mono", monospace;
+      }
+      .see-visitor-card--ambassador .see-visitor-label { color: #a17a00 !important; }
+      .see-visitor-tier-name { color: #0b0f0d !important; }
+      .see-visitor-tagline { color: #4a4f4c !important; }
+      .see-visitor-divider-card {
+        background: rgba(11,15,13,0.10) !important;
+      }
+      .see-visitor-price-usd,
+      .see-visitor-card--premier .see-visitor-price-usd,
+      .see-visitor-card--ambassador .see-visitor-price-usd {
+        color: #1a6b3c !important;
+      }
+      .see-visitor-price-currency { color: #4a4f4c !important; }
+      .see-visitor-price-etb { color: #7a7f7c !important; }
+      .see-visitor-feature-item { color: #1a1d1b !important; }
+
+      /* Badge — flat pill, no glow */
+      .see-visitor-badge {
+        background: #1a6b3c !important;
+        color: #ffffff !important;
+        box-shadow: none !important;
+        border-radius: 0 0 6px 6px;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+      }
+
+      /* CTA — Sponsor button conventions */
+      .see-visitor-cta,
+      .see-visitor-card--ambassador .see-visitor-cta,
+      .see-visitor-card--discovery .see-visitor-cta {
+        background: #1a6b3c !important;
+        color: #ffffff !important;
+        border-radius: 6px !important;
+        box-shadow: none !important;
+        font-family: "Space Grotesk", sans-serif;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 16px 24px !important;
+        transition: background 0.3s ease;
+      }
+      .see-visitor-cta:hover {
+        background: #0b0f0d !important;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      /* ── FEATURED: Premier = solid green with white text ── */
+      .see-visitor-card--premier {
+        background: #1a6b3c !important;
+        border-color: #1a6b3c !important;
+        color: #ffffff;
+        position: relative;
+        overflow: hidden;
+      }
+      .see-visitor-card--premier::after {
+        content: "";
+        position: absolute; top: 0; left: 0; right: 0; height: 4px;
+        background: #f5c800;
+      }
+      .see-visitor-card--premier .see-visitor-icon-wrap {
+        background: rgba(245,200,0,0.20) !important;
+        border-color: rgba(245,200,0,0.4) !important;
+      }
+      .see-visitor-card--premier .see-visitor-label { color: #f5c800 !important; }
+      .see-visitor-card--premier .see-visitor-tier-name { color: #ffffff !important; }
+      .see-visitor-card--premier .see-visitor-tagline { color: rgba(255,255,255,0.82) !important; }
+      .see-visitor-card--premier .see-visitor-divider-card {
+        background: rgba(255,255,255,0.20) !important;
+      }
+      .see-visitor-card--premier .see-visitor-price-usd { color: #f5c800 !important; }
+      .see-visitor-card--premier .see-visitor-price-currency { color: rgba(255,255,255,0.7) !important; }
+      .see-visitor-card--premier .see-visitor-price-etb { color: rgba(255,255,255,0.6) !important; }
+      .see-visitor-card--premier .see-visitor-feature-item { color: rgba(255,255,255,0.92) !important; }
+      .see-visitor-card--premier .see-visitor-badge {
+        background: #f5c800 !important;
+        color: #0b0f0d !important;
+      }
+      .see-visitor-card--premier .see-visitor-cta {
+        background: #f5c800 !important;
+        color: #0b0f0d !important;
+      }
+      .see-visitor-card--premier .see-visitor-cta:hover {
+        background: #ffffff !important;
+        color: #0b0f0d !important;
+      }
+
+      /* City-tour helper line on every card */
+      .see-visitor-tour-note {
+        margin: 4px 0 20px;
+        padding: 10px 12px;
+        border: 1px dashed rgba(26,107,60,0.35);
+        border-radius: 6px;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        line-height: 1.5;
+        color: #4a4f4c;
+      }
+      .see-visitor-card--premier .see-visitor-tour-note {
+        border-color: rgba(245,200,0,0.55);
+        color: rgba(255,255,255,0.88);
+      }
+
+      .see-visitor-footnote { color: #6c726b; }
+
+      /* ================================================================
+         BOOKING MODAL
+         ================================================================ */
+      .sev-book-modal {
+        position: fixed; inset: 0; z-index: 10000;
+        display: none; align-items: flex-start; justify-content: center;
+        padding: 40px 20px;
+        background: rgba(11,20,16,0.65);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        opacity: 0;
+        transition: opacity 0.25s ease;
+        overflow-y: auto;
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .sev-book-modal[data-open="true"] { display: flex; opacity: 1; }
+      .sev-book-dialog {
+        position: relative;
+        width: 100%; max-width: 520px;
+        margin: auto;
+        background: #ffffff;
+        border: 1px solid rgba(11,15,13,0.14);
+        border-radius: 10px;
+        padding: 40px 36px 32px;
+        color: #0b0f0d;
+        box-shadow: 0 40px 80px -20px rgba(11,15,13,0.4);
+      }
+      .sev-book-dialog::before {
+        content: ""; position: absolute; top: 0; left: 0; right: 0;
+        height: 4px; background: #1a6b3c; border-radius: 10px 10px 0 0;
+      }
+      .sev-book-close {
+        position: absolute; top: 12px; right: 12px;
+        width: 36px; height: 36px; border-radius: 50%;
+        border: 1px solid rgba(11,15,13,0.14);
+        background: transparent; color: #0b0f0d;
+        font-size: 20px; line-height: 1; cursor: pointer;
+        display: inline-flex; align-items: center; justify-content: center;
+        transition: all .25s ease;
+      }
+      .sev-book-close:hover { background: #0b0f0d; color: #fff; border-color: #0b0f0d; }
+      .sev-book-eyebrow {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+        color: #1a6b3c; margin-bottom: 12px;
+      }
+      .sev-book-title {
+        font-weight: 700; font-size: 26px; letter-spacing: -0.02em;
+        line-height: 1.1; margin: 0 0 6px; color: #0b0f0d;
+      }
+      .sev-book-title span { color: #1a6b3c; }
+      .sev-book-sub {
+        font-size: 14px; color: #4a4f4c; line-height: 1.55; margin: 0 0 22px;
+      }
+      .sev-book-form { display: flex; flex-direction: column; gap: 14px; }
+      .sev-book-row {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+      }
+      @media (max-width: 480px) { .sev-book-row { grid-template-columns: 1fr; } }
+      .sev-book-field { display: flex; flex-direction: column; gap: 6px; }
+      .sev-book-label {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+        color: #4a4f4c; font-weight: 600;
+      }
+      .sev-book-input {
+        background: #fff; border: 1px solid rgba(11,15,13,0.18);
+        border-radius: 4px; padding: 12px 14px;
+        color: #0b0f0d; font-family: inherit; font-size: 14px; line-height: 1.4;
+        transition: border-color .25s ease, box-shadow .25s ease;
+        width: 100%;
+      }
+      .sev-book-input:focus {
+        outline: none; border-color: #1a6b3c;
+        box-shadow: 0 0 0 3px rgba(26,107,60,0.15);
+      }
+      .sev-book-summary {
+        margin-top: 6px; padding: 16px 18px;
+        background: #faf8f0; border: 1px solid rgba(11,15,13,0.10);
+        border-radius: 6px;
+        display: flex; flex-direction: column; gap: 8px;
+        font-size: 13px;
+      }
+      .sev-book-summary-row {
+        display: flex; justify-content: space-between;
+        color: #4a4f4c;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 12px; letter-spacing: 0.04em;
+      }
+      .sev-book-summary-total {
+        display: flex; justify-content: space-between; align-items: baseline;
+        border-top: 1px solid rgba(11,15,13,0.14);
+        padding-top: 10px; margin-top: 4px;
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .sev-book-summary-total > span:first-child {
+        font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+        color: #0b0f0d; font-weight: 700;
+      }
+      .sev-book-summary-total > span:last-child {
+        font-size: 22px; font-weight: 700; color: #1a6b3c;
+        letter-spacing: -0.02em;
+      }
+      .sev-book-error {
+        color: #b1301c; font-size: 12px;
+        font-family: "IBM Plex Mono", monospace;
+        letter-spacing: 0.04em;
+      }
+      .sev-book-pay {
+        margin-top: 6px;
+        appearance: none; background: #1a6b3c; color: #fff;
+        border: none; padding: 18px 24px;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600; letter-spacing: 0.18em;
+        text-transform: uppercase; font-size: 12px;
+        cursor: pointer; transition: background .3s ease;
+        border-radius: 6px;
+      }
+      .sev-book-pay:hover:not(:disabled) { background: #0b0f0d; }
+      .sev-book-pay:disabled { opacity: .45; cursor: not-allowed; }
+      .sev-book-note {
+        margin: 12px 0 0; font-size: 11px; line-height: 1.5;
+        color: #6c726b;
+      }
+      .sev-book-note strong { color: #0b0f0d; }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sport-expo-et-2027.netlify.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Visitor",
+            "item": "https://sport-expo-et-2027.netlify.app/visitor/"
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body
+    style="
+      background: linear-gradient(
+        160deg,
+        #060d1a 0%,
+        #091424 30%,
+        #04150d 70%,
+        #060d1a 100%
+      ) !important;
+    "
+  >
+    <div
+      class="page-wrapper"
+      style="
+        background: linear-gradient(
+          160deg,
+          #060d1a 0%,
+          #091424 30%,
+          #04150d 70%,
+          #060d1a 100%
+        );
+      "
+    >
+      <!-- Preloader -->
+      <div class="preloader"></div>
+
+      <header class="main-header header-style-two">
+        <!-- Header top -->
+        <div class="header-top">
+          <div class="auto-container">
+            <div class="inner-container">
+              <div class="top-left">
+                <ul class="contact-list-two">
+                  <li>
+                    <strong>Address</strong>  Addis Ababa, Ethiopia
+                  </li>
+                  <li><strong>Event Date</strong> january 2027</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Header Top -->
+
+        <!-- Header Lower -->
+        <div class="header-lower">
+          <div class="auto-container">
+            <!-- Main box -->
+            <div class="main-box">
+              <div class="logo-box">
+                <div class="logo">
+                  <a href="../index.html"
+                    ><img
+                      src="../static/images/sportexpo.png"
+                      alt="Sport Expo ET 2027 Logo"
+                      width="163"
+                      height="70"
+                  /></a>
+                </div>
+              </div>
+
+              <div class="nav-outer">
+                <!-- Main Menu -->
+                <nav class="main-menu navbar-expand-md">
+                  <div class="navbar-header">
+                    <!-- Toggle Button -->
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                  </div>
+
+                  <div
+                    class="navbar-collapse collapse clearfix"
+                    id="navbarSupportedContent"
+                  >
+                    <ul class="navigation clearfix">
+                      <li><a href="../index.html">Home</a></li>
+                      <li><a href="../about/index.html">About</a></li>
+                      <li class="current">
+                        <a href="index.html">Visitor</a>
+                      </li>
+                      <li><a href="../media/index.html">Media</a></li>
+                      <li><a href="../sponsor/index.html">Sponsor</a></li>
+                      <li><a href="../hall/index.html">Hall</a></li>
+                      <li><a href="../schedule/index.html">Schedule</a></li>
+                      <li><a href="../gallery/index.html">Gallery</a></li>
+                      <li><a href="../blog/index.html">Blog</a></li>
+                      <li><a href="../contact/index.html">Contact</a></li>
+                      <li>
+                        <a
+                          href="../admin/index.html"
+                          class="user-icon-link"
+                          aria-label="User profile"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            class="user-icon"
+                            fill="currentColor"
+                          >
+                            <!-- User -->
+                            <path
+                              d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-3.3 0-10 1.7-10 5v3h10v-3c0-1.3.4-2.5 1.1-3.5-.4-.3-.7-.5-1.1-.5z"
+                            />
+
+                            <!-- Shield -->
+                            <path
+                              d="M17 13l3 1v2c0 2.7-1.7 5.1-3 6-1.3-.9-3-3.3-3-6v-2l3-1z"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+
+                <!-- Main Menu End-->
+                <div class="outer-box clearfix">
+                  <!-- Search Btn -->
+
+                  <!-- Quote Btn -->
+                  <div class="btn-box">
+                    <a
+                      href="../schedule/index.html"
+                      class="theme-btn btn-style-one"
+                      ><span class="btn-title"
+                        ><i class="flaticon-chair"></i> Register as
+                        Visitor</span
+                      ></a
+                    >
+                  </div>
+
+                  <button class="nav-toggler">
+                    <i class="flaticon flaticon-menu-2"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky Header  -->
+        <div class="sticky-header">
+          <div class="auto-container">
+            <div class="main-box">
+              <div class="logo-box">
+                <div class="logo">
+                  <a href="../index.html"
+                    ><img
+                      src="../static/images/sportexpo.png"
+                      alt="Sport Expo ET 2027 Logo"
+                      width="163"
+                      height="70"
+                  /></a>
+                </div>
+                <div class="upper-right">
+                  <a
+                    href="index.html#nav-mobile"
+                    class="mobile-nav-toggler navbar-trigger"
+                    ><i class="flaticon-menu"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!--Keep This Empty / Menu will come through Javascript-->
+            </div>
+          </div>
+        </div>
+        <!-- End Sticky Menu -->
+
+        <!-- Mobile Header -->
+        <div class="mobile-header">
+          <div class="logo">
+            <a href="../index.html"
+              ><img
+                src="../static/images/sportexpo.png"
+                alt="Sport Expo ET 2027 Logo"
+                width="163"
+                height="70"
+            /></a>
+          </div>
+
+          <!--Nav Box-->
+          <div class="nav-outer clearfix">
+            <div class="outer-box">
+              <!-- Search Btn -->
+              <a
+                href="index.html#nav-mobile"
+                class="mobile-nav-toggler navbar-trigger"
+                ><i class="flaticon-menu"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu">
+          <div class="menu-backdrop"></div>
+
+          <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+          <nav class="menu-box">
+            <div class="upper-box">
+              <div class="nav-logo">
+                <a href="../index.html"
+                  ><img
+                    src="../static/images/sportexpo.png"
+                    alt="Sport Expo ET 2027 Logo"
+                    width="163"
+                    height="70"
+                /></a>
+              </div>
+              <div class="close-btn"><i class="icon flaticon-close"></i></div>
+            </div>
+
+            <ul class="navigation clearfix"></ul>
+
+            <ul class="contact-list-one">
+              <li>
+                <i class="flaticon-location"></i>  Addis Ababa, Ethiopia
+                <strong>Address</strong>
+              </li>
+              <li>
+                <i class="flaticon-alarm-clock-1"></i>january 2027
+                <strong>Event Date</strong>
+              </li>
+              <li>
+                <i class="flaticon-email-1"></i>
+                <a href="mailto:info@sportexpoet.com">info@sportexpoet.com</a>
+                <strong>Mail to us</strong>
+              </li>
+            </ul>
+
+            <ul class="social-links">
+              <li>
+                <a href="index.html#"
+                  ><span class="fab fa-facebook-f"></span
+                ></a>
+              </li>
+              <li>
+                <a href="index.html#"
+                  ><span class="fab fa-pinterest"></span
+                ></a>
+              </li>
+              <li>
+                <a href="index.html#"
+                  ><span class="fab fa-twitter"></span
+                ></a>
+              </li>
+              <li>
+                <a href="index.html#"
+                  ><span class="fab fa-dribbble"></span
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- End Mobile Menu -->
+
+        <!-- Header Search -->
+
+        <!-- End Header Search -->
+      </header>
+      <!--End Main Header -->
+
+      <!-- Hidden bar back drop -->
+      <div class="form-back-drop"></div>
+
+      <!-- Hidden Bar -->
+      <section class="hidden-bar">
+        <div class="inner-box">
+          <div class="title-box">
+            <h2>Contact Us</h2>
+            <div class="cross-icon"><span class="fa fa-times"></span></div>
+          </div>
+
+          <!--Appointment Form-->
+          <div class="form-style-one">
+            <form action="http://localhost:8000/visitor/visitor.html#" method="post">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="username"
+                  class="username"
+                  placeholder="Your Name *"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  class="email"
+                  placeholder="Your Email *"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="phone"
+                  class="phone"
+                  value=""
+                  placeholder="Your Phone*"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="contact_message"
+                  class="message"
+                  placeholder="Text Message"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <button
+                  class="theme-btn btn-style-one"
+                  type="button"
+                  id="submit"
+                  name="submit-form"
+                >
+                  <span class="btn-title">Submit Now</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <ul class="contact-list-one">
+            <li>
+              <i class="flaticon-location"></i> Addis Ababa Exhibition &
+              Convention Center, Addis Ababa, Ethiopia <strong>Address</strong>
+            </li>
+            <li>
+              <i class="flaticon-alarm-clock-1"></i>january 2027
+              <strong>Event Date</strong>
+            </li>
+            <li>
+              <i class="flaticon-email-1"></i>
+              <a href="mailto:info@sportexpoet.com">info@sportexpoet.com</a>
+              <strong>Mail to us</strong>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--End Hidden Bar -->
+
+      <section class="see-visitor-section" id="see-visitor-packages">
+        <!-- Background decoration -->
+        <div class="see-visitor-bg-orb-1" aria-hidden="true"></div>
+        <div class="see-visitor-bg-orb-2" aria-hidden="true"></div>
+        <div class="see-visitor-bg-orb-3" aria-hidden="true"></div>
+        <div class="see-visitor-bg-grid" aria-hidden="true"></div>
+
+        <div class="see-visitor-inner">
+          <!-- Header -->
+          <div class="see-visitor-header" id="see-visitor-header">
+            <div class="see-visitor-eyebrow">Sport Expo ET 2027</div>
+
+            <h1 class="see-visitor-title">
+              Visitor <span class="see-visitor-title-gold">Packages</span>
+            </h1>
+
+            <p class="see-visitor-subtitle">
+              Experience Africa's premier sports industry gathering in
+              <strong>Addis Ababa, Ethiopia</strong> — january 2027. Choose the
+              package that fits your journey.
+            </p>
+
+            <div class="see-visitor-divider">
+              <div class="see-visitor-divider-line-left"></div>
+              <div class="see-visitor-divider-dot"></div>
+              <div class="see-visitor-divider-line-right"></div>
+            </div>
+          </div>
+
+          <!-- Cards -->
+          <div class="see-visitor-cards">
+            <!-- DISCOVERY -->
+            <div
+              class="see-visitor-card"
+              id="see-visitor-card-discovery"
+              style="transition-delay: 0ms"
+            >
+              <div class="see-visitor-card-body">
+                <div class="see-visitor-card-top">
+                  <div class="see-visitor-icon-wrap">🏅</div>
+                  <div>
+                    <div class="see-visitor-label">Starter</div>
+                    <h3 class="see-visitor-tier-name">Discovery</h3>
+                  </div>
+                </div>
+
+                <p class="see-visitor-tagline">
+                  Entry-level access for first-time visitors and solo travelers
+                </p>
+                
+
+                <div class="see-visitor-divider-card"></div>
+
+                <div class="see-visitor-price-wrap">
+                  <div class="see-visitor-price-row">
+                    <span class="see-visitor-price-usd">$699</span>
+                    <span class="see-visitor-price-currency">USD</span>
+                  </div>
+                  <div class="see-visitor-price-etb">111,840 ETB</div>
+                </div>
+
+                <ul
+                  class="see-visitor-features"
+                  id="see-visitor-feat-discovery"
+                >
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>3-night hotel stay near the venue</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Airport transfer and in-city shuttle service</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Full event access passes for all event days</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Official event guide and programme booklet</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Introductory sports demonstration access</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Bilingual event support on-site</span>
+                    
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>City tour 1 day</span>
+                  </li>
+                </ul>
+
+                <button
+                  class="see-visitor-cta"
+                  onclick="seeVisitorSelectPackage('discovery')"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+
+            <!-- PREMIER (most popular) -->
+            <div
+              class="see-visitor-card see-visitor-card--premier"
+              id="see-visitor-card-premier"
+              style="transition-delay: 150ms"
+            >
+              <div class="see-visitor-badge">Most Popular</div>
+              <div class="see-visitor-card-body">
+                <div class="see-visitor-card-top">
+                  <div class="see-visitor-icon-wrap">🏆</div>
+                  <div>
+                    <div class="see-visitor-label">Recommended</div>
+                    <h3 class="see-visitor-tier-name">Premier</h3>
+                  </div>
+                </div>
+
+                <p class="see-visitor-tagline">
+                  The most popular choice for individual professionals and small
+                  delegations
+                </p>
+                
+
+                <div class="see-visitor-divider-card"></div>
+
+                <div class="see-visitor-price-wrap">
+                  <div class="see-visitor-price-row">
+                    <span class="see-visitor-price-usd">$1,299</span>
+                    <span class="see-visitor-price-currency">USD</span>
+                  </div>
+                  <div class="see-visitor-price-etb">207,840 ETB</div>
+                </div>
+
+                <ul class="see-visitor-features" id="see-visitor-feat-premier">
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>4-night hotel stay, superior room category</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      >Priority airport reception and dedicated shuttle</span
+                    >
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      >Full event access with reserved seating sections</span
+                    >
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Official welcome reception attendance</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Two pre-booked one-on-one athlete sessions</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Dedicated expo guide and priority queue entry</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Official souvenir pack</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                   
+                  </li>
+                  
+                  
+                </ul>
+
+                <button
+                  class="see-visitor-cta"
+                  onclick="seeVisitorSelectPackage('premier')"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+
+            <!-- AMBASSADOR -->
+            <div
+              class="see-visitor-card see-visitor-card--ambassador"
+              id="see-visitor-card-ambassador"
+              style="transition-delay: 300ms"
+            >
+              <div class="see-visitor-shimmer-bar" aria-hidden="true"></div>
+              <div class="see-visitor-card-body">
+                <div class="see-visitor-card-top">
+                  <div class="see-visitor-icon-wrap">👑</div>
+                  <div>
+                    <div class="see-visitor-label">Flagship</div>
+                    <h3 class="see-visitor-tier-name">Ambassador</h3>
+                  </div>
+                </div>
+
+                <p class="see-visitor-tagline">
+                  The flagship experience — for heads of federation, government
+                  delegates, and key investors
+                </p>
+                
+
+                <div class="see-visitor-divider-card"></div>
+
+                <div class="see-visitor-price-wrap">
+                  <div class="see-visitor-price-row">
+                    <span class="see-visitor-price-usd">$5,500</span>
+                    <span class="see-visitor-price-currency">USD</span>
+                  </div>
+                  <div class="see-visitor-price-etb">880,000 ETB</div>
+                </div>
+
+                <ul
+                  class="see-visitor-features"
+                  id="see-visitor-feat-ambassador"
+                >
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      >6-night stay in a five-star property with suite
+                      option</span
+                    >
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Private vehicle available for the full stay</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      >Unlimited event access including all restricted
+                      zones</span
+                    >
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Formal diplomatic reception attendance</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      >Direct schedule with senior athletes and federation
+                      heads</span
+                    >
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Personal liaison officer for the entire visit</span>
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      >Priority briefings and media coordination if
+                      required</span
+                    >
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      >Full branded materials, souvenir collection, and custom
+                      itinerary</span
+                    >
+                  </li>
+                  <li class="see-visitor-feature-item">
+                    <svg
+                      class="see-visitor-check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="8"
+                        fill="#F5C800"
+                        fill-opacity="0.18"
+                      />
+                      <path
+                        d="M4.5 8.5L6.5 10.5L11.5 5.5"
+                        stroke="#F5C800"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>City tour 1 day</span>
+                  </li>
+                </ul>
+
+                <button
+                  class="see-visitor-cta"
+                  onclick="seeVisitorSelectPackage('ambassador')"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- /.see-visitor-cards -->
+
+          <p class="see-visitor-footnote">
+            All packages include access to the full Sport Expo ET 2027 event
+            programme.<br />
+            Prices are inclusive of all applicable service fees.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Footer -->
+      <footer class="main-footer style-three">
+        <!--Widgets Section-->
+        <div class="widgets-section">
+          <div class="auto-container">
+            <div class="row">
+              <!--Big Column-->
+              <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <div class="row">
+                  <!--Footer Column-->
+                  <div
+                    class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12"
+                  >
+                    <div class="footer-widget about-widget">
+                      <div class="logo">
+                        <a href="../index.html"
+                          ><img
+                            src="../static/images/sportexpo.png"
+                            alt="Sport Expo ET 2027 Logo"
+                            width="163"
+                            height="62"
+                            loading="lazy"
+                        /></a>
+                      </div>
+                      <div class="text">
+                        <p>
+                          We have very good strength in innovative technology
+                          and tools with over 35 years of experience. We makes
+                          long-term investments goal in global companies in
+                          different sectors, mainly in Europe and other
+                          countries.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Footer Column-->
+                  <div
+                    class="footer-column col-xl-5 col-lg-6 col-md-6 col-sm-12"
+                  >
+                    <div class="footer-widget lnks-widget">
+                      <h2 class="widget-title">Useful Links</h2>
+                      <ul class="user-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about/index.html">About</a></li>
+                        <li><a href="index.html">Visitor</a></li>
+                        <li><a href="../schedule/index.html">Schedule</a></li>
+                        <li><a href="../gallery/index.html">Gallery</a></li>
+                        <li><a href="../contact/index.html">Contact</a></li>
+                        <li>
+                          <a href="../terms-and-conditions/index.html"
+                            >Terms and Conditions</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Big Column-->
+              <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <div class="row">
+                  <!--Footer Column-->
+                  <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                    <!--Footer Column-->
+                    <div class="footer-widget contact-widget">
+                      <h2 class="widget-title">Get in Touch</h2>
+                      <!--Footer Column-->
+                      <div class="widget-content">
+                        <ul class="contact-list-three">
+                          <li>
+                            <i class="icon flaticon-alarm-clock-1"></i>
+                            <div class="text">
+                              january 2027 <br />
+                              <strong>Event Date</strong>
+                            </div>
+                          </li>
+
+                          <li>
+                            <i class="icon flaticon-email-1"></i>
+                            <div class="text">
+                              <a href="mailto:info@sportexpoet.com"
+                                >info@sportexpoet.com</a
+                              ><br />
+                              <strong>Mail to us</strong>
+                            </div>
+                          </li>
+
+                          <li>
+                            <i class="icon flaticon-location"></i>
+                            <div class="text">
+                               Addis
+                              Ababa, Ethiopia
+                              <strong>Address</strong>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Footer Column-->
+                  <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                    <div class="footer-widget">
+                      <h2 class="widget-title">Events</h2>
+                      <div class="widget-content">
+                        <ul class="events-list">
+                          <li>Innovation Hub — Addis Ababa</li>
+                          <li>Business & Trade Nexus</li>
+                          <li>Global Community Zone</li>
+                          <li>Sport Expo ET 2027 — january</li>
+                        </ul>
+
+                        <ul class="social-icon-two">
+                          <li>
+                            <a href="index.html#"
+                              ><i class="fab fa-facebook-f"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="index.html#"
+                              ><i class="fab fa-pinterest"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="index.html#"
+                              ><i class="fab fa-twitter"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="index.html#"
+                              ><i class="fab fa-dribbble"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright-text">Copyright © 2027 Sport Expo ET 2027.</div>
+        </div>
+      </footer>
+      <!--End Main Footer -->
+    </div>
+    <!-- End Page Wrapper -->
+
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html">
+      <span class="fa fa-angle-up"></span>
+    </div>
+
+    <!-- Color Palate -->
+
+    <script>
+      (function () {
+        "use strict";
+
+        /* ── Entrance animation via IntersectionObserver ─────────────── */
+        var CARD_DELAYS = {
+          "see-visitor-card-discovery": 0,
+          "see-visitor-card-premier": 150,
+          "see-visitor-card-ambassador": 300,
+        };
+        var FEATURE_DELAYS = {
+          "see-visitor-feat-discovery": 300,
+          "see-visitor-feat-premier": 450,
+          "see-visitor-feat-ambassador": 600,
+        };
+
+        function revealEl(el, delay) {
+          setTimeout(function () {
+            el.classList.add("see-visitor-visible");
+          }, delay || 0);
+        }
+
+        function setupObserver(el, delay) {
+          if (!el) return;
+          if ("IntersectionObserver" in window) {
+            var obs = new IntersectionObserver(
+              function (entries) {
+                entries.forEach(function (e) {
+                  if (e.isIntersecting) {
+                    revealEl(el, delay);
+                    obs.disconnect();
+                  }
+                });
+              },
+              { threshold: 0.1 },
+            );
+            obs.observe(el);
+          } else {
+            revealEl(el, delay);
+          }
+        }
+
+        /* Header */
+        setupObserver(document.getElementById("see-visitor-header"), 0);
+
+        /* Cards */
+        Object.keys(CARD_DELAYS).forEach(function (id) {
+          setupObserver(document.getElementById(id), CARD_DELAYS[id]);
+        });
+
+        /* Feature items */
+        Object.keys(FEATURE_DELAYS).forEach(function (listId) {
+          var list = document.getElementById(listId);
+          if (!list) return;
+          var items = list.querySelectorAll(".see-visitor-feature-item");
+          var baseDelay = FEATURE_DELAYS[listId];
+          items.forEach(function (item, i) {
+            var delay = baseDelay + i * 40;
+            setupObserver(item, delay);
+          });
+        });
+
+        /* ── Booking flow (dates → live total → Stripe) ─────────────── */
+
+        /* CONFIG — edit these when finalized ------------------------ */
+        var BOOKING_CUTOFF_DATE = "2027-11-30"; // last selectable date (inclusive), YYYY-MM-DD
+
+        var PACKAGE_PRICING = {
+          discovery:  { name: "Discovery",  nightly_rate: 0, arrival_fee: 0 },
+          premier:    { name: "Premier",    nightly_rate: 0, arrival_fee: 0 },
+          ambassador: { name: "Ambassador", nightly_rate: 0, arrival_fee: 0 },
+        };
+
+        // One Stripe Payment Link per tier. Each Payment Link should have
+        // two line items: "Nightly rate" (customer-adjustable quantity) and
+        // "Arrival fee" (quantity fixed at 1). Guest sets nights = N on
+        // Stripe's page — the total shown here in the popup matches the
+        // final Stripe checkout total when they do.
+        var STRIPE_PAYMENT_LINKS = {
+          discovery:  "", // e.g. "https://buy.stripe.com/..."
+          premier:    "",
+          ambassador: "",
+        };
+        /* ---------------------------------------------------------- */
+
+        var currentTier = null;
+        var modal, elTitle, elCheckin, elCheckout, elName, elEmail, elPhone;
+        var elNights, elRate, elArr, elTotal, elNightsNote, elError, elPay;
+
+        function bindBookingEls() {
+          modal    = document.getElementById("sev-book-modal");
+          if (!modal) return false;
+          elTitle  = modal.querySelector("[data-sev-tier-name]");
+          elCheckin  = document.getElementById("sev-checkin");
+          elCheckout = document.getElementById("sev-checkout");
+          elName   = document.getElementById("sev-name");
+          elEmail  = document.getElementById("sev-email");
+          elPhone  = document.getElementById("sev-phone");
+          elNights = modal.querySelector("[data-sev-nights]");
+          elRate   = modal.querySelector("[data-sev-rate]");
+          elArr    = modal.querySelector("[data-sev-arrival]");
+          elTotal  = modal.querySelector("[data-sev-total]");
+          elNightsNote = modal.querySelector("[data-sev-nights-note]");
+          elError  = document.getElementById("sev-book-error");
+          elPay    = document.getElementById("sev-book-pay");
+          return true;
+        }
+
+        function todayISO() {
+          var d = new Date();
+          var m = String(d.getMonth() + 1).padStart(2, "0");
+          var day = String(d.getDate()).padStart(2, "0");
+          return d.getFullYear() + "-" + m + "-" + day;
+        }
+
+        function fmtUSD(n) {
+          return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " USD";
+        }
+
+        // UTC-midnight diff — avoids DST off-by-one.
+        // July 10 → July 13 = 3 nights.
+        function nightsBetween(inStr, outStr) {
+          if (!inStr || !outStr) return 0;
+          var a = new Date(inStr + "T00:00:00Z").getTime();
+          var b = new Date(outStr + "T00:00:00Z").getTime();
+          if (isNaN(a) || isNaN(b)) return 0;
+          var diff = Math.round((b - a) / 86400000);
+          return diff > 0 ? diff : 0;
+        }
+
+        function setError(msg) {
+          if (!elError) return;
+          if (msg) { elError.textContent = msg; elError.hidden = false; }
+          else     { elError.textContent = "";  elError.hidden = true; }
+        }
+
+        function recalc() {
+          if (!currentTier) return;
+          var cfg = PACKAGE_PRICING[currentTier] || { nightly_rate: 0, arrival_fee: 0 };
+          var nights = nightsBetween(elCheckin.value, elCheckout.value);
+
+          elNights.textContent = nights ? String(nights) : "—";
+          elNightsNote.textContent = nights ? String(nights) : "—";
+          elRate.textContent   = cfg.nightly_rate ? fmtUSD(cfg.nightly_rate) : "—";
+          elArr.textContent    = cfg.arrival_fee  ? fmtUSD(cfg.arrival_fee)  : "—";
+
+          var total = (nights * cfg.nightly_rate) + cfg.arrival_fee;
+          var valid = nights > 0 && total > 0;
+
+          elTotal.textContent = valid ? fmtUSD(total) : "$0.00 USD";
+
+          // Validate date bounds
+          setError("");
+          if (elCheckin.value && elCheckin.value < todayISO()) {
+            setError("Check-in cannot be in the past.");
+            valid = false;
+          } else if (elCheckout.value && elCheckout.value > BOOKING_CUTOFF_DATE) {
+            setError("Check-out is beyond the booking window (" + BOOKING_CUTOFF_DATE + ").");
+            valid = false;
+          } else if (elCheckin.value && elCheckout.value && nights <= 0) {
+            setError("Check-out must be after check-in.");
+            valid = false;
+          } else if (nights > 0 && (!cfg.nightly_rate || !cfg.arrival_fee)) {
+            setError("Pricing not yet configured for this package.");
+            valid = false;
+          }
+
+          elPay.disabled = !valid;
+          elPay.dataset.sevTotal = valid ? String(total) : "0";
+          elPay.dataset.sevNights = valid ? String(nights) : "0";
+        }
+
+        function openModal(tier) {
+          if (!modal || !PACKAGE_PRICING[tier]) return;
+          currentTier = tier;
+          if (elTitle) elTitle.textContent = PACKAGE_PRICING[tier].name;
+          // Reset form values
+          elCheckin.value = "";
+          elCheckout.value = "";
+          elName.value = "";
+          elEmail.value = "";
+          elPhone.value = "";
+          setError("");
+          // Bounds
+          var today = todayISO();
+          elCheckin.min  = today;
+          elCheckin.max  = BOOKING_CUTOFF_DATE;
+          elCheckout.min = today;
+          elCheckout.max = BOOKING_CUTOFF_DATE;
+          recalc();
+          modal.setAttribute("data-open", "true");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          if (!modal) return;
+          modal.setAttribute("data-open", "false");
+          document.body.style.overflow = "";
+        }
+
+        // Queue calls made before DOM is ready
+        var pendingTier = null;
+        window.seeVisitorSelectPackage = function (tier) {
+          if (!modal && !bindBookingEls()) {
+            pendingTier = tier;
+            return;
+          }
+          openModal(tier);
+        };
+
+        function initBooking() {
+          if (!bindBookingEls()) return;
+
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) closeModal();
+          });
+          modal.querySelector(".sev-book-close").addEventListener("click", closeModal);
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && modal.getAttribute("data-open") === "true") closeModal();
+          });
+
+          [elCheckin, elCheckout, elName, elEmail, elPhone].forEach(function (el) {
+            if (!el) return;
+            el.addEventListener("input",  recalc);
+            el.addEventListener("change", recalc);
+          });
+
+          elCheckin.addEventListener("change", function () {
+            if (elCheckin.value) {
+              elCheckout.min = elCheckin.value;
+              if (elCheckout.value && elCheckout.value <= elCheckin.value) {
+                elCheckout.value = "";
+              }
+            }
+            recalc();
+          });
+
+          elPay.addEventListener("click", function () {
+            if (elPay.disabled) return;
+            if (!elName.value || !elEmail.value || !elPhone.value) {
+              setError("Please fill in your name, email, and phone.");
+              return;
+            }
+            var link = STRIPE_PAYMENT_LINKS[currentTier];
+            if (!link) {
+              setError("Payment link not configured for " + PACKAGE_PRICING[currentTier].name + " yet.");
+              return;
+            }
+            // client_reference_id gets passed to the checkout.session.completed
+            // webhook so the confirmation email/QR flow can join it to guest data.
+            var ref = [
+              currentTier,
+              elCheckin.value,
+              elCheckout.value,
+              elPay.dataset.sevNights,
+              Date.now(),
+            ].join("_");
+            var sep = link.indexOf("?") === -1 ? "?" : "&";
+            var url = link + sep +
+              "prefilled_email=" + encodeURIComponent(elEmail.value) +
+              "&client_reference_id=" + encodeURIComponent(ref);
+            window.location.href = url;
+          });
+
+          if (pendingTier) { openModal(pendingTier); pendingTier = null; }
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initBooking);
+        } else {
+          initBooking();
+        }
+      })();
+    </script>
+    <script src="https://www.dante-ai.com/embed.js" data-agent-id="0be10571-a198-45e7-bf0f-953949a6b483" data-widget-key="wk_Zol4GavQqpVQB-kI_c0clwYruiLtfaLF" crossorigin="anonymous" async></script>
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/popper.min.js" defer></script>
+    <script src="../static/js/bootstrap.min.js" defer></script>
+    <script src="../static/js/jquery-ui.js" defer></script>
+    <script src="../static/js/jquery.fancybox.js" defer></script>
+    <script src="../static/js/jquery.countdown.js" defer></script>
+    <script src="../static/js/appear.js" defer></script>
+    <script src="../static/js/owl.js" defer></script>
+    <script src="../static/js/wow.js" defer></script>
+    <script src="../static/js/script.js" defer></script>
+    <!-- Color Setting -->
+    <script src="../static/js/color-settings.js" defer></script>
+
+    <!-- Visitor booking modal -->
+    <div class="sev-book-modal" id="sev-book-modal" role="dialog" aria-modal="true" aria-labelledby="sev-book-title">
+      <div class="sev-book-dialog">
+        <button type="button" class="sev-book-close" aria-label="Close">×</button>
+        <div class="sev-book-eyebrow">Book your visit</div>
+        <h3 class="sev-book-title" id="sev-book-title"><span data-sev-tier-name>Discovery</span> Package</h3>
+        <p class="sev-book-sub">Choose your dates and enter your details — you'll continue to secure Stripe checkout.</p>
+        <form class="sev-book-form" onsubmit="return false;">
+          <div class="sev-book-row">
+            <div class="sev-book-field">
+              <label class="sev-book-label" for="sev-checkin">Check-in</label>
+              <input class="sev-book-input" type="date" id="sev-checkin" required />
+            </div>
+            <div class="sev-book-field">
+              <label class="sev-book-label" for="sev-checkout">Check-out</label>
+              <input class="sev-book-input" type="date" id="sev-checkout" required />
+            </div>
+          </div>
+          <div class="sev-book-field">
+            <label class="sev-book-label" for="sev-name">Full name</label>
+            <input class="sev-book-input" type="text" id="sev-name" autocomplete="name" required />
+          </div>
+          <div class="sev-book-row">
+            <div class="sev-book-field">
+              <label class="sev-book-label" for="sev-email">Email</label>
+              <input class="sev-book-input" type="email" id="sev-email" autocomplete="email" required />
+            </div>
+            <div class="sev-book-field">
+              <label class="sev-book-label" for="sev-phone">Phone</label>
+              <input class="sev-book-input" type="tel" id="sev-phone" autocomplete="tel" required />
+            </div>
+          </div>
+          <div class="sev-book-summary">
+            <div class="sev-book-summary-row"><span>Nights</span><span data-sev-nights>—</span></div>
+            <div class="sev-book-summary-row"><span>Nightly rate</span><span data-sev-rate>—</span></div>
+            <div class="sev-book-summary-row"><span>Arrival fee</span><span data-sev-arrival>—</span></div>
+            <div class="sev-book-summary-total"><span>Total</span><span data-sev-total>$0.00 USD</span></div>
+          </div>
+          <div class="sev-book-error" id="sev-book-error" hidden></div>
+          <button type="button" class="sev-book-pay" id="sev-book-pay" disabled>Pay with card →</button>
+          <p class="sev-book-note">You'll be redirected to Stripe. On the next screen, set the "Nightly rate" quantity to <strong data-sev-nights-note>—</strong> to match your stay.</p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
