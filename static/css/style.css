@@ -14312,3 +14312,15 @@ Accordian Box
   pointer-events: none; /* critical — without this you'll block clicks to whatever's underneath */
   z-index: 10;
 }
+.owl-carousel .owl-item img {
+  max-width: 120px !important;
+  width: 120px !important;
+  height: auto !important;
+  margin: 0 auto !important;
+}
+
+.sponsors-outer .slide-item img {
+  width: 120px !important;
+  height: auto;
+  margin: 0 auto;
+}
